@@ -18,7 +18,12 @@ Now we have to create the project
 vue create name-project
 ```
 
-We will use plugin Vue Router
+We will use plugin Vue Router in your project folder
+
+```
+cd name-project
+```
+
 
 ```
 vue add router
