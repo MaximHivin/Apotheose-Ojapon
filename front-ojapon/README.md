@@ -34,6 +34,8 @@ NOW WE ARE READY
 
 ### Compiles and hot-reloads for development
 
+We have to use a local development server
+
 ```
 npm run serve
 ```
