@@ -12,17 +12,7 @@ In this project we will use NPM
 npm install -g @vue/cli
 ```
 
-Now we have to create the project 
-
-```
-vue create name-project
-```
-
 We will use plugin Vue Router in your project folder
-
-```
-cd name-project
-```
 
 
 ```
