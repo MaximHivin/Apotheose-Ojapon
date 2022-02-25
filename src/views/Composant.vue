@@ -1,14 +1,14 @@
 <template>
   <h1>Mes composants</h1>
-  <Textarea />
+  <InputSearch />
 </template>
 
 <script>
-import Textarea from '../components/formulaire/Textarea.vue'
+import InputSearch from '@/components/formulaire/InputSearch.vue'
 export default {
   name: 'Composant',
   components: {
-    Textarea
+    InputSearch
   }
 }
 </script>
