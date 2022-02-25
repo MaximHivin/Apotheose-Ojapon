@@ -1,14 +1,14 @@
 <template>
   <h1>Mes composants</h1>
-  <InputText />
+  <Tag />
 </template>
 
 <script>
-import InputText from '@/components/formulaire/InputText.vue'
+import Tag from '@/components/Tag.vue'
 export default {
   name: 'Composant',
   components: {
-    InputText
+    Tag
   }
 }
 </script>
