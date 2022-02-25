@@ -12,6 +12,7 @@
 <div class="nav">
   <div class="nav-wrapper">
     <nav>
+        
       <a href="#">Accueil</a><br>
       <a href="#">Le Japon</a><br>
       <a href="#">Points d'Intérêts</a><br>
@@ -21,7 +22,7 @@
       <ul class="login">
         <li class="inscription">Inscription</li>
         <li class="connect">Se Connecter</li>
-        </ul>
+    </ul>
     </nav>
   </div>
 </div>
@@ -34,8 +35,7 @@
 
 export default {
     name: 'HeaderLayoutMobile',
-
-
+    
 }
 </script>
 
@@ -48,8 +48,8 @@ export default {
 **/
 .hamburger {
   position: absolute;
-  top: 130em;
-  left: 70em;
+  top: 120em;
+  left: 60em;
   margin-left: -2em;
   margin-top: -45px;
   width: 2em;
@@ -94,7 +94,7 @@ nav a {
   position: relative;
   text-decoration: none;
   color: #ce1137;
-  font-size: 2em;
+  font-size: 4em;
   display: inline-block;
   margin-top: 1.25em;
   transition: color 0.2s ease-in-out;
@@ -141,11 +141,20 @@ others
 **/
 .connect {
     background-color: #ce1137;
-    border-radius: 8%;
-    width: 8em;
+    border-radius: 10px;
+    width: 7em;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 16px;
+    padding-top: 16px;
+    padding-bottom:16px;
+    padding-left: 24px;
+    padding-right:24px;
 }
 .inscription{
     color: white;
+    font-size: 80px;
+    margin-bottom: 40px;
 }
 .login {
     color: white;
@@ -155,4 +164,8 @@ img {
     position:relative;
     top: 105em;
 }
+ul {
+    margin-top: 48px;
+}
+
 </style>
