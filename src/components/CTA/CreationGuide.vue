@@ -15,6 +15,10 @@ export default {
 <style scoped>
 
     .btn-creation-guide {
+      
+        /* A supprimer après validation */
+        margin: 20px;
+        /* *********************************** */
         position: relative;
         display: flex;
         align-items: center;
