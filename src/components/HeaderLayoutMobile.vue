@@ -1,31 +1,22 @@
 <template>
-  <div>
+  <div class="container">
       <img src="../assets/logo.png" alt="logo">
       <input id="toggle" type="checkbox">
 
-<label for="toggle" class="hamburger">
-  <div class="top-bun"></div>
-  <div class="meat"></div>
-  <div class="bottom-bun"></div>
-</label>
+        <label for="toggle" class="hamburger">
+        <div class="top-bun"></div>
+        <div class="meat"></div>
+        <div class="bottom-bun"></div>
+        </label>
 
-<div class="nav">
-  <div class="nav-wrapper">
-    <nav>
-        
-      <a href="#">Accueil</a><br>
-      <a href="#">Le Japon</a><br>
-      <a href="#">Points d'Intérêts</a><br>
-      <a href="#">Blogs Voyageurs</a><br>
-      <a href="#">FAQ</a><br>
-      <a href="#">Contact</a>
-      <ul class="login">
-        <li class="inscription">Inscription</li>
-        <li class="connect">Se Connecter</li>
-    </ul>
-    </nav>
-  </div>
-</div>
+    <div class="nav">
+        <div class="nav-wrapper">
+            <nav>
+                <router-link v-for="link in links" :key="link.name" :to="link.route">{{ link.name }}</router-link>
+
+            </nav>
+        </div>
+    </div>
   </div>
 
 
@@ -35,11 +26,52 @@
 
 export default {
     name: 'HeaderLayoutMobile',
+     data () {
+            return {
+                links: [
+                    {
+                        name: 'Accueil',
+                        route: '/'
+                    },
+                    {
+                        name: 'Le Japon',
+                        route: '/le_japon'
+                    },
+                    {
+                        name: 'Points d\'intérêts',
+                        route: '/pointsinterets'
+                    },
+                    {
+                        name: 'Blogs Voyageurs',
+                        route: '/blogs'
+                    },
+                    {
+                        name: 'FAQ',
+                        route: '/faq'
+                    },
+                    {
+                        name: 'Contact',
+                        route: '/contact'
+                    },
+                     {
+                        name: 'Inscription',
+                        route: '/register'
+                    },
+                     {
+                        name: 'Se Connecter',
+                        route: '/connect'
+                    }
+                    
+                    
+                ]
+            }
+        }
     
 }
 </script>
 
 <style scoped>
+
 #toggle{
     display:none;
 }
@@ -48,8 +80,8 @@ export default {
 **/
 .hamburger {
   position: absolute;
-  top: 120em;
-  left: 60em;
+  top: 4em;
+  left: 18em;
   margin-left: -2em;
   margin-top: -45px;
   width: 2em;
@@ -89,12 +121,15 @@ Nav Styles
 nav {
   text-align: left;
   margin-left: 25%;
+  display: flex;
+  flex-direction: column;
+
 }
 nav a {
   position: relative;
   text-decoration: none;
   color: #ce1137;
-  font-size: 4em;
+  font-size: 1em;
   display: inline-block;
   margin-top: 1.25em;
   transition: color 0.2s ease-in-out;
@@ -139,33 +174,17 @@ Animations
 /**
 others
 **/
-.connect {
-    background-color: #ce1137;
-    border-radius: 10px;
-    width: 7em;
-    font-size: 80px;
-    text-align: center;
-    margin-top: 16px;
-    padding-top: 16px;
-    padding-bottom:16px;
-    padding-left: 24px;
-    padding-right:24px;
-}
-.inscription{
-    color: white;
-    font-size: 80px;
-    margin-bottom: 40px;
-}
-.login {
-    color: white;
-    list-style-type: none;
+.container {
+  width: 360px;
+  position:fixed;
+  top: 36em;
+  border-top: #ce1137 solid;
 }
 img {
-    position:relative;
-    top: 105em;
-}
-ul {
-    margin-top: 48px;
+  position: relative;
+  width: 75px;
+  right: 8em;
+  top: 0.5em;
 }
 
 </style>
