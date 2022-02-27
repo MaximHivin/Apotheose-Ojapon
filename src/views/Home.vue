@@ -2,7 +2,8 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to O'Japon"/>
-    <Button />
+    <Button btnName="se connecter" /><br><br>
+    <Button btnName="s'inscrire" /><br><br>
   </div>
 </template>
 
