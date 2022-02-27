@@ -20,12 +20,22 @@ export default {
     .btn-retour {
         display: flex;
         align-items: center;
-        width: 36px;
-        height: 32px;
         font-size: 18px;
         font-weight: bold;
         color: #1D1D1D;
 
     }
+
+    img {
+        width: 36px;
+        height: 32px;
+    }
+
+     @media screen and (max-width: 375px) {
+
+         .btn-retour {
+             font-size: 14px;
+                      }
+     }
 
 </style>
