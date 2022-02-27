@@ -1,10 +1,10 @@
 <template>
-<div class="example">
+
 <div class="btn-retour">
     <img alt="arrow left" src="@/assets/arrow-left.svg">
     <span>Retour</span>
 </div>
-</div> 
+
 </template>
 
 <script>

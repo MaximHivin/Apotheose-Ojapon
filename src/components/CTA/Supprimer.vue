@@ -13,7 +13,7 @@ export default {
 
 <style>
 
-    .add-element {
+    .delete-element {
 
         /* A supprimer après validation */
         margin: 20px;
