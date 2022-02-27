@@ -1,5 +1,5 @@
 <template>
-  <div class="btn-creation-guide">
+  <div class="link-to">
       <a href="x" class="create-link">Créer votre guide de voyage</a>
       <img alt="arrow right" src="@/assets/arrow-right.svg">
   </div>
@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 
-    .btn-creation-guide {
+    .link-to {
       
         /* A supprimer après validation */
         margin: 20px;
