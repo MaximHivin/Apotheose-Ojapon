@@ -1,5 +1,5 @@
 <template>
-  <div class="add-element">
+  <div class="delete-element">
       <img alt="trash icon" src="@/assets/trash.svg">
   </div>
 </template>
