@@ -17,10 +17,6 @@ export default {
 
 <style scoped>
 
-    .example {
-        margin: 0 150px;
-    }
-
     .btn-retour {
         display: flex;
         align-items: center;
