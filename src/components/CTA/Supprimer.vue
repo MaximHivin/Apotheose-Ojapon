@@ -14,11 +14,6 @@ export default {
 <style>
 
     .delete-element {
-
-        /* A supprimer après validation */
-        margin: 20px;
-        /* *********************************** */
-
         height: 50px;
         width: 50px;
         border-radius: 50%;
@@ -31,5 +26,17 @@ export default {
     img {
         height: 22px;
     }
+
+    @media screen and (max-width: 375px) {
+
+        .delete-element {
+            height: 40px;
+            width: 40px;
+        }
+        
+
+    }
+
+
 
 </style>
