@@ -1,8 +1,11 @@
 <template>
   <div>
-    <h1>This is a Maxime Components Page</h1>
+    <h1>Components Page</h1>
     <Retour />
-    <CreationGuide />
+    <CreationGuide linkContent="Créer un point d'intérêt" />
+    <CreationGuide linkContent="Créer un guide de voyage" />
+    <CreationGuide linkContent="Accéder à la liste des points d'intérêts" />
+    <CreationGuide linkContent="Accéder à un guide de voyage" />
     <Ajouter />
     <Supprimer />
   </div>
@@ -31,6 +34,9 @@ export default {
 
 <style scoped>
 
+div {
+  margin: 0 20px;
+}
 
 
 </style>

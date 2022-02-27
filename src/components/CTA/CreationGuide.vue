@@ -1,13 +1,16 @@
 <template>
   <div class="link-to">
-      <a href="x" class="create-link">Créer votre guide de voyage</a>
+      <a href="x" class="create-link">{{ linkContent }}</a>
       <img alt="arrow right" src="@/assets/arrow-right.svg">
   </div>
 </template>
 
 <script>
 export default {
-    name: 'CreationGuide'
+    name: 'CreationGuide',
+    props: {
+        linkContent: String
+    }
 
 }
 </script>
@@ -15,20 +18,16 @@ export default {
 <style scoped>
 
     .link-to {
-      
-        /* A supprimer après validation */
-        margin: 20px;
-        /* *********************************** */
         position: relative;
         display: flex;
         align-items: center;
         text-align: left;
+        margin-bottom: 10px;
         padding-left: 40px;
         width: 812px;
         height: 110px;
         background-color: #CE1137;
-        font-weight: bold;
-        font-size: 18px;
+        
 
     }
 
@@ -42,6 +41,29 @@ export default {
     .create-link {
         text-decoration: none;
         color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 375px) {
+
+        .link-to {
+            width: 302px;
+            height: 49px;
+            margin: 5px auto;
+            padding-left: 16px;
+        
+        }
+
+        img {
+            display: none;
+        }
+
+        .create-link {
+            font-size: 14px;
+            
+        }
+
     }
 
 </style>
