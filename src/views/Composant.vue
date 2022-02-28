@@ -19,6 +19,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+div {
+  margin: 0 20px;
+}
 
 </style>
