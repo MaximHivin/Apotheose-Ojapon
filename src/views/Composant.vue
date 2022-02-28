@@ -20,7 +20,7 @@ import Supprimer from '@/components/CTA/Supprimer.vue'
 
 
 export default {
-    name: 'ComposantsMaxime',
+    name: 'Composant',
     components: {
         Retour,
         CreationGuide,
