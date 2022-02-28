@@ -48,7 +48,7 @@ export default {
 
 }
 
-h2, span {
+h2,span {
     display: flex;
     justify-content: left;
     padding-left: 24px;
@@ -74,6 +74,37 @@ span.tag {
 
     margin-top: 20px;
     color: #1d1d1d;
+}
+
+@media screen and (max-width: 375px) {
+
+    .card {
+        width: 302px;
+        height: 256px;
+    }
+
+    .img-card {
+       width: 302px;
+       height: 135px; 
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .map-pin {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .pin {
+        height: 18px;
+        width: 22px;
+    }
+
+    span.tag {
+        font-size: 14px;
+    }
 }
 
 </style>
