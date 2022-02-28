@@ -1,19 +1,22 @@
 <template>
-  <div class="card">
+<div class="card">
 
       <img class="img-card" alt="image" src="../assets/japan-card1.jpg">
+
       <h2>Nom du point d'intérêt</h2>
 
         <div class="map-pin">
-                 <span><img class="pin" alt="logo map pin" src="../assets/map-pin.svg">Localisation</span>
-               <br>
+
+                <span>
+                     <img class="pin" alt="logo map pin" src="../assets/map-pin.svg">
+                Localisation</span>
+        
         </div>
 
-      <span class="tag">Tag 2, Tag 3</span>
-      
+        <span class="tag">Tag 2, Tag 3</span>
 
 
-  </div>
+</div>
 </template>
 
 <script>
@@ -56,6 +59,11 @@ h2, span {
 .map-pin {
     display: flex;
     color: #adadad;
+    line-height: 2;
+}
+
+.pin {
+    margin-right: 8px;
 }
 
 span {
@@ -63,6 +71,8 @@ span {
 }
 
 span.tag {
+
+    margin-top: 20px;
     color: #1d1d1d;
 }
 
