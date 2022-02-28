@@ -15,7 +15,6 @@ export default {
   name: 'Home',
   components: {
     HelloWorld,
-    Button,
   }
 }
 </script>
