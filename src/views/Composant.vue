@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import CirclePi from '@/components/CirclePi.vue'
+import Tag from '@/components/formulaire/Tag.vue'
 export default {
   name: 'Composant',
   components: {
