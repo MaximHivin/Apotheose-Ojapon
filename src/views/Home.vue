@@ -1,19 +1,20 @@
 <template>
-  <div class="home">
-    <FormulaireDeConnexion />
-    
-  </div>
+    <ConnectionLayout />
 </template>
 
 <script>
 // @ is an alias to /src
-import FormulaireDeConnexion from '@/components/FormulaireDeConnexion.vue'
+import ConnectionLayout from '@/components/ConnectionLayout.vue'
+
+
 
 
 export default {
   name: 'Home',
   components: {
-    FormulaireDeConnexion
+    ConnectionLayout,
+    
+    
     
   }
 }
