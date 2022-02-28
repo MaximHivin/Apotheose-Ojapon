@@ -2,10 +2,10 @@
   <div id="nav">
     
   </div>
-  <router-view/>
 </template>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -14,17 +14,20 @@
   color: #2c3e50;
 }
 
-#nav {
+nav {
   padding: 30px;
 }
 
-#nav a {
+nav a {
   font-weight: bold;
   color: #2c3e50;
 }
+body {
+  background-color: black;
+}
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+nav a.router-link-exact-active {
+  color: #ce1137;
 }
 body {
   background-color: black;
