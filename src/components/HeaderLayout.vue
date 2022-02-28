@@ -81,9 +81,12 @@ li {
 
 .connect {
     background-color: #ce1137;
-    border-radius: 8%;
-    padding: 0.5em;
-    margin-top: 10px;
+    border-radius: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 3px;
     height: 1rem;
     
 }
