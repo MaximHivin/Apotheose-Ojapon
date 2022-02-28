@@ -1,14 +1,14 @@
 <template>
   <h1>Mes composants</h1>
-  <InputText />
+  <CirclePi />
 </template>
 
 <script>
-import InputText from '@/components/formulaire/InputText.vue'
+import CirclePi from '@/components/CirclePi.vue'
 export default {
   name: 'Composant',
   components: {
-    InputText
+    CirclePi
   }
 }
 </script>
