@@ -1,5 +1,7 @@
 <template>
-  <router-view/>
+  <div id="nav">
+    
+  </div>
 </template>
 
 <style>
@@ -26,5 +28,8 @@ body {
 
 nav a.router-link-exact-active {
   color: #ce1137;
+}
+body {
+  background-color: black;
 }
 </style>
