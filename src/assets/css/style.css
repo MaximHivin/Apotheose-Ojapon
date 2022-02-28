@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Fellix Light";
+    src: url("../fonts/Fellix-Light.ttf");
+  }
+
+  @font-face {
+    font-family: "Fellix Regular";
+    src: url("../fonts/Fellix-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Fellix Italic";
+    src: url("../fonts/Fellix-RegularItalic.ttf");
+  }
+
+  @font-face {
+    font-family: "Fellix Medium";
+    src: url("../fonts/Fellix-Medium.ttf");
+  }
+
+  @font-face {
+    font-family: "Fellix SemiBold";
+    src: url("../fonts/Fellix-SemiBold.ttf");
+  }
+
+  @font-face {
+    font-family: "Fellix Bold";
+    src: url("../fonts/Fellix-Bold.ttf");
+  }
