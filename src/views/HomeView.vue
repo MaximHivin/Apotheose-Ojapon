@@ -19,6 +19,7 @@ import FooterLayout from '@/components/FooterLayout.vue';
 import FooterLayoutMobile from '@/components/FooterLayoutMobile.vue'
 import ConnectionLayout from '@/components/ConnectionLayout.vue';
 
+
 export default {
   name: 'HomeView',
   components: {
@@ -26,7 +27,8 @@ export default {
     FooterLayoutMobile,
     HeaderLayout,
     HeaderLayoutMobile,
-    ConnectionLayout
+    ConnectionLayout,
+    
   }
 }
 </script>
