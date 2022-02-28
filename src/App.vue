@@ -1,14 +1,7 @@
 <template>
-<<<<<<< HEAD
-  
-  <router-view/>
-  
-  
-=======
   <div id="nav">
     
   </div>
->>>>>>> develop
 </template>
 
 <style>

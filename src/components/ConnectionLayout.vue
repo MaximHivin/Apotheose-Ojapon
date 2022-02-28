@@ -4,8 +4,8 @@
         <h1 class="Title">Connectez-vous à votre compte</h1>
         <div class="inputs">
             <p class="email">Votre email</p>
-            <input v-model="Email" class="inputs_g" type="text" placeholder="Email">
-            <p class="mdp">Votre mot de passe</p>
+          <input v-model="Email" class="inputs_g" type="text" placeholder="Email">
+            <p class="mdp">Votre mot de passe</p>  
             <input v-model="password" class="inputs_d" type="password" placeholder="Password">
         </div>
     </div> 
