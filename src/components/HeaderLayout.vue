@@ -26,15 +26,15 @@ export default {
                         route: '/'
                     },
                     {
-                        name: 'Le Japon',
-                        route: '/le_japon'
+                        name: 'LeJapon',
+                        route: '/lejapon'
                     },
                     {
-                        name: 'Points d\'intérêts',
+                        name: 'PointsInterets',
                         route: '/pointsinterets'
                     },
                     {
-                        name: 'Blogs Voyageurs',
+                        name: 'BlogsVoyageurs',
                         route: '/blogs'
                     },
                     {
