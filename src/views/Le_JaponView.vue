@@ -1,14 +1,16 @@
 <template>
-  <HeaderLayoutMobile/>
+  <HeaderLayout/>
+  <LeJaponLayout/>
 </template>
 
 <script>
-import HeaderLayoutMobile from '@/components/HeaderLayoutMobile.vue'
+import HeaderLayout from '@/components/HeaderLayout.vue'
+import LeJaponLayout from '@/components/LeJaponLayout.vue'
 export default {
     name: 'Le_JaponView',
     components: {
-    HeaderLayoutMobile,
-    
+    HeaderLayout,
+    LeJaponLayout
   }
 
 }
