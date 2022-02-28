@@ -8,6 +8,7 @@
     <CreationGuide linkContent="Accéder à un guide de voyage" />
     <Ajouter />
     <Supprimer />
+    <CirclePi />
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import Retour from '@/components/CTA/Retour.vue'
 import CreationGuide from '@/components/CTA/CreationGuide.vue'
 import Ajouter from '@/components/CTA/Ajouter.vue'
 import Supprimer from '@/components/CTA/Supprimer.vue'
+import Tag from '@/components/formulaire/Tag.vue'
 
 
 export default {
@@ -26,7 +28,7 @@ export default {
         CreationGuide,
         Ajouter,
         Supprimer,
-
+        CirclePi
     }
 
 }
@@ -37,6 +39,5 @@ export default {
 div {
   margin: 0 20px;
 }
-
 
 </style>
