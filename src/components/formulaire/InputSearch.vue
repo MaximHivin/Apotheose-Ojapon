@@ -1,5 +1,5 @@
 <template>
-  <div class="searchbar">
+  <div class="container_searchbar">
       <input type="text" name="searchbar" id="searchbar" placeholder="Ou voulez-vous aller" class="searchbar">
   </div>
 </template>
