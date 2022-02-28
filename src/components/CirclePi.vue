@@ -52,6 +52,9 @@ export default {
 }
 
 @media screen and (max-width: 375px){
+    .container_circlepi{
+        max-width: initial;
+    }
     .circlepi{
         display: block;
     }
