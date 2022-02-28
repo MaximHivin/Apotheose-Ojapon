@@ -19,7 +19,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1 {
-  margin: 10px 0 0;
+  margin: 20px 0 40px;
 }
 ul {
   list-style-type: none;
