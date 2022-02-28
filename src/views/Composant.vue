@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import Tag from '@/components/Tag.vue'
+import Tag from '@/components/formulaire/Tag.vue'
 export default {
   name: 'Composant',
   components: {
