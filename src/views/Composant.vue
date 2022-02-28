@@ -1,6 +1,6 @@
 <template>
   <h1>Mes composants</h1>
-  <Tag />
+  <CirclePi />
 </template>
 
 <script>
@@ -8,7 +8,7 @@ import Tag from '@/components/formulaire/Tag.vue'
 export default {
   name: 'Composant',
   components: {
-    Tag
+    CirclePi
   }
 }
 </script>
