@@ -1,9 +1,11 @@
 <template>
   <div>
-      
+      <span class="letter_japan">日本の歴史</span>
       <main class="container">
+          
         <div class="container__japan">
           <div class="container__japan__content-left">
+              
             <img src="../assets/card-japan.jpg" alt="logo" class="photo1">
           </div>
           <div class="container__japan__content-right">
@@ -19,7 +21,11 @@
             ligula et, vulputate sem. Suspendisse a mauris fringilla erat efficitur auctor. Nullam eget quam a arcu 
             efficitur dignissim ut et erat. Quisque sit amet eros sit amet tellus eleifend interdum a non tortor. 
             Pellentesque non sagittis ipsum. Aenean non sapien ultrices mi aliquet interdum nec at metus</p>
+            <ul class="readmore_button">
+                <li>En savoir plus</li>
+            </ul>
             <img src="../assets/card-japan.jpg" alt="logo" class="photo2">
+            
           </div>
         </div>
       </main>
@@ -38,29 +44,38 @@ export default {
 .container {
     max-width: 1642px;
     margin: 0 auto;
-    background-color: green;
+    margin-top: 56px;
 }
 .container__japan{
     display:flex;
     width: 100%;
     justify-content: center;
 }
-.container__japan__content-right{
-    background-color: grey;
-}
-.container__japan__content-right p{
+
+.container__japan__content-right {
     text-align:left;
     margin-left: 56px;
+    padding-right: 20px;
     width: 100%;
     
 }
 .container__japan__content-right h2{
     text-align: left;
-    margin-left: 56px;
+    margin-left: 16px;
     
+    
+}
+.photo1{
+    display:block;
+    width: 674px;
+    height: 831px;
+    margin-left: 26px;
 }
 .photo2{
     display:block;
+    width: 810px;
+    height: 541px;
+    margin-left: 24px;
 }
 /*
 */
@@ -78,20 +93,32 @@ h2 {
 }
 p {
     color:white;
-    
+    width: 886px;
+    height: 341px;
+    padding-left: 16px;
+    padding-right: 16px;
     
 }
-span {
-    color: white;
-    background-color: #ce1137;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 24px;
-    padding-right: 24px;
-    border-radius: 10px;
-    height: 20px;
-    width: 120px;
+.letter_japan {
+    font-size: 150px;
+    -webkit-text-stroke: 2px #ce1137;
+    z-index: -1;
+    color:black;
     position: relative;
-    left: 100rem;
+    top: 140px;
+    right: 550px;
 }
+.readmore_button{
+    background-color: #ce1137;
+    color: white;
+    list-style-type : none;
+    padding: 16px 24px 16px 24px;
+    border-radius: 10px;
+    width: 150px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 16px;
+    margin-bottom: 150px;
+}
+
 </style>
