@@ -62,18 +62,19 @@ export default {
 <style scoped>
 
 .main_container {
-     max-width : 1642px;
-     margin: 0 auto;
-     background-color: white;
+    max-width: 164.2em;
+    margin: 0 auto;
+    background-color: white;
+    padding-bottom: 15.000em;
 }
 
 .connexion {
     text-align: left;
     color: black;
     font-weight: bold;
-    padding-left: 122px;
-    padding-top: 50px;
-    margin-top: 35px;
+    padding-left: 7.625em;
+    padding-top: 3.125em;
+    margin-top: 2.188em;
 }
     
 
@@ -85,12 +86,12 @@ export default {
 }
 
 .email {
-    margin-left: 122px;
+    margin-left: 7.625em;
 }
 
 .mdp {
     margin: auto;
-    padding-right: 65px;
+    padding-right: 4.063em;
 }
 
 .container_inputText{
@@ -99,14 +100,14 @@ export default {
 }
 
 .inputText{
-    padding-left: 24px;
-    padding-top: 32px;
-    padding-bottom: 32px; 
-    border-radius: 10px;
-    border: 1px solid #F1F1F1;
+    padding-left: 1.500em;
+    padding-top: 2.000em;
+    padding-bottom: 2.000em; 
+    border-radius: 0.625em;
+    border: 0.063em solid #F1F1F1;
     background-color:#F1F1F1 ;
     color: #1d1d1d;
-    font-size: 16px;
+    font-size: 1.000em;
     font-weight: 500;
     width: 100%;
     box-sizing: border-box; 
@@ -119,80 +120,80 @@ export default {
 
  @media screen and (max-width: 375px){
     .container_inputText{
-        width: 302px;
+        width: 18.875em;
         margin: 0 auto;
     }
 
     .inputText{
-        padding: 16px;
+        padding: 1.000em;
     }
 } 
 .input_left {
-    border-radius: 10px;
-    border: 1px solid #F1F1F1;
+    border-radius: 0.625em;
+    border: 0.063em solid #F1F1F1;
     background-color:#F1F1F1 ;
     color: #1d1d1d;
-    font-size: 16px;
+    font-size: 1.000em;
     font-weight: 500;
     width: 100%;
     box-sizing: border-box;
-    margin-left: 116px;
-    margin-right: 18px;
+    margin-left: 7.250em;
+    margin-right: 1.125em;
 }
 
 
 .input_right {
-    border-radius: 10px;
-    border: 1px solid #F1F1F1;
+    border-radius: 0.625em;
+    border: 0.063em solid #F1F1F1;
     background-color:#F1F1F1 ;
     color: #1d1d1d;
-    font-size: 16px;
+    font-size: 1.000em;
     font-weight: 500;
     width: 100%;
     box-sizing: border-box;
-    margin-right: 140px;
+    margin-right: 8.750em;
 }
 
 .button {
-    width: 156px;
-    height: 54px;
-    line-height: 54px;
+    width: 9.750em;
+    height: 3.375em;
+    line-height: 3.375em;
     background-color: #CE1137;
     /* padding: 16px 24px; */
-    border-radius: 10px;
+    border-radius: 0.625em;
     font-weight: bold;
     /* font-size: 18px; */
     text-decoration: none;
     color: #fff;
-    margin-left: 122px;
-    margin-top: 35px;
+    margin-left: 7.625em;
+    margin-top: 2.188em;
 }
 
 .btn_connexion {
     
-        border: 1px solid #CE1137;
+        border: 0.063em solid #CE1137;
         color: white;
         transition: 400ms ease-in-out;
         text-decoration: none;
 }
 
 .button_2 {
-    width: 156px;
-    height: 54px;
-    line-height: 54px;
+    width: 9.750em;
+    height: 3.375em;
+    line-height: 3.375em;
     background-color: #CE1137;
     /* padding: 16px 24px; */
-    border-radius: 10px;
+    border-radius: 0.625em;
     font-weight: bold;
     /* font-size: 18px; */
     text-decoration: none;
     color: #fff;
-    margin-left: 122px;
-    margin-top: 35px;
+    margin-left: 7.625em;
+    margin-top: 2.188em;
 }
 
 .btn_create {
-    border: 1px solid #CE1137;
+    border: 0.063em solid #CE1137;
     color: white;
     transition: 400ms ease-in-out;
     text-decoration: none;
@@ -203,21 +204,21 @@ export default {
 
     
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 23.438em) {
 
     }
 
     .text_mdp {
     text-align: right;
-    margin-right: 140px;
+    margin-right: 8.750em;
     font-weight: bold;
     }
 
     .inscription {
     text-align: left;
-    margin-left: 122px;
-    margin-top: 80px;
-    margin-bottom: 56px;
+    margin-left: 7.625em;
+    margin-top: 5.000em;
+    margin-bottom: 3.500em;
     }
 
 </style>
