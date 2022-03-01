@@ -4,7 +4,9 @@
       <a href="#" class="card__back-text">{{ linkContent }}
       <img alt="arrow right" src="@/assets/images/long_arrow.svg"></a>
   </div> -->
-    <a href="#" class="card__back">
+  
+  <div class="container__card__back">
+      <a href="#" class="card__back">
         <div class="card__back__content">
            <div class="card__back__content-left">
                 <span>{{ linkContent }}</span>
@@ -14,6 +16,7 @@
             </div>
         </div>
     </a>
+  </div>
 
 </template>
 
@@ -30,9 +33,17 @@ export default {
 <style scoped>
 @import url('../../assets/css/style.css');
 
+
+    .container__card__back{
+        width: 812px;
+        margin-bottom: 1.6em;
+        margin-right: 1.6em;
+        display: inline-block;
+    }
+
     .card__back{
         text-decoration: none;
-        display: inline-block;
+        width: 100%;
     }
 
     .card__back__content{
@@ -40,6 +51,7 @@ export default {
         padding: 4em;
         display:flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     .card__back__content-left{
@@ -50,6 +62,11 @@ export default {
     }
 
     @media screen and (max-width: 375px) {
+
+        .container__card__back{
+            width: 100%;
+            margin-right: 0;
+        } 
 
         .card__back{
             width: 100%;
@@ -62,6 +79,7 @@ export default {
         .card__back__content-left{
             font-size: 1.6em;
             margin-right: 0;
+            width: 100%;
             font-family: 'Fellix SemiBold';
         }
 

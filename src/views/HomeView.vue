@@ -2,7 +2,7 @@
 
 
   <div class="home">
-    <ButtonBack linkContent='Créer mon guide de voyage' />
+    <ButtonBack linkContent="Accéder à la liste des points d'intérêts" />
   </div>
 </template>
 
