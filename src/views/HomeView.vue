@@ -13,7 +13,7 @@
 <script>
 // @ is an alias to /src
 
-import Supprimer from '@/components/CTA/Supprimer.vue';
+// import Supprimer from '@/components/CTA/Supprimer.vue';
 // import Retour from '@/components/CTA/Retour.vue';
 // import ButtonBack from '@/components/CTA/ButtonBack.vue';
 // import Button from '@/components/Button.vue'
@@ -24,7 +24,7 @@ import Supprimer from '@/components/CTA/Supprimer.vue';
 export default {
   name: 'HomeView',
   components: {
-    Supprimer
+  // Supprimer
   //   Retour,
   //   ButtonBack,
   //   Card,
