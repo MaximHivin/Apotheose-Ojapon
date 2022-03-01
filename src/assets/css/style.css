@@ -1,7 +1,17 @@
 html{
-  font-size: 50%;
-  font-size: calc(1em*0.5);
-}
+  font-size: 62.5%;
+  font-size: calc(1em * 0.625);
+  /* 1em = 10px */
+  --primary-color: #ce1137;
+  --medium-red: #e06880;
+  --regular-red: #eda8b6;
+  --light-red: #fbe9ed;
+  --secondary-color: #1d1d1d;
+  --medium-black: #6f6f6f;
+  --regular-black: #adadad;
+  --light-black: #eaeaea;
+  --grey-color: #f1f1f1;
+  }
 
 @font-face {
     font-family: "Fellix Light";

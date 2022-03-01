@@ -17,10 +17,7 @@
             porttitor purus posuere a. Morbi nec lacinia nisi, non pellentesque mi. Cras sagittis congue velit, a aliquam 
             nisl. Phasellus gravida felis convallis, congue ipsum feugiat, pretium turpis.<br><br><br>
 
-            Curabitur sit amet sapien sed orci placerat mollis eget sit amet quam. Maecenas et neque tincidunt, ultrices 
-            ligula et, vulputate sem. Suspendisse a mauris fringilla erat efficitur auctor. Nullam eget quam a arcu 
-            efficitur dignissim ut et erat. Quisque sit amet eros sit amet tellus eleifend interdum a non tortor. 
-            Pellentesque non sagittis ipsum. Aenean non sapien ultrices mi aliquet interdum nec at metus</p>
+            </p>
             <ul class="readmore_button">
                 <li>En savoir plus</li>
             </ul>
@@ -40,7 +37,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url('../assets/css/style.css');
 .container {
     max-width: 1642px;
@@ -90,6 +87,8 @@ h1 {
 }
 h2 {
     color: white;
+    font-family: "Fellix SemiBold";
+    font-size: 4.75em;
   
 }
 p {
@@ -98,6 +97,8 @@ p {
     height: 341px;
     padding-left: 16px;
     padding-right: 16px;
+    font-family: "Fellix Medium";
+    font-size: 2.25em;
     
 }
 .letter_japan {
@@ -120,6 +121,7 @@ p {
     text-align: center;
     margin-left: 16px;
     margin-bottom: 150px;
+    font-family: "Fellix Bold";
 }
 @media (max-width: 375px) {
 
@@ -136,29 +138,47 @@ p {
     .container__japan__content-left{
         width: 50rem;
     }
+    .container__japan__content-right {
+    text-align:left;
+    margin-left: 2em;
+    padding-right: 2em;
+    width: 100%;
+    
+    }
+    h2{
+        font-size: 3.5em;
+    }
+    p{
+        font-size: 2em;
+        width: 25em;
+    }
+
 
     .letter_japan{
-        width: 40em;
-        font-size: 8em;
+        display: block;
+        width: 5em;
+        font-size: 8.5em;
         -webkit-text-stroke: 2px #ce1137;
-        z-index: 1;
+        z-index: -1;
         color:black;
-        background-color: aqua;
         position:relative;
-        left: 1em;
-        top: 1em;
+        left: 0.3em;
+        top: 1.5em;
         
 
     }
     .photo1{
-        width: 50em;
-        height: 50em;
-        align-items: center;
+        width: 40em;
+        height: 40em;
+       margin-left: 7em;
 
     }
     .photo2{
         display: none;
 
+    }
+    .readmore_button{
+        font-family: "Fellix Bold";
     }
     
 }
