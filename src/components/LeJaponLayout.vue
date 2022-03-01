@@ -41,6 +41,7 @@ export default {
 </script>
 
 <style>
+@import url('../assets/css/style.css');
 .container {
     max-width: 1642px;
     margin: 0 auto;
@@ -119,6 +120,47 @@ p {
     text-align: center;
     margin-left: 16px;
     margin-bottom: 150px;
+}
+@media (max-width: 375px) {
+
+    .container {
+    max-width: 50em;
+    margin: 0 auto;
+    margin-top: 8em;
+    }
+    .container__japan{
+    display:flex;
+    width: 100%;
+    flex-direction: column;
+    }
+    .container__japan__content-left{
+        width: 50rem;
+    }
+
+    .letter_japan{
+        width: 40em;
+        font-size: 8em;
+        -webkit-text-stroke: 2px #ce1137;
+        z-index: 1;
+        color:black;
+        background-color: aqua;
+        position:relative;
+        left: 1em;
+        top: 1em;
+        
+
+    }
+    .photo1{
+        width: 50em;
+        height: 50em;
+        align-items: center;
+
+    }
+    .photo2{
+        display: none;
+
+    }
+    
 }
 
 </style>
