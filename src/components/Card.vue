@@ -1,15 +1,14 @@
 <template>
 <div class="card">
 
-      <img class="img-card" alt="image" src="../assets/japan-card1.jpg">
+      <img class="card__img" alt="image" src="../assets/japan-card1.jpg">
       
     <div class="card__content">
         <h3>Nom du point d'intérêt</h3>
         <div class="card__content__map-pin">
-             <span>
-             <img class="pin" alt="logo map pin" src="../assets/map-pin.svg">Localisation</span>
+             <span class="card__contgent__map__pin-content"><img class="pin" alt="logo map pin" src="../assets/map-pin.svg">Localisation</span>
         </div>
-        <span class="tag">Tag 2, Tag 3</span>
+        <span class="card__content-tag">Tag 2, Tag 3</span>
     </div>
 
 </div>
@@ -30,14 +29,14 @@ export default {
 
 .card {
     width: 536px;
-    height: 429px;
     box-shadow: 0px 7px 40px #0000001A;
     border-radius: 5px;
     background-color: #fff;
+    padding-bottom: 2.4em;
    
 }
 
-.img-card {
+.card__img {
     height: 250px;
     width: 536px;
     border-top-right-radius: 5px;
@@ -46,7 +45,7 @@ export default {
 }
 
 .card__content{
-    padding-left: 3em;
+    padding-left: 2.4em;
 }
 
 .card__content__map-pin span{
@@ -55,12 +54,13 @@ export default {
 }
 
 .card__content__map-pin img {
-    margin-right: 1em;
+    margin-right: 0.8em;
 }
 
 h3{
     font-family: 'Fellix Semibold';
-    font-size: 24px;
+    font-size: 2.4em;
+    margin-bottom: 0.8em;
     color: var(--primary-color);
 }
 
@@ -81,10 +81,17 @@ h3{
     margin-right: 1em;
 } */
 
-span {
-    color: #adadad;
+.card__contgent__map__pin-content {
+    color: var(--regular-black);
     font-family: 'Fellix Regular';
-    font-size: 2em;
+    font-size: 1.8em;
+    margin-bottom: 0.8em;
+}
+
+.card__content-tag{
+    color: var(--secondary-color);
+    font-family: 'Fellix Regular';
+    font-size: 1.8em;
 }
 
 /* span.tag {
@@ -93,16 +100,31 @@ span {
 } */
 
 @media screen and (max-width: 375px) {
-
+    
     .card {
-        width: 302px;
-        height: 256px;
+        max-width: 302px;
+        margin: 0 auto;
     }
 
-    .img-card {
+    .card__img {
        width: 302px;
        height: 135px; 
     }
+
+    h3{
+        font-size: 1.8em
+    }
+
+    .card__contgent__map__pin-content, .card__content-tag{
+        font-size: 1.4em;
+    }
+
+    /* .card {
+        width: 30.2em;
+        height: 256px;
+    }
+
+
 
     h2 {
         font-size: 18px;
@@ -118,9 +140,9 @@ span {
         width: 22px;
     }
 
-    span.tag {
+    .card__content-tag {
         font-size: 14px;
-    }
+    } */
 }
 
 </style>
