@@ -3,7 +3,7 @@
 
       <img class="img-card" alt="image" src="../assets/japan-card1.jpg">
 
-      <h2>Nom du point d'intérêt</h2>
+      <h3>Nom du point d'intérêt</h3>
 
         <div class="map-pin">
 
@@ -14,8 +14,6 @@
         </div>
 
         <span class="tag">Tag 2, Tag 3</span>
-
-
 </div>
 </template>
 
@@ -29,31 +27,39 @@ export default {
 
 <style>
 
+@import url('../assets/css/style.css');
+
+
 .card {
-    width: 536px;
+    width: 352px;
     height: 429px;
     box-shadow: 0px 7px 40px #0000001A;
     border-radius: 5px;
     margin: 10px auto;
     display: flex;
     flex-direction: column;
+    background-color: #fff;
    
 }
 
 .img-card {
     height: 250px;
-    width: 536px;
+    width: 352px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 
 }
 
-h2,span {
+h3{
+    font-family: 'Fellix Semibold';
+    color:
+}
+
+h3,span {
     display: flex;
     justify-content: left;
     padding-left: 24px;
     color: #1d1d1d;
-    
 }
 
 .map-pin {
@@ -68,6 +74,7 @@ h2,span {
 
 span {
     color: #adadad;
+    font-family: 'Fellix Bold';
 }
 
 span.tag {
