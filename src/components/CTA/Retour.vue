@@ -1,17 +1,20 @@
 <template>
 
-<a href="#" class="return">
-    <div class="return__content">
-        <img class="return__content-left" alt="arrow left" src="@/assets/arrow-left.svg">
-        <span class="return__content-right">Retour</span>
-    </div>
-</a>
+    <a href="#" class="return">
+        <div class="return__content">
+            <img class="return__content-left" alt="arrow left" src="@/assets/arrow-left.svg">
+            <span class="return__content-right">{{ textBtn }}</span>
+        </div>
+    </a>
 
 </template>
 
 <script>
 export default {
     name: 'Retour',
+    props: {
+        textBtn: String
+    }
 
 
 }
@@ -19,6 +22,10 @@ export default {
 
 <style scoped>
 @import url('../../assets/css/style.css');
+
+    .return{
+        text-decoration: none;
+    }
 
     .return__content {
         display: flex;
@@ -29,8 +36,7 @@ export default {
         font-size: 1.8em;
         font-family: 'Fellix SemiBold';
         margin-left: 0.8em; 
-        /* color: var(--secondary-color) */
-        color:#fff;
+        color: var(--secondary-color)
     }
 
     img {

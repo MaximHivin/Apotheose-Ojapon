@@ -2,7 +2,7 @@
 
 
   <div class="home">
-    <Retour />
+    <Retour textBtn="Texte à mettre"/>
   </div>
 </template>
 
