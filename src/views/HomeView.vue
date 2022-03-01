@@ -8,12 +8,14 @@
     <Ajouter/>
     <CirclePi/>
     <InputText />
+    <Tag TagContent="Nom du tag"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
+import Tag from '@/components/formulaire/Tag.vue'
 // import InputText from '@/components/formulaire/InputText.vue'
 // import Supprimer from '@/components/CTA/Supprimer.vue';
 // import Retour from '@/components/CTA/Retour.vue';
@@ -34,6 +36,7 @@ export default {
   //   CirclePi,
   //   Button
   // InputText
+  Tag
   }
 }
 </script>
