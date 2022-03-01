@@ -18,15 +18,24 @@ export default {
 
 <style>
 
+@font-face {
+  font-family: 'Fellix Semibold';
+  src: url('../assets/fonts/Fellix-SemiBold.ttf') format('truetype');
+}
+    
+    .btn-components{
+      display: inline-block;
+    }
+
     .btn-connection {
-       width: 196px;
-       height: 54px;
-       line-height: 54px;
-       background-color: #CE1137;
-       padding: 16px 24px;
-       border-radius: 10px;   
-       font-weight: bold;
+       /* width: 196px;
+       height: 54px; */
+      line-height: 54px;
+      background-color: #CE1137;
+      padding: 16px 24px;
+      border-radius: 10px;   
       font-size: 18px;
+      font-family: 'Fellix Semibold';
       text-decoration: none;
       color: #fff;
     }
