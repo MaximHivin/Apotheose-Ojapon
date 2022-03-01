@@ -2,7 +2,7 @@
   <div class="container_circlepi">
       <div class="circlepi">
           <div class="circlepi__left">
-              <img src="../assets/pi1.jpg">
+              <img src="../assets/images/circlepi1.png">
           </div>
 
           <div class="circlepi__right">
