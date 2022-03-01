@@ -7,7 +7,7 @@
 
 import LeJaponLayout from '@/components/LeJaponLayout.vue'
 export default {
-    name: 'Le_JaponView',
+    name: 'LeJaponView',
     components: {
     
     LeJaponLayout
