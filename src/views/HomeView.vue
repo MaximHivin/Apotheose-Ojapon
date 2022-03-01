@@ -3,7 +3,6 @@
 
   <div class="home">
     <HeaderLayout/>
-    <HeaderLayoutMobile/>
     <ConnectionLayout/>
     <FooterLayout />
     <FooterLayoutMobile />
@@ -14,7 +13,6 @@
 // @ is an alias to /src
 
 import HeaderLayout from '@/components/HeaderLayout.vue';
-import HeaderLayoutMobile from '@/components/HeaderLayoutMobile.vue';
 import FooterLayout from '@/components/FooterLayout.vue';
 import FooterLayoutMobile from '@/components/FooterLayoutMobile.vue'
 import ConnectionLayout from '@/components/ConnectionLayout.vue';
@@ -26,7 +24,6 @@ export default {
     FooterLayout,
     FooterLayoutMobile,
     HeaderLayout,
-    HeaderLayoutMobile,
     ConnectionLayout,
     
   }
