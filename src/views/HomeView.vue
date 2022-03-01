@@ -7,12 +7,14 @@
     <Card/>
     <Ajouter/>
     <CirclePi/>
+    <InputText />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
+// import InputText from '@/components/formulaire/InputText.vue'
 // import Supprimer from '@/components/CTA/Supprimer.vue';
 // import Retour from '@/components/CTA/Retour.vue';
 // import ButtonBack from '@/components/CTA/ButtonBack.vue';
@@ -31,6 +33,7 @@ export default {
   //   Ajouter,
   //   CirclePi,
   //   Button
+  // InputText
   }
 }
 </script>
