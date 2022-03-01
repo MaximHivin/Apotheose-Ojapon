@@ -140,7 +140,7 @@ p {
     }
     .container__japan__content-right {
     text-align:left;
-    margin-left: 2em;
+    margin-left: 4em;
     padding-right: 2em;
     width: 100%;
     
@@ -150,27 +150,27 @@ p {
     }
     p{
         font-size: 2em;
-        width: 25em;
+        width: 15em;
     }
 
 
     .letter_japan{
         display: block;
         width: 5em;
-        font-size: 8.5em;
+        font-size: 5em;
         -webkit-text-stroke: 2px #ce1137;
         z-index: -1;
         color:black;
         position:relative;
-        left: 0.3em;
-        top: 1.5em;
+        left: 0.7em;
+        top: 2.1em;
         
 
     }
     .photo1{
-        width: 40em;
-        height: 40em;
-       margin-left: 7em;
+        width: 31em;
+        height: 30em;
+       margin-left: 5.5em;
 
     }
     .photo2{
@@ -179,6 +179,7 @@ p {
     }
     .readmore_button{
         font-family: "Fellix Bold";
+        margin-top: 10em;
     }
     
 }
