@@ -42,7 +42,7 @@ export default {
     }
 
     @media screen and (max-width: 375px) {
-
+        
         .delete__element {
             height: 4em;
             width: 4em;

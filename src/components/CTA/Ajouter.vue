@@ -1,7 +1,9 @@
 <template>
+<a href="#" class="add">
   <div class="add__element">
       <img alt="add element" src="@/assets/plus.svg">
   </div>
+  </a>
 </template>
 
 <script>
@@ -13,6 +15,10 @@ export default {
 
 <style>
 @import url('../../assets/css/style.css');
+
+    .add{
+        display:inline-block;
+    }
 
     .add__element {
         height: 5em;
@@ -28,7 +34,7 @@ export default {
     }
 
     .add__element:hover{
-        margin-top: 1.6em;
+        margin-top: 1.2em;
     }
 
     img {

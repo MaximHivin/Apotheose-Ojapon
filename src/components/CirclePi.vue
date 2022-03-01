@@ -1,8 +1,19 @@
 <template>
-  <div class="container_circlepi">
+            <div class="card__pi">
+        <div class="card__pi__left"><img src="../assets/images/circlepi1.png"></div>
+        <div class="card__pi__right">
+         <span class="card__pi__right-tag">Lieu du point d'intérêt</span>
+            <span class="card__pi__right-name">Point d'intérêt 1</span>
+        </div>
+    </div>
+
+
+
+
+  <!-- <div class="container_circlepi">
       <div class="circlepi">
           <div class="circlepi__left">
-              <img src="../assets/pi1.jpg">
+              <img src="../assets/images/circlepi1.png">
           </div>
 
           <div class="circlepi__right">
@@ -10,7 +21,7 @@
               <span>Nom du point d'intérêt</span></p>
           </div>
       </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -20,47 +31,53 @@ export default {
 </script>
 
 <style>
+@import url('../assets/css/style.css');
 
 
-.container_circlepi{
-    max-width: 322px;
-}
 
-.circlepi{
-    width: 100%;
-    display: flex;
+.card__pi{
+    display:flex;
     align-items: center;
-    justify-content: center;
 }
 
-.circlepi__left img{
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
+.card__pi__right{
+    margin-left: 2.4em
 }
 
-.circlepi__right{
-    font-size: 16px;
-    color: #1d1d1d;
-    text-align: start;
-    margin-left: 24px;
+.card__pi__right-tag{
+    display:block;
+    font-size: 1.6em;
+    color: #fff;
+    font-family: 'Fellix Light';
 }
 
-.circlepi__right span{
-    font-size: 18px;
-    font-weight: 600;
+.card__pi__right-name{
+    display: block;
+    font-size: 1.8em;
+    color: #fff;
+    font-family: 'Fellix SemiBold';
 }
+
+
+
 
 @media screen and (max-width: 375px){
-    .container_circlepi{
-        max-width: initial;
+    .card__pi{
+        width: 302px;
+        justify-content: center;
     }
-    .circlepi{
+
+    .card__pi__left img{
         display: block;
+        margin: 0 auto;
     }
-    .circlepi__right{
-        text-align: center;
-        margin-left:0;
+
+    .card__pi__right{
+        margin-left: 2.4em;
+    }
+
+    .card__pi__right-tag, .card__pi__right-name{
+        text-align: left;
     }
 }
 
