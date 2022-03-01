@@ -1,20 +1,15 @@
 <template>
 <div class="card">
 
-      <img class="img-card" alt="image" src="../assets/japan-card1.jpg">
-
-      <h2>Nom du point d'intérêt</h2>
-
-        <div class="map-pin">
-
-                <span>
-                     <img class="pin" alt="logo map pin" src="../assets/map-pin.svg">
-                Localisation</span>
-        
+      <img class="card__img" alt="image" src="../assets/japan-card1.jpg">
+      
+    <div class="card__content">
+        <h3>Nom du point d'intérêt</h3>
+        <div class="card__content__map-pin">
+             <span class="card__contgent__map__pin-content"><img class="pin" alt="logo map pin" src="../assets/map-pin.svg">Localisation</span>
         </div>
-
-        <span class="tag">Tag 2, Tag 3</span>
-
+        <span class="card__content-tag">Tag 2, Tag 3</span>
+    </div>
 
 </div>
 </template>
@@ -29,18 +24,19 @@ export default {
 
 <style>
 
+@import url('../assets/css/style.css');
+
+
 .card {
     width: 536px;
-    height: 429px;
     box-shadow: 0px 7px 40px #0000001A;
     border-radius: 5px;
-    margin: 10px auto;
-    display: flex;
-    flex-direction: column;
+    background-color: #fff;
+    padding-bottom: 2.4em;
    
 }
 
-.img-card {
+.card__img {
     height: 250px;
     width: 536px;
     border-top-right-radius: 5px;
@@ -48,45 +44,87 @@ export default {
 
 }
 
-h2,span {
-    display: flex;
-    justify-content: left;
-    padding-left: 24px;
-    color: #1d1d1d;
-    
+.card__content{
+    padding-left: 2.4em;
 }
 
-.map-pin {
+.card__content__map-pin span{
+    display: flex;
+    align-items: center;
+}
+
+.card__content__map-pin img {
+    margin-right: 0.8em;
+}
+
+h3{
+    font-family: 'Fellix Semibold';
+    font-size: 2.4em;
+    margin-bottom: 0.8em;
+    color: var(--primary-color);
+}
+
+/* h3,span {
+    display: flex;
+    justify-content: left;
+    padding-left: 3em;
+    color: #1d1d1d;
+} */
+
+/* .map-pin {
     display: flex;
     color: #adadad;
     line-height: 2;
+} */
+
+/* .pin {
+    margin-right: 1em;
+} */
+
+.card__contgent__map__pin-content {
+    color: var(--regular-black);
+    font-family: 'Fellix Regular';
+    font-size: 1.8em;
+    margin-bottom: 0.8em;
 }
 
-.pin {
-    margin-right: 8px;
+.card__content-tag{
+    color: var(--secondary-color);
+    font-family: 'Fellix Regular';
+    font-size: 1.8em;
 }
 
-span {
-    color: #adadad;
-}
-
-span.tag {
-
+/* span.tag {
     margin-top: 20px;
     color: #1d1d1d;
-}
+} */
 
 @media screen and (max-width: 375px) {
-
+    
     .card {
-        width: 302px;
-        height: 256px;
+        max-width: 302px;
+        margin: 0 auto;
     }
 
-    .img-card {
+    .card__img {
        width: 302px;
        height: 135px; 
     }
+
+    h3{
+        font-size: 1.8em
+    }
+
+    .card__contgent__map__pin-content, .card__content-tag{
+        font-size: 1.4em;
+    }
+
+    /* .card {
+        width: 30.2em;
+        height: 256px;
+    }
+
+
 
     h2 {
         font-size: 18px;
@@ -102,9 +140,9 @@ span.tag {
         width: 22px;
     }
 
-    span.tag {
+    .card__content-tag {
         font-size: 14px;
-    }
+    } */
 }
 
 </style>

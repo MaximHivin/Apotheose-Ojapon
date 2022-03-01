@@ -5,7 +5,7 @@
 <script>
 import HeaderLayoutMobile from '@/components/HeaderLayoutMobile.vue'
 export default {
-    name: 'Le_JaponView',
+    name: 'LeJaponView',
     components: {
     HeaderLayoutMobile,
     
