@@ -1,29 +1,29 @@
 <template>
 <section class="ConnectionLayout">
-<div class="main_container">
-    <div class="connexion">
-        <h1>Connectez-vous à votre compte</h1>
-    </div>
-    <div class="email_mdp">
-        <p class="email">Votre email:</p>
-        <p class="mdp">Votre mot de passe:</p>
+    <div class="main_container">
+        <div class="connexion">
+            <h1>Connectez-vous à votre compte</h1>
+        </div>
+        <div class="email_mdp">
+            <p class="email">Votre email:</p>
+            <p class="mdp">Votre mot de passe:</p>
         </div>
         
         
         
         <div class="container_inputText">
-            <div class="input_left">
-      <input  type="text" name="inputText" id="inputText" placeholder="*******" class="inputText">
-      </div>
-      <div class="input_right">
-      <input type="text" name="inputText" id="inputText" placeholder="*******" class="inputText">
-      </div>
-  </div>
-  <div class="text_mdp">
-            <p>Mot de passe oublié ?</p>
+        <div class="input_left">
+            <input  type="text" name="inputText" id="inputText" placeholder="*******" class="inputText">
+        </div>
+        <div class="input_right">
+            <input type="text" name="inputText" id="inputText" placeholder="*******" class="inputText">
+        </div>
+        </div>
+        <div class="text_mdp">
+             <p>Mot de passe oublié ?</p>
         </div>
         <div class="button">
-        <a href="#" class="btn_connexion">Se connecter</a>
+            <a href="#" class="btn_connexion">Se connecter</a>
         </div>
 
         
@@ -32,7 +32,7 @@
         </div>
 
         <div class="button_2">
-        <a href="#" class="btn_create">Créez un compte</a>
+            <a href="#" class="btn_create">Créez un compte</a>
         </div>
 
 
@@ -62,19 +62,22 @@ export default {
 <style scoped>
 
 .main_container {
-    max-width: 164.2em;
+    max-width: 102.625em;
     margin: 0 auto;
     background-color: white;
     padding-bottom: 15.000em;
+    
 }
 
 .connexion {
     text-align: left;
     color: black;
-    font-weight: bold;
-    padding-left: 7.625em;
+    padding-left: 3em;
     padding-top: 3.125em;
     margin-top: 2.188em;
+    font-family: "Fellix SemiBold";
+    font-size: 2.375em;
+    
 }
     
 
@@ -83,15 +86,18 @@ export default {
     display: flex;
     font-weight: bold;
     color: black;
+    font-family: "Fellix SemiBold";
+    font-size: 1.500em;
 }
 
 .email {
-    margin-left: 7.625em;
+    margin-left: 5em;
+;
 }
 
 .mdp {
-    margin: auto;
-    padding-right: 4.063em;
+        margin: auto;
+    padding-right: 2.5em;
 }
 
 .container_inputText{
@@ -118,14 +124,14 @@ export default {
     font-weight: 500;
 }
 
- @media screen and (max-width: 375px){
+ @media screen and (max-width: 23.438em){
     .container_inputText{
-        width: 18.875em;
-        margin: 0 auto;
+    width: 18.875em;
+    margin: 0 auto;
     }
 
     .inputText{
-        padding: 1.000em;
+    padding: 1.000em;
     }
 } 
 .input_left {
@@ -167,14 +173,15 @@ export default {
     color: #fff;
     margin-left: 7.625em;
     margin-top: 2.188em;
+    font-family: "Fellix Bold";
 }
 
 .btn_connexion {
     
-        border: 0.063em solid #CE1137;
-        color: white;
-        transition: 400ms ease-in-out;
-        text-decoration: none;
+    border: 0.063em solid #CE1137;
+    color: white;
+    transition: 400ms ease-in-out;
+    text-decoration: none;
 }
 
 .button_2 {
@@ -190,6 +197,7 @@ export default {
     color: #fff;
     margin-left: 7.625em;
     margin-top: 2.188em;
+    font-family: "Fellix Bold";
 }
 
 .btn_create {
@@ -211,14 +219,18 @@ export default {
     .text_mdp {
     text-align: right;
     margin-right: 8.750em;
-    font-weight: bold;
+    font-family: "Fellix SemiBold";
+    font-size: 1.125em;
     }
 
     .inscription {
     text-align: left;
-    margin-left: 7.625em;
+    margin-left: 3em;
     margin-top: 5.000em;
     margin-bottom: 3.500em;
+    font-family: "Fellix SemiBold";
+    font-size: 2.375em;
+    color: black;
     }
 
 </style>
