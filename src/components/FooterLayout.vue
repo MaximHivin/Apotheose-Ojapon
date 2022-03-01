@@ -30,8 +30,8 @@ export default {
                         route: '/lejapon'
                     },
                     {
-                        name: 'PointsInterets',
-                        route: '/pointsinterets'
+                        name: 'PointsInteret',
+                        route: '/pointsinteret'
                     },
                     {
                         name: 'BlogsVoyageurs',
