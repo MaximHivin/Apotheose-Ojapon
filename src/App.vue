@@ -12,11 +12,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-nav {
+/* #nav {
   padding: 30px;
 }
 
-nav a {
+#nav a {
   font-weight: bold;
   color: #2c3e50;
 }
@@ -26,8 +26,8 @@ body {
 
 nav a.router-link-exact-active {
   color: #ce1137;
-}
+}*/
 body {
-  background-color: black;
+  background-color: #1D1D1D;
 }
 </style>

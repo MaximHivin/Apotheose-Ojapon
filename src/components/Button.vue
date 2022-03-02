@@ -21,7 +21,7 @@ export default {
 .button-content{
   background-color: var(--primary-color);
   color:#fff;
-  padding: 1.2em 2.4em;
+  padding: 1em 2em;
   font-size: 1.8em;
   text-decoration: none;
   font-family: 'Fellix Bold';

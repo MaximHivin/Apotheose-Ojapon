@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Supprimer />
+    <!-- <Supprimer />
     <Retour textBtn="Texte à mettre"/>
     <ButtonBack linkContent="Accéder à la liste des points d'intérêts" />
     <Button btnName="Texte à mettre" />
@@ -10,13 +10,15 @@
     <InputText />
     <Tag TagContent="Nom du tag"/>
     <TextArea />
-    <InputSearch />
+    <InputSearch /> -->
+    <HeaderLayout />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
+import HeaderLayout from '@/components/HeaderLayout.vue'
 // import Card from '@/components/Card.vue'
 // import InputSearch from '@/components/formulaire/InputSearch.vue'
 // import TextArea from '@/components/formulaire/TextArea.vue'
@@ -34,6 +36,7 @@ export default {
   name: 'HomeView',
   components: {
 
+HeaderLayout
   // Supprimer
   // Retour,
   // ButtonBack
