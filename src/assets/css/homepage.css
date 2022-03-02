@@ -72,7 +72,23 @@ body{
 
 /* Section sur le Japon */
 
+.main_container{
+    position:relative;
+}
+
+.lejapon_word{
+    position: absolute;
+    color:var(--secondary-color);
+    font-size: 10em;
+    top:-80px;
+    left:-80px;
+    font-family: 'Fellix SemiBold';
+    text-shadow: var(--primary-color) 1px 1px, var(--primary-color) -1px 1px, var(--primary-color) -1px -1px, var(--primary-color) 1px -1px
+    /* z-index: 80; */
+}
+
 .lejapon{
+    position: relative;
     margin-top:20em;
     margin-bottom:20em;
     display: flex;

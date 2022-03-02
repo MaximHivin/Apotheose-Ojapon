@@ -24,8 +24,9 @@
           </div> 
         </div>
   </div>
-  
+
 <div class="main_container">
+  <div class="lejapon_word">日本の歴史</div>
   <section class="lejapon">
     <!-- <div class="lejapon-word">日本の歴史</div> -->
     <div class="lejapon__content-left">
@@ -46,6 +47,10 @@
     </div>
 
   </section>
+</div>
+
+<div class="main_container">
+
 </div>
 
 </body>
