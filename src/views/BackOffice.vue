@@ -1,16 +1,27 @@
 <template>
-  <div>
+<section class="backoffice">
 
-      <h1>Bonjour <span>User</span></h1>
-      <p>Vous souhaitez :</p>
-      
-      <CreationGuide LinkContent="Créer un guide voyage" />
-      <CreationGuide LinkContent="Créer un guide voyage" />
-      <CreationGuide LinkContent="Créer un guide voyage" />
-      <CreationGuide LinkContent="Créer un guide voyage" />
+    <div class="main_container">
 
-      <!-- <FooterLayoutMobile /> -->
-  </div>
+            <h1>Bonjour <span>User</span></h1>
+            <p>Vous souhaitez :</p>
+
+        <div class="container__backoffice__link">
+           
+            <CreationGuide LinkContent="Créer un guide voyage" />
+            <CreationGuide LinkContent="Créer un guide voyage" />
+            <CreationGuide LinkContent="Créer un guide voyage" />
+            <CreationGuide LinkContent="Créer un guide voyage" />
+
+        </div>
+
+    </div>
+  
+
+    <!-- <FooterLayoutMobile /> -->
+</section>
+
+  
 </template>
 
 <script>
@@ -24,7 +35,7 @@ import CreationGuide from '@/components/CTA/CreationGuide.vue'
 export default {
     name: 'BackOffice',
     components: {
-        CreationGuide,
+        CreationGuide
         // FooterLayoutMobile
 
     }
@@ -34,10 +45,14 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
+
+body {
+    background-color: #fff;
+}
 
 h1 {
-    color: #fff;
+    color: #1d1d1d;
     font-size: 24px;
     margin: 40px 20px 0;
     text-align: left;
@@ -49,7 +64,8 @@ span {
 }
 
 p {
-    color: #fff;
+    color: #1d1d1d;
+    font-weight: bold;
     text-align: left;
     font-size: 18px;
     margin: 24px 20px 20px;

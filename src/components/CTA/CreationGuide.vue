@@ -6,6 +6,7 @@
 </template>
 
 <script>
+
 export default {
     name: 'CreationGuide',
     props: {
@@ -13,27 +14,27 @@ export default {
     }
 
 }
+
 </script>
 
-<style scoped>
+<style>
 
     .link-to {
         position: relative;
         display: flex;
         align-items: center;
         text-align: left;
-        margin-bottom: 10px;
-        padding-left: 40px;
+        margin-bottom: 1em;
+        padding-left: 4em;
         width: 812px;
         height: 110px;
         background-color: #CE1137;
         
-
     }
 
     img {
         position: absolute;
-        right: 40px;
+        right: 4em;
         width: 63px;
         height: 32px;
     }
@@ -60,7 +61,7 @@ export default {
         }
 
         .create-link {
-            font-size: 14px;
+            font-size: 1.4em;
             
         }
 
