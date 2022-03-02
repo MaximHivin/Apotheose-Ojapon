@@ -30,6 +30,7 @@
 export default {
   name: 'HomeView',
   components: {
+
   // Supprimer
   //   Retour,
   //   ButtonBack,
