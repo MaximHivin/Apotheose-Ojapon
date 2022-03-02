@@ -21,7 +21,7 @@
 // import InputText from '@/components/formulaire/InputText.vue'
 // import Supprimer from '@/components/CTA/Supprimer.vue';
 // import Retour from '@/components/CTA/Retour.vue';
-// import ButtonBack from '@/components/CTA/ButtonBack.vue';
+import ButtonBack from '@/components/CTA/ButtonBack.vue';
 // import Button from '@/components/Button.vue'
 // import CirclePi from '@/components/CirclePi.vue';
 // import Card from '@/components/Card.vue';
@@ -33,7 +33,7 @@ export default {
 
   // Supprimer
   //   Retour,
-  //   ButtonBack,
+    ButtonBack
   //   Card,
   //   Ajouter,
   //   CirclePi,
