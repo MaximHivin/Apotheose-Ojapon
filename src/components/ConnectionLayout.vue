@@ -92,7 +92,7 @@ export default {
 
 .email {
     margin-left: 5em;
-;
+
 }
 
 .mdp {
