@@ -4,7 +4,7 @@
     <Retour textBtn="Texte à mettre"/>
     <ButtonBack linkContent="Accéder à la liste des points d'intérêts" />
     <Button btnName="Texte à mettre" />
-    <Card/>
+    <Card namePI="Texte à mettre"/>
     <Ajouter/>
     <CirclePi/>
     <InputText />
@@ -17,6 +17,7 @@
 <script>
 // @ is an alias to /src
 
+// import Card from '@/components/Card.vue'
 // import InputSearch from '@/components/formulaire/InputSearch.vue'
 // import TextArea from '@/components/formulaire/TextArea.vue'
 // import Tag from '@/components/formulaire/Tag.vue'
@@ -34,16 +35,17 @@ export default {
   components: {
 
   // Supprimer
-  //   Retour,
+  // Retour,
   // ButtonBack
-  //   Card,
-  //   Ajouter,
-  //   CirclePi,
+  // Card,
+  // Ajouter,
+  // CirclePi,
   // Button
   // InputText
   // Tag
   // TextArea
   // InputSearch
+  // Card
   }
 }
 </script>
