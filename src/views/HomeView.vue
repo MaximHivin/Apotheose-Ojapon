@@ -50,7 +50,30 @@
 </div>
 
 <div class="main_container">
+  <section class="pi">
+    <div class="pi__content">
+      <div class="pi__content-title">
+        <h2>Parcourez nos lieux insolites</h2>
+      </div>
+      <div class="content-btn">
+        <Button btnName="Afficher tout" />
+      </div>
+    </div>
+    <p>Découvrez les points d'intérêt sélectionnés par l'équipe O'Japon. Vous pouvez accéder aux informations des différents P.I en cliquant dessus. Alors n'hésitez pas :-)</p>
 
+    <div class="pi__list__top">
+      <div class="pi__list__top-left"><span>Osaka</span></div>
+      <div class="pi__list__top-center"></div>
+      <div class="pi__list__top-right"><span>Matsumoto</span></div>
+    </div>
+
+    <div class="pi__list__bottom">
+      <div class="pi__list__bottom-right"></div>
+      <div class="pi__list__bottom-center"><span>Mont Fuji</span></div>
+      <div class="pi__list__bottom-left"></div>
+    </div>
+
+  </section>
 </div>
 
 </body>

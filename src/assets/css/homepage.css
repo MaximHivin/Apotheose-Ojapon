@@ -26,10 +26,10 @@ body{
 
 .header__desktop{
     width: 100%;
-    height: 100vh;
     background-image: linear-gradient(rgba(7, 7, 7, 0.247), rgba(7, 7, 7, 0.247)), url('../../assets/images/header_background.jpg');
     background-size: cover;
     background-position: center;
+    height: 100vh;
 }
 
 .header__desktop-title{
@@ -154,3 +154,64 @@ body{
     z-index:2;
     margin-left: 1.6em;
 }
+
+
+/* Section Parcourez nos lieux insolites */
+
+.pi{
+    margin-top: 20em;
+    margin-bottom: 20em;
+}
+
+.pi__content{
+    display:flex;
+    align-items: center;
+}
+
+.pi__content-title h2{
+    font-size: 3.8em;
+    font-family: 'Fellix SemiBold';
+    color:#fff;
+}
+
+.pi__content-title{
+    margin-right: 4em;
+}
+
+.pi p {
+    color:#fff;
+    font-family: 'Fellix Regular';
+    font-size: 1.8em;
+    line-height: 1.4;
+    width: 50%;
+}
+
+.pi__list__top, .pi__list__bottom{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8em;
+    margin-bottom:8em;
+}
+
+
+.pi__list__top span, .pi__list__bottom-center span{
+    color: #fff;
+    font-size: 16em;
+    font-family: 'Presque';
+    text-align: center;
+}
+
+.pi__list__top-center,
+.pi__list__bottom-right,
+.pi__list__bottom-left{
+    width: 250px;
+    height: 4px;
+    background: var(--primary-color);
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+
