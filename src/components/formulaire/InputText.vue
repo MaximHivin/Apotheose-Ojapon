@@ -1,7 +1,7 @@
 <template>
-  <div class="container_inputText">
+
       <input type="text" name="inputText" id="inputText" placeholder="Votre texte" class="container__inputText-content">
-  </div>
+
 </template>
 
 <script>
@@ -14,9 +14,6 @@ export default {
 <style>
 @import url('../../assets/css/style.css');
 
-.container_inputText{
-    max-width: 748px;
-}
 
 .container__inputText-content{
     padding-left: 2.4em;
@@ -34,7 +31,7 @@ export default {
 }
 
 .container__inputText-content::placeholder{
-    color:#ADADAD;
+    color:var(--regular-black);
     font-weight: 500;
 }
 

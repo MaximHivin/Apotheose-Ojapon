@@ -1,9 +1,9 @@
 <template>
-
     <div class="container__tag">
-            <label for="tag" class="container__tag-label">{{TagContent}}</label>
-            <input type="checkbox" name="tag" id="tag" class="container__tag-input">
-    </div>
+        <label for="tag" class="container__tag-label">{{TagContent}}</label>
+        <input type="checkbox" name="tag" id="tag" class="container__tag-input">
+</div>
+
 
 </template>
 
@@ -22,6 +22,7 @@ export default {
 .container__tag{
     display:flex;
     align-items: center;
+    width: 100%;
 }
 
 .container__tag-label{

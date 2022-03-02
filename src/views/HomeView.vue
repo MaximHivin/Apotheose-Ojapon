@@ -1,12 +1,34 @@
 <template>
   <div class="home">
+<<<<<<< HEAD
     <RegistrationForm/>
+=======
+    <!-- <Supprimer />
+    <Retour textBtn="Texte à mettre"/>
+    <ButtonBack linkContent="Accéder à la liste des points d'intérêts" />
+    <Button btnName="Texte à mettre" />
+    <Card namePI="Texte à mettre"/>
+    <Ajouter/>
+    <CirclePi localisationPI="Texte à mettre" namePI="Texte à mettre"/>
+    <InputText />
+    <Tag TagContent="Nom du tag"/>
+    <TextArea />
+    <InputSearch /> -->
+    <HeaderLayout />
+>>>>>>> develop
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+<<<<<<< HEAD
 import RegistrationForm from '@/components/RegistrationForm.vue'
+=======
+
+import HeaderLayout from '@/components/HeaderLayout.vue'
+// import Card from '@/components/Card.vue'
+// import InputSearch from '@/components/formulaire/InputSearch.vue'
+>>>>>>> develop
 // import TextArea from '@/components/formulaire/TextArea.vue'
 // import Tag from '@/components/formulaire/Tag.vue'
 // import InputText from '@/components/formulaire/InputText.vue'
@@ -21,17 +43,24 @@ import RegistrationForm from '@/components/RegistrationForm.vue'
 export default {
   name: 'HomeView',
   components: {
+<<<<<<< HEAD
     RegistrationForm,
+=======
+
+HeaderLayout
+>>>>>>> develop
   // Supprimer
-  //   Retour,
-  //   ButtonBack,
-  //   Card,
-  //   Ajouter,
-  //   CirclePi,
-  //   Button
+  // Retour,
+  // ButtonBack
+  // Card,
+  // Ajouter,
+  // CirclePi
+  // Button
   // InputText
   // Tag
   // TextArea
+  // InputSearch
+  // Card
   }
 }
 </script>
