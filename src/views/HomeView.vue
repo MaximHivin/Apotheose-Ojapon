@@ -1,21 +1,12 @@
 <template>
   <div class="home">
-    <Supprimer />
-    <Retour textBtn="Texte à mettre"/>
-    <ButtonBack linkContent="Accéder à la liste des points d'intérêts" />
-    <Button btnName="Se connecter" />
-    <Card/>
-    <Ajouter/>
-    <CirclePi/>
-    <InputText />
-    <Tag TagContent="Nom du tag"/>
-    <TextArea />
+    <RegistrationForm/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
+import RegistrationForm from '@/components/RegistrationForm.vue'
 // import TextArea from '@/components/formulaire/TextArea.vue'
 // import Tag from '@/components/formulaire/Tag.vue'
 // import InputText from '@/components/formulaire/InputText.vue'
@@ -30,6 +21,7 @@
 export default {
   name: 'HomeView',
   components: {
+    RegistrationForm,
   // Supprimer
   //   Retour,
   //   ButtonBack,
