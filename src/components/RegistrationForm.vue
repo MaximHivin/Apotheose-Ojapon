@@ -35,10 +35,10 @@
         </div>
 
         <div class="Connection">
-            <h1>Vous avez déjà un compte ?</h1>
+            <h2>Vous avez déjà un compte ?</h2>
         </div>
 
-        <div class="button_2">
+        <div class="button_bottom">
             <a href="#" class="btn_create">Se connecter</a>
         </div>
 
@@ -71,11 +71,11 @@ export default {
 .inscription {
     text-align: left;
     color: black;
-    padding-left: 3em;
+    padding-left: 3.5em;
     padding-top: 3.125em;
     margin-top: 2.188em;
     font-family: "Fellix SemiBold";
-    font-size: 2.375em;
+    font-size: 2.0em;
 }
 
 .prenom_email {
@@ -92,7 +92,7 @@ export default {
 
 .email {
     margin: auto;
-    padding-right: 2.5em;
+    padding-right: 6em;
 }
 
 .container_inputText {
@@ -148,11 +148,13 @@ export default {
 
 .mdp {
     margin-left: 5em;
+    padding-top: 40px;
 }
 
 .cmdp {
     margin: auto;
-    padding-right: 2.5em;
+    padding-top: 40px;
+    
 }
 
 .container_inputText_bottom {
@@ -182,34 +184,44 @@ export default {
     width: 100%;
     box-sizing: border-box;
     margin-right: 8.750em;
-};
+}
 
 .button_top {
-    width: 9.750em;
+    width: 180px;
     height: 3.375em;
     line-height: 3.375em;
     background-color: #CE1137;
-     padding: 16px 24px; 
+    /* padding: 16px 24px; */
     border-radius: 0.625em;
     font-weight: bold;
-     font-size: 18px; 
+    /* font-size: 18px; */
     text-decoration: none;
     color: #fff;
-    margin-left: 7.625em;
+    margin-left: 7.5em;
     margin-top: 2.188em;
-    font-family: "Fellix Bold";
+    margin-bottom: 2.5em;
 }
 
 .btn_connexion {
     
-    border: 0.063em solid #CE1137;
+    border: 12px solid #CE1137;
     color: white;
     transition: 400ms ease-in-out;
     text-decoration: none;
 }
 
-.button_2 {
-    width: 9.750em;
+.Connection {
+   text-align: left;
+    margin-left: 3.7em;
+    margin-top: 97px;
+    margin-bottom: 54px;
+    font-family: "Fellix SemiBold";
+    font-size: 2em;
+    color: black;
+}
+
+.button_bottom {
+    width: 125px;
     height: 3.375em;
     line-height: 3.375em;
     background-color: #CE1137;
@@ -225,12 +237,13 @@ export default {
 }
 
 .btn_create {
-    border: 0.063em solid #CE1137;
+    border: 12px solid #CE1137;
     color: white;
     transition: 400ms ease-in-out;
     text-decoration: none;
     
 }
+
 
 
 
