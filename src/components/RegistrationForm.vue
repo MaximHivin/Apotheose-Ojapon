@@ -148,12 +148,12 @@ export default {
 
 .mdp {
     margin-left: 5em;
-    padding-top: 40px;
+    padding-top: 2.5em;
 }
 
 .cmdp {
     margin: auto;
-    padding-top: 40px;
+    padding-top: 2.5em;
     
 }
 
@@ -204,7 +204,7 @@ export default {
 
 .btn_connexion {
     
-    border: 12px solid #CE1137;
+    border: 0.750em solid #CE1137;
     color: white;
     transition: 400ms ease-in-out;
     text-decoration: none;
@@ -213,15 +213,15 @@ export default {
 .Connection {
    text-align: left;
     margin-left: 3.7em;
-    margin-top: 97px;
-    margin-bottom: 54px;
+    margin-top: 6.063em;
+    margin-bottom: 3.375em;
     font-family: "Fellix SemiBold";
     font-size: 2em;
     color: black;
 }
 
 .button_bottom {
-    width: 125px;
+    width: 7.813em;
     height: 3.375em;
     line-height: 3.375em;
     background-color: #CE1137;
@@ -237,7 +237,7 @@ export default {
 }
 
 .btn_create {
-    border: 12px solid #CE1137;
+    border: 0.750em solid #CE1137;
     color: white;
     transition: 400ms ease-in-out;
     text-decoration: none;
