@@ -5,7 +5,6 @@
       <img alt="arrow right" src="@/assets/images/long_arrow.svg"></a>
   </div> -->
   
-  <div class="container__card__back">
       <a href="#" class="card__back">
         <div class="card__back__content">
            <div class="card__back__content-left">
@@ -16,8 +15,6 @@
             </div>
         </div>
     </a>
-  </div>
-
 </template>
 
 <script>
@@ -34,12 +31,6 @@ export default {
 @import url('../../assets/css/style.css');
 
 
-    .container__card__back{
-        width: 812px;
-        margin-bottom: 1.6em;
-        margin-right: 1.6em;
-        display: inline-block;
-    }
 
     .card__back{
         text-decoration: none;
@@ -62,11 +53,6 @@ export default {
     }
 
     @media screen and (max-width: 375px) {
-
-        .container__card__back{
-            width: 100%;
-            margin-right: 0;
-        } 
 
         .card__back{
             width: 100%;

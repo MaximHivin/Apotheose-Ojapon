@@ -12,11 +12,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-nav {
+.errors {
+    color: #750a20;
+    background-color: #eac7ce;
+    border-color: crimson;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.success {
+    color: #215e5e;
+    background-color: #d5ffff;
+    border-color: teal;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* #nav {
   padding: 30px;
 }
 
-nav a {
+#nav a {
   font-weight: bold;
   color: #2c3e50;
 }
@@ -26,8 +43,8 @@ body {
 
 nav a.router-link-exact-active {
   color: #ce1137;
-}
+}*/
 body {
-  background-color: black;
+  background-color: #1D1D1D;
 }
 </style>

@@ -3,19 +3,28 @@
     <!-- <Supprimer />
     <Retour textBtn="Texte à mettre"/>
     <ButtonBack linkContent="Accéder à la liste des points d'intérêts" />
-    <Button btnName="Se connecter" />
-    <Card/>
+    <Button btnName="Texte à mettre" />
+    <Card namePI="Texte à mettre"/>
     <Ajouter/>
-    <CirclePi/>
+    <CirclePi localisationPI="Texte à mettre" namePI="Texte à mettre"/>
     <InputText />
     <Tag TagContent="Nom du tag"/>
+<<<<<<< HEAD
     <TextArea /> -->
+=======
+    <TextArea />
+    <InputSearch /> -->
+    <HeaderLayout />
+>>>>>>> develop
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
+import HeaderLayout from '@/components/HeaderLayout.vue'
+// import Card from '@/components/Card.vue'
+// import InputSearch from '@/components/formulaire/InputSearch.vue'
 // import TextArea from '@/components/formulaire/TextArea.vue'
 // import Tag from '@/components/formulaire/Tag.vue'
 // import InputText from '@/components/formulaire/InputText.vue'
@@ -31,16 +40,19 @@ export default {
   name: 'HomeView',
   components: {
 
+HeaderLayout
   // Supprimer
-  //   Retour,
-  //   ButtonBack,
-  //   Card,
-  //   Ajouter,
-  //   CirclePi,
-  //   Button
+  // Retour,
+  // ButtonBack
+  // Card,
+  // Ajouter,
+  // CirclePi
+  // Button
   // InputText
   // Tag
   // TextArea
+  // InputSearch
+  // Card
   }
 }
 </script>

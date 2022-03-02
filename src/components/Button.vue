@@ -1,8 +1,8 @@
 <template>
-  
-    <div class="btn-components">
-      <a href="" class="btn-connection">{{ btnName }}</a>
-    </div>
+
+      <!-- <a href="" class="button-content">{{ btnName }}</a> -->
+      <button class="button-content">{{ btnName }}</button>
+
 </template>
 
 <script>
@@ -17,40 +17,25 @@ export default {
 </script>
 
 <style>
+@import url('../assets/css/style.css');
 
-@font-face {
-  font-family: 'Fellix Semibold';
-  src: url('../assets/fonts/Fellix-SemiBold.ttf') format('truetype');
+.button-content{
+  background-color: var(--primary-color);
+  color:#fff;
+  padding: 1em 2em;
+  font-size: 1.8em;
+  text-decoration: none;
+  font-family: 'Fellix Bold';
+  border-radius: 10px;
+  border: 0;
 }
-    
-    .btn-components{
-      display: inline-block;
-    }
 
-    .btn-connection {
-       /* width: 196px;
-       height: 54px; */
-      line-height: 54px;
-      background-color: #CE1137;
-      padding: 16px 24px;
-      border-radius: 10px;   
-      font-size: 18px;
-      font-family: 'Fellix Semibold';
-      text-decoration: none;
-      color: #fff;
-    }
+.button-content:hover{
+  background-color: #fff;
+  color: var(--primary-color);
+  transition: 0.5s;
+}
 
-    .btn-connection:hover {
-        background-color: #fff;
-        border: 1px solid #CE1137;
-        color: #CE1137;
-        transition: 400ms ease-in-out;
-    }
-
-    
-
-    @media screen and (max-width: 375px) {
-
-    }
+  
 
 </style>

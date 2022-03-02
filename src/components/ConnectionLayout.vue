@@ -4,39 +4,35 @@
             <div class="connexion">
                 <h1>Connectez-vous à votre compte</h1>
             </div>
-            <p>Résultat : {{ formData }}</p>
-            <div>
-                <label for="email">Votre email :</label>
-                <InputText name="email" id="email" placeholder="johndoe@gmail.com" type="text" @inputChange="updateInputValue" />
+            <div class="errors" v-if="errors.length > 0">
+                <p v-for="error in errors" :key="error">{{ error }}</p>
             </div>
-            <div>
-                <label for="password">Votre mot de passe :</label>
+            <div class="success" v-if="success">
+                <p>{{ success }}</p>
+            </div>
+            <fieldset>
+                <label class="email_mdp" for="username">Votre nom d'utilisateur :</label>
+                <InputText name="username" id="username" placeholder="johndoe" type="text" @inputChange="updateInputValue" />
+            </fieldset>
+            <fieldset>
+                <label class="email_mdp" for="password">Votre mot de passe :</label>
                 <InputText name="password" id="password" placeholder="********" type="password" @inputChange="updateInputValue" />
-            </div>
-            <div class="email_mdp">
-                <p class="email">Votre email:</p>
-                <p class="mdp">Votre mot de passe:</p>
-            </div>
-            
-            <div class="container_inputText">
-                <div class="input_left">
-                    <input  type="text" name="inputText" id="inputText" placeholder="*******" class="inputText">
-                </div>
-                <div class="input_right">
-                    <input type="text" name="inputText" id="inputText" placeholder="*******" class="inputText">
-                </div>
-            </div>
+            </fieldset>
+
             <div class="text_mdp">
                 <p>Mot de passe oublié ?</p>
             </div>
-            <Button btnName="Se connecter" />
+            <div class="center-button">
+                <Button v-on:click="sendForm" btnName="Se connecter"/>
+            </div>
 
-            
             <div class="inscription">
                 <h1>Pas encore de compte ?</h1>
             </div>
-
-            <Button btnName="S'inscrire" />
+            <div class="center-button">
+                <Button btnName="S'inscrire" />
+            </div>
+            
 
         </div> 
 
@@ -47,6 +43,7 @@
 <script>
 import InputText from '@/components/formulaire/InputText.vue';
 import Button from '@/components/Button.vue';
+import UsersService from '@/services/UsersService.js'
 
 export default {
     name: "ConnectionLayout", 
@@ -54,20 +51,58 @@ export default {
         InputText,
         Button
     },
-  data () {
-    return {
-      formData: {
-        password: '',
-        email: ''
-      }
+    data () {
+        return {
+            errors: [],
+            success: null,
+            formData: {
+                password: '',
+                username: ''
+            }
+        }
+    },
+    methods: {
+        updateInputValue: function (value) {
+            this.formData[value.name] = value.value
+        },
+        sendForm() {
+            // on commence par vider le tableau des erreurs (en cas de second submit suite à une erreur, il y a au moins un item dedans, et on souhaite éviter les messages d'erreur en doublon)
+            this.errors.length = 0;
+            this.success = null;
+            // récupérer toutes les données du formulaire
+                // on les a déjà dans data...
+            // valider ces données
+            if(!this.formData.username) {
+                console.log("no id");
+                this.errors.push('Please enter your email or nickname');
+            }
+            if(!this.formData.password) {
+                this.errors.push('Please enter your password');
+            }
+            // renvoyer des messages d'erreur en cas de non validation
+            //exécuter une requête asynchrone pour connecter un utilisateur
+            if (this.errors.length > 0) {
+                console.log("Ça va pas du tout, fais ça correctement stp !");
+                console.log(this.errors);
+            } else {
+                console.log('send form !');
+                // on exécute la requête pour récupérer un token
+                UsersService.connect({
+                    username: this.formData.username,
+                    password: this.formData.password
+                }, (data) => {
+                    console.log(data);
+                    // Je verifie le type de réponse et j'affiche
+                    // le message en consequence
+                    if(data.type === "success") {
+                        this.success = data.message;
+                    } else {
+                        this.errors.push(data.message);
+                    }
+                });
+            }
+        }
     }
-  },
-  methods: {
-    updateInputValue: function (value) {
-      this.formData[value.name] = value.value
-    }
-  } 
-
 }
  
 </script>
@@ -216,7 +251,15 @@ export default {
     
 }
 
-
+.center-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+fieldset {
+    border: 0;
+    margin-bottom: 2em;
+}
 
     
 
