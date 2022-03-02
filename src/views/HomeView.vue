@@ -3,7 +3,7 @@
     <Supprimer />
     <Retour textBtn="Texte à mettre"/>
     <ButtonBack linkContent="Accéder à la liste des points d'intérêts" />
-    <Button btnName="Se connecter" />
+    <Button btnName="Texte à mettre" />
     <Card/>
     <Ajouter/>
     <CirclePi/>
@@ -35,11 +35,11 @@ export default {
 
   // Supprimer
   //   Retour,
-    // ButtonBack
+  // ButtonBack
   //   Card,
   //   Ajouter,
   //   CirclePi,
-  //   Button
+  // Button
   // InputText
   // Tag
   // TextArea
