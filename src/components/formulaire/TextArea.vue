@@ -1,7 +1,7 @@
 <template>
-<div class="container_textarea">
-    <textarea name="textarea" id="textarea" class="textarea" placeholder="Merci d'écrire votre message.."></textarea>
-</div>
+
+    <textarea name="textarea" id="textarea" class="container__textarea-content" placeholder="Merci d'écrire votre message.."></textarea>
+
 </template>
 
 <script>
@@ -11,39 +11,38 @@ export default {
 </script>
 
 <style>
+@import url('../../assets/css/style.css');
 
-.container_textarea{
+ /* .container__textarea{
     max-width: 748px;
-}
+    height: 180px;
+}  */
 
-.textarea{
-    padding-top: 32px;
-    padding-left: 24px;
+.container__textarea-content{
+    padding-top: 3.2em;
+    padding-left: 2.4em;
+    padding-bottom: 3.2em;
     width: 100%;
-    border: 1px solid #F1F1F1;
-    background-color: #F1F1F1;
-    color: #1d1d1d;
-    font-size: 16px;
-    font-weight: 500;
-    min-height: 226px;
-    box-sizing: border-box;
+    height: 100%;
     resize: none;
+    font-size: 1.6em;
+    font-family: 'Fellix Medium';
+    color: var(--secondary-color);
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.textarea::placeholder{
-    color:#ADADAD;
+.container__textarea-content::placeholder{
+    font-family: 'Fellix Medium';
 }
 
 
 @media screen and (max-width: 375px){
-    .container_textarea{
-        max-width: 302px;
-        margin: 0 auto;
-    }
 
-    .textarea{
-        padding: 16px;
-        min-height: 150px;
+    .container__textarea-content{
+        padding-top: 2.4em;
+        padding-left: 1.6em;
+        padding-bottom: 2.4em;
     }
 }
 
