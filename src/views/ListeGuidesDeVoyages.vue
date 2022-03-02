@@ -48,10 +48,18 @@ export default {
 
 <style>
 
+body {
+    background-color: #fff;
+}
+
+.container__liste_guides_de_voyages {
+    margin-top: 2.4em;
+}
+
 h1 {
-    color: #fff;
+    color: #1d1D1D;
     text-align: left;
-    margin: 80px 0;
+    margin: 4em 0;
     font-size: 2em;
    
 }
