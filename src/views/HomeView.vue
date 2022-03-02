@@ -1,8 +1,5 @@
 <template>
   <div class="home">
-<<<<<<< HEAD
-    <RegistrationForm/>
-=======
     <!-- <Supprimer />
     <Retour textBtn="Texte à mettre"/>
     <ButtonBack linkContent="Accéder à la liste des points d'intérêts" />
@@ -15,20 +12,18 @@
     <TextArea />
     <InputSearch /> -->
     <HeaderLayout />
->>>>>>> develop
+    <RegistrationForm/>
+    <RegistrationFormMobile/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-<<<<<<< HEAD
-import RegistrationForm from '@/components/RegistrationForm.vue'
-=======
-
-import HeaderLayout from '@/components/HeaderLayout.vue'
+   import RegistrationForm from '@/components/RegistrationForm.vue'
+   import RegistrationFormMobile from '@/components/RegistrationFormMobile.vue'
+// import HeaderLayout from '@/components/HeaderLayout.vue'
 // import Card from '@/components/Card.vue'
 // import InputSearch from '@/components/formulaire/InputSearch.vue'
->>>>>>> develop
 // import TextArea from '@/components/formulaire/TextArea.vue'
 // import Tag from '@/components/formulaire/Tag.vue'
 // import InputText from '@/components/formulaire/InputText.vue'
@@ -43,12 +38,10 @@ import HeaderLayout from '@/components/HeaderLayout.vue'
 export default {
   name: 'HomeView',
   components: {
-<<<<<<< HEAD
     RegistrationForm,
-=======
+    RegistrationFormMobile
 
-HeaderLayout
->>>>>>> develop
+  //HeaderLayout,
   // Supprimer
   // Retour,
   // ButtonBack
