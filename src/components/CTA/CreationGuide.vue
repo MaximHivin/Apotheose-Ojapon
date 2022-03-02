@@ -50,7 +50,7 @@ export default {
         .link-to {
             width: 302px;
             height: 49px;
-            margin: 5px auto;
+            margin: 10px auto;
             padding-left: 16px;
         
         }
