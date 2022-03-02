@@ -6,7 +6,7 @@
     <Button btnName="Texte à mettre" />
     <Card namePI="Texte à mettre"/>
     <Ajouter/>
-    <CirclePi/>
+    <CirclePi localisationPI="Texte à mettre" namePI="Texte à mettre"/>
     <InputText />
     <Tag TagContent="Nom du tag"/>
     <TextArea />
@@ -39,7 +39,7 @@ export default {
   // ButtonBack
   // Card,
   // Ajouter,
-  // CirclePi,
+  // CirclePi
   // Button
   // InputText
   // Tag
