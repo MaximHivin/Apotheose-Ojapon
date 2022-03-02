@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Supprimer />
+    <!-- <Supprimer />
     <Retour textBtn="Texte à mettre"/>
     <ButtonBack linkContent="Accéder à la liste des points d'intérêts" />
     <Button btnName="Se connecter" />
@@ -9,7 +9,7 @@
     <CirclePi/>
     <InputText />
     <Tag TagContent="Nom du tag"/>
-    <TextArea />
+    <TextArea /> -->
   </div>
 </template>
 

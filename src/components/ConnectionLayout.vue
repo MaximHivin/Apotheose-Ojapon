@@ -1,59 +1,72 @@
 <template>
-<section class="ConnectionLayout">
-    <div class="main_container">
-        <div class="connexion">
-            <h1>Connectez-vous à votre compte</h1>
-        </div>
-        <div class="email_mdp">
-            <p class="email">Votre email:</p>
-            <p class="mdp">Votre mot de passe:</p>
-        </div>
-        
-        
-        
-        <div class="container_inputText">
-        <div class="input_left">
-            <input  type="text" name="inputText" id="inputText" placeholder="*******" class="inputText">
-        </div>
-        <div class="input_right">
-            <input type="text" name="inputText" id="inputText" placeholder="*******" class="inputText">
-        </div>
-        </div>
-        <div class="text_mdp">
-             <p>Mot de passe oublié ?</p>
-        </div>
-        <div class="button">
-            <a href="#" class="btn_connexion">Se connecter</a>
-        </div>
+    <section class="ConnectionLayout">
+        <div class="main_container">
+            <div class="connexion">
+                <h1>Connectez-vous à votre compte</h1>
+            </div>
+            <p>Résultat : {{ formData }}</p>
+            <div>
+                <label for="email">Votre email :</label>
+                <InputText name="email" id="email" placeholder="johndoe@gmail.com" type="text" @inputChange="updateInputValue" />
+            </div>
+            <div>
+                <label for="password">Votre mot de passe :</label>
+                <InputText name="password" id="password" placeholder="********" type="password" @inputChange="updateInputValue" />
+            </div>
+            <div class="email_mdp">
+                <p class="email">Votre email:</p>
+                <p class="mdp">Votre mot de passe:</p>
+            </div>
+            
+            <div class="container_inputText">
+                <div class="input_left">
+                    <input  type="text" name="inputText" id="inputText" placeholder="*******" class="inputText">
+                </div>
+                <div class="input_right">
+                    <input type="text" name="inputText" id="inputText" placeholder="*******" class="inputText">
+                </div>
+            </div>
+            <div class="text_mdp">
+                <p>Mot de passe oublié ?</p>
+            </div>
+            <Button btnName="Se connecter" />
 
-        
-        <div class="inscription">
-            <h1>Pas encore de compte ?</h1>
-        </div>
+            
+            <div class="inscription">
+                <h1>Pas encore de compte ?</h1>
+            </div>
 
-        <div class="button_2">
-            <a href="#" class="btn_create">Créez un compte</a>
-        </div>
+            <Button btnName="S'inscrire" />
 
+        </div> 
 
-
-  
-      
-    </div> 
-
-</section>
-        
-        
-
-        
+    </section>
      
-    
-
 </template>
 
 <script>
+import InputText from '@/components/formulaire/InputText.vue';
+import Button from '@/components/Button.vue';
+
 export default {
-    name: "ConnectionLayout",    
+    name: "ConnectionLayout", 
+    components: {
+        InputText,
+        Button
+    },
+  data () {
+    return {
+      formData: {
+        password: '',
+        email: ''
+      }
+    }
+  },
+  methods: {
+    updateInputValue: function (value) {
+      this.formData[value.name] = value.value
+    }
+  } 
 
 }
  
@@ -76,12 +89,8 @@ export default {
     padding-top: 3.125em;
     margin-top: 2.188em;
     font-family: "Fellix SemiBold";
-    font-size: 2.375em;
-    
+    font-size: 2.375em; 
 }
-    
-
-
 .email_mdp {
     display: flex;
     font-weight: bold;
@@ -92,7 +101,6 @@ export default {
 
 .email {
     margin-left: 5em;
-;
 }
 
 .mdp {

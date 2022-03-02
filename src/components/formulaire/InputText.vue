@@ -1,13 +1,31 @@
 <template>
   <div class="container_inputText">
-      <input type="text" name="inputText" id="inputText" placeholder="Votre texte" class="container__inputText-content">
+      <input :type="type" :name="name" :id="id" v-on:keyup="handleKeyUp" :placeholder="placeholder" class="container__inputText-content">
   </div>
 </template>
 
 <script>
 export default {
-     
-
+    name: 'InputText',
+    props: {
+        type: String,
+        name: String,
+        id: String,
+        placeholder: String
+    },
+    data () {
+        return {
+            localInputValue: ''
+        }
+    },
+    methods: {
+        handleKeyUp: function (event) {
+        this.$emit('inputChange', {
+            name: this.name,
+            value: event.target.value
+        })
+        }
+    }
 }
 </script>
 
