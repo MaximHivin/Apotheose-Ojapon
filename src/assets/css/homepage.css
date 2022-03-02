@@ -22,6 +22,8 @@ body{
     background-color: var(--secondary-color);
 }
 
+/* Section header */
+
 .header__desktop{
     width: 100%;
     height: 100vh;
@@ -67,3 +69,72 @@ body{
     justify-content: space-between;
 }
 
+
+/* Section sur le Japon */
+
+.lejapon{
+    margin-top:20em;
+    margin-bottom:20em;
+    display: flex;
+}
+
+.lejapon__content-left{
+    position: relative;
+    width: 40%;
+    padding-bottom: 30%;
+}
+
+.lejapon__content-left img{
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/* height: 100%; */
+	object-fit: cover;
+    z-index:2;
+}
+
+.lejapon__content-right{
+    width: 80%;
+}
+
+.lejapon__content__right-text{
+    margin-left: 8em;
+}
+
+.lejapon__content__right-text h2{
+    color:#fff;
+    font-size: 3.8em;
+    font-family: 'Fellix SemiBold';
+    margin:0;
+}
+
+.lejapon__content__right-text p{
+    color:#fff;
+    font-size: 1.8em;
+    font-family: 'Fellix Regular';
+    line-height: 1.4;
+    margin-bottom: 4em;
+}
+
+.lejapon__content-right a {
+    display: inline-block;
+    margin-bottom: 4em;
+}
+
+.lejapon__content__right-img{
+    position: relative;
+    width: 100%;
+    padding-bottom: 40%;
+}
+
+.lejapon__content__right-img img{
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    z-index:2;
+    margin-left: 1.6em;
+}
