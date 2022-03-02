@@ -1,54 +1,64 @@
 <template>
-  <div class="home">
-    <!-- <Supprimer />
-    <Retour textBtn="Texte à mettre"/>
-    <ButtonBack linkContent="Accéder à la liste des points d'intérêts" />
-    <Button btnName="Texte à mettre" />
-    <Card namePI="Texte à mettre"/>
-    <Ajouter/>
-    <CirclePi localisationPI="Texte à mettre" namePI="Texte à mettre"/>
-    <InputText />
-    <Tag TagContent="Nom du tag"/>
-    <TextArea />
-    <InputSearch /> -->
-    <HeaderLayout />
+
+<body class="black_color">
+  <div class="header__desktop">
+        <HeaderLayout />
+        <div class="main_container">
+
+          <div class="header__desktop-title">
+            <span>日本</span>
+            <h1>Japan</h1>
+          </div>
+
+          <div class="header__desktop__action">
+            <div class="header__desktop__action__container-search">
+              <InputSearch />
+            </div>
+            <div class="header__desktop__action__container-btn">
+               <Button btnName="Rechercher" />
+            </div>
+          </div>
+
+          <div class="header__desktop-pi">
+            <CirclePi localisationPI="Localisation" namePI="Nom du point d'intérêt" /><CirclePi localisationPI="Localisation" namePI="Nom du point d'intérêt" /><CirclePi localisationPI="Localisation" namePI="Nom du point d'intérêt" />
+          </div> 
+
+        </div>
   </div>
+<div class="main_container">
+
+</div>
+
+</body>
+
+
+
+
 </template>
 
 <script>
 // @ is an alias to /src
 
 import HeaderLayout from '@/components/HeaderLayout.vue'
-// import Card from '@/components/Card.vue'
-// import InputSearch from '@/components/formulaire/InputSearch.vue'
-// import TextArea from '@/components/formulaire/TextArea.vue'
-// import Tag from '@/components/formulaire/Tag.vue'
-// import InputText from '@/components/formulaire/InputText.vue'
-// import Supprimer from '@/components/CTA/Supprimer.vue';
-// import Retour from '@/components/CTA/Retour.vue';
-// import ButtonBack from '@/components/CTA/ButtonBack.vue';
-// import Button from '@/components/Button.vue'
-// import CirclePi from '@/components/CirclePi.vue';
-// import Card from '@/components/Card.vue';
-// import Ajouter from '@/components/CTA/Ajouter.vue';
+import InputSearch from '@/components/formulaire/InputSearch.vue'
+import Button from '@/components/Button.vue'
+import CirclePi from '@/components/CirclePi.vue'
+
 
 export default {
   name: 'HomeView',
   components: {
 
-HeaderLayout
-  // Supprimer
-  // Retour,
-  // ButtonBack
-  // Card,
-  // Ajouter,
-  // CirclePi
-  // Button
-  // InputText
-  // Tag
-  // TextArea
-  // InputSearch
-  // Card
+    HeaderLayout,
+    InputSearch,
+    Button,
+    CirclePi
+
   }
 }
 </script>
+
+<style>
+@import url('../assets/css/style.css');
+@import url('../assets/css/homepage.css');
+</style>
