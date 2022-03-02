@@ -57,7 +57,7 @@ body {
 }
 
 h1 {
-    color: #1d1D1D;
+    color: #1d1d1d;
     text-align: left;
     margin: 4em 0;
     font-size: 2em;
