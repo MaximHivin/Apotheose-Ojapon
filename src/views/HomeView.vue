@@ -16,7 +16,7 @@
 <script>
 // @ is an alias to /src
 
-import TextArea from '@/components/formulaire/TextArea.vue'
+// import TextArea from '@/components/formulaire/TextArea.vue'
 // import Tag from '@/components/formulaire/Tag.vue'
 // import InputText from '@/components/formulaire/InputText.vue'
 // import Supprimer from '@/components/CTA/Supprimer.vue';
@@ -39,7 +39,7 @@ export default {
   //   Button
   // InputText
   // Tag
-  TextArea
+  // TextArea
   }
 }
 </script>
