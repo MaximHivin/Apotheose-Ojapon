@@ -20,7 +20,7 @@
 // import InputSearch from '@/components/formulaire/InputSearch.vue'
 // import TextArea from '@/components/formulaire/TextArea.vue'
 // import Tag from '@/components/formulaire/Tag.vue'
-import InputText from '@/components/formulaire/InputText.vue'
+// import InputText from '@/components/formulaire/InputText.vue'
 // import Supprimer from '@/components/CTA/Supprimer.vue';
 // import Retour from '@/components/CTA/Retour.vue';
 // import ButtonBack from '@/components/CTA/ButtonBack.vue';
@@ -40,7 +40,7 @@ export default {
   //   Ajouter,
   //   CirclePi,
   //   Button
-  InputText
+  // InputText
   // Tag
   // TextArea
   // InputSearch
