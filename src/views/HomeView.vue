@@ -1,34 +1,46 @@
 <template>
-
-
   <div class="home">
-    <HeaderLayout/>
-    <ConnectionLayout/>
-    <ConnectionLayoutMobile/>
-    <FooterLayout />
-    <FooterLayoutMobile />
+    <Supprimer />
+    <Retour textBtn="Texte à mettre"/>
+    <ButtonBack linkContent="Accéder à la liste des points d'intérêts" />
+    <Button btnName="Se connecter" />
+    <Card/>
+    <Ajouter/>
+    <CirclePi/>
+    <InputText />
+    <Tag TagContent="Nom du tag"/>
+    <TextArea />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
-import HeaderLayout from '@/components/HeaderLayout.vue';
-import FooterLayout from '@/components/FooterLayout.vue';
-import FooterLayoutMobile from '@/components/FooterLayoutMobile.vue'
-import ConnectionLayout from '@/components/ConnectionLayout.vue';
-import ConnectionLayoutMobile from '@/components/ConnectionLayoutMobile.vue'
-
+// import TextArea from '@/components/formulaire/TextArea.vue'
+// import Tag from '@/components/formulaire/Tag.vue'
+// import InputText from '@/components/formulaire/InputText.vue'
+// import Supprimer from '@/components/CTA/Supprimer.vue';
+// import Retour from '@/components/CTA/Retour.vue';
+// import ButtonBack from '@/components/CTA/ButtonBack.vue';
+// import Button from '@/components/Button.vue'
+// import CirclePi from '@/components/CirclePi.vue';
+// import Card from '@/components/Card.vue';
+// import Ajouter from '@/components/CTA/Ajouter.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    FooterLayout,
-    FooterLayoutMobile,
-    HeaderLayout,
-    ConnectionLayout,
-    ConnectionLayoutMobile, 
-    
+
+  // Supprimer
+  //   Retour,
+  //   ButtonBack,
+  //   Card,
+  //   Ajouter,
+  //   CirclePi,
+  //   Button
+  // InputText
+  // Tag
+  // TextArea
   }
 }
 </script>
