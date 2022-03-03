@@ -39,7 +39,7 @@
             <p><b>Le Japon</b> (en japonais : 日本, Nihon, /ɲihoꜜɴ/ Écouter ou Nippon, /ɲippoꜜɴ/ Écouter) est un <b>pays insulaire</b> de l'Asie de l'Est, situé entre l'océan Pacifique et la mer du Japon, à l'est de la Chine, de la Corée du Sud, de la Corée du Nord et de la Russie, et au nord de Taïwan. Étymologiquement, <b>les kanjis</b> (caractères chinois) qui composent le nom du Japon signifient « pays (国, koku) d'origine (本, hon) du Soleil (日, ni) » ; c'est ainsi que le Japon est désigné comme le <b>« pays du soleil levant »</b>.
             <br><br>
             Le Japon forme, depuis 1945, un <b>archipel de 6 852 îles</b> (de plus de 100 m2), dont les quatre plus grandes sont Hokkaidō, Honshū, Shikoku et Kyūshū, représentant à elles seules 95 % de la superficie terrestre du pays. L'archipel s'étend sur plus de <b>trois mille kilomètres</b>. La plupart des îles sont montagneuses, parfois volcaniques. Ainsi, le plus haut sommet du Japon, le mont Fuji (3 776 m), est un volcan dont la dernière éruption a eu lieu en 1707. Le Japon est le onzième pays le plus peuplé du monde.</p>
-            <Button btnName="En savoir plus" />
+            <Button btnName="En savoir plus"/>
          </div>
          <div class="lejapon__content__right-img">
            <img src="../assets/card-japan.jpg" alt="">

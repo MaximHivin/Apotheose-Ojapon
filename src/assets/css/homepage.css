@@ -14,8 +14,10 @@
   }
 
 
-body{
+body,html{
     margin:0;
+    padding: 0;
+    height: 100%
 }
 
 .black_color{
@@ -29,7 +31,7 @@ body{
     background-image: linear-gradient(rgba(7, 7, 7, 0.247), rgba(7, 7, 7, 0.247)), url('../../assets/images/header_background.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .header__desktop-title{
@@ -133,8 +135,7 @@ body{
     margin-bottom: 4em;
 }
 
-.lejapon__content-right a {
-    display: inline-block;
+.lejapon__content-right button {
     margin-bottom: 4em;
 }
 
