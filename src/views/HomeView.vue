@@ -76,7 +76,6 @@
   </section>
 </div>
 
-<div class="personnaliser">
   <div class="main_container">
     <section class="personnaliser__experience">
       <h2 class="personnaliser__experience-title">Personnaliser votre voyage
@@ -89,39 +88,78 @@
 
     </section>
   </div>
-</div>
-
 
 
 
 
 <div class="main_container">
-  <section class="pi">
-    <div class="pi__content">
-      <div class="pi__content-title">
-        <h2>Parcourez nos lieux insolites</h2>
-      </div>
-      <div class="content-btn">
-        <Button btnName="Afficher tout" />
-      </div>
+  <section class="galerie">
+    <div class="galerie-word">
+      <span class="galerie-word-1">ギャラリー</span>
+      <span class="galerie-word-2">ギャラリー</span>
     </div>
-    <p>Découvrez les points d'intérêt sélectionnés par l'équipe O'Japon. Vous pouvez accéder aux informations des différents P.I en cliquant dessus. Alors n'hésitez pas :-)</p>
-
-    <div class="pi__list__top">
-      <div class="pi__list__top-left"><span>Osaka</span></div>
-      <div class="pi__list__top-center"></div>
-      <div class="pi__list__top-right"><span>Matsumoto</span></div>
+    <div class="galerie-text">
+      <h2>La galerie</h2>
+      <p>Découvrez les différentes photos que l'équipe O'Japon a selectionné pour vous.<br> Elles représentent les plus beaux endroits que nous avons pu visiter durant nos différents voyages.</p>
     </div>
-
-    <div class="pi__list__bottom">
-      <div class="pi__list__bottom-right"></div>
-      <div class="pi__list__bottom-center"><span>Mont Fuji</span></div>
-      <div class="pi__list__bottom-left"></div>
+    <div class="galerie__img">
+        <div class="galerie__img-1">
+          <img src="../assets/images/galerie1.png">
+          </div>
+        <div class="galerie__img-2">
+          <img src="../assets/images/galerie2.png">
+          <img src="../assets/images/galerie1.png">
+          </div>
+        <div class="galerie__img-2">
+          <img src="../assets/images/galerie3.png">
+          <img src="../assets/images/galerie1.png">
+          <img src="../assets/images/galerie3.png">
+          </div>
+        <div class="galerie__img-3">
+          <img src="../assets/images/galerie2.png">
+          </div>
     </div>
 
   </section>
 </div>
 
+<div class="main_container">
+  <section class="contact">
+
+      <div class="contact__content-left">
+        <img src="../assets/images/header_background.jpg">
+      </div>
+
+      <div class="contact__content__right">
+        <h2>Contactez-nous</h2>
+        <form action="" class="contact__content__right-form">
+          <label for="username">Votre nom et prénom :</label>
+          <InputText placeholder="John Doe" name="username" type="text"/>
+
+           <label for="email">Votre email :</label>
+          <InputText type="email" placeholder="john@gmail.com" name="email"/>
+
+          <label for="message">Votre message :</label>
+          <TextArea name="message"/>
+
+          <Button btnName="Envoyez" type="submit"/>
+        </form>
+      </div>
+
+  </section>
+</div>
+
+
+<div class="main_container">
+  <footer class="footer">
+    <HeaderLayout />
+    <div class="footer-separator"></div>
+    <div class="footer-bottom">
+      <span>Mentions Légales</span>
+      <span>Copyright O'Japon 2020</span>
+    </div>
+  </footer>
+</div>
 
 </body>
 
@@ -137,6 +175,8 @@ import HeaderLayout from '@/components/HeaderLayout.vue'
 import InputSearch from '@/components/formulaire/InputSearch.vue'
 import Button from '@/components/Button.vue'
 import CirclePi from '@/components/CirclePi.vue'
+import InputText from '@/components/formulaire/InputText.vue'
+import TextArea from '@/components/formulaire/TextArea.vue'
 
 
 export default {
@@ -146,7 +186,9 @@ export default {
     HeaderLayout,
     InputSearch,
     Button,
-    CirclePi
+    CirclePi,
+    InputText,
+    TextArea
 
   }
 }

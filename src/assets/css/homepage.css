@@ -85,7 +85,7 @@ body,html{
     top:-80px;
     left:-80px;
     font-family: 'Fellix SemiBold';
-    text-shadow: var(--primary-color) 1px 1px, var(--primary-color) -1px 1px, var(--primary-color) -1px -1px, var(--primary-color) 1px -1px
+    text-shadow: var(--primary-color) 1px 1px, var(--primary-color) -1px 1px, var(--primary-color) -1px -1px, var(--primary-color) 1px -1px;
     /* z-index: 80; */
 }
 
@@ -241,6 +241,12 @@ body,html{
 
 .personnaliser__experience{
     margin: 0 auto;
+    background-image: url('../images/background_personnaliser.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 20em;
+    padding-bottom: 20em;
 }
 
 .personnaliser__experience-title{
@@ -266,4 +272,160 @@ body,html{
     font-size: 1.8em;
     color:#fff;
     text-decoration: none;
+    margin-right: 1.6em;
+}
+
+.personnaliser__experience-action a:hover{
+    color:var(--primary-color);
+    transition: 0.5s;
+}
+
+
+/* Section Galerie */
+
+.galerie {
+    margin-top: 20em;
+    margin-bottom: 20em;
+    position: relative;
+}
+
+.galerie-word-1{
+    position: absolute;
+    color:var(--secondary-color);
+    font-size: 10em;
+    right: 0;
+    top: 0;
+    font-family: 'Fellix SemiBold';
+    text-shadow: var(--primary-color) 1px 1px, var(--primary-color) -1px 1px, var(--primary-color) -1px -1px, var(--primary-color) 1px -1px;
+}
+
+.galerie-word-2{
+    position: absolute;
+    color:var(--secondary-color);
+    font-size: 10em;
+    bottom: 10%;
+    font-family: 'Fellix SemiBold';
+    text-shadow: var(--primary-color) 1px 1px, var(--primary-color) -1px 1px, var(--primary-color) -1px -1px, var(--primary-color) 1px -1px;
+}
+
+.galerie-text h2{
+    font-size: 3.8em;
+    color:#fff;
+    font-family: 'Fellix SemiBold';
+    margin: 0;
+}
+
+.galerie-text p{
+    font-size: 1.8em;
+    color:#fff;
+    font-family: 'Fellix Regular';
+}
+
+.galerie__img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.galerie__img-1,
+.galerie__img-2,
+.galerie__img-3,
+.galerie__img-4{
+    margin-right: 1.6em;
+}
+
+.galerie__img-1 img,
+.galerie__img-2 img,
+.galerie__img-3 img,
+.galerie__img-4 img{
+    margin-bottom: 1.6em;
+}
+
+
+/* Section contact */
+
+.contact{
+    position: relative;
+    margin-top:20em;
+    margin-bottom:20em;
+    display: flex;
+}
+
+.contact__content-left{
+    position: relative;
+    width: 50%;
+}
+
+.contact__content-left img{
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%; 
+	object-fit: cover;
+    z-index:2;
+}
+
+.contact__content__right{
+    width: 50%;
+    padding: 8em;
+    background-color: #fff;
+}
+
+.contact__content__right h2{
+    font-size: 3.8em;
+    color: var(--secondary-color);
+    font-family: 'Fellix SemiBold';
+    margin-bottom: 2.4em;
+}
+
+.contact__content__right textarea{
+    background-color: #f1f1f1;
+    border: none;
+    margin-top: 1.6em;
+}
+
+.contact__content__right label{
+    font-size: 2.4em;
+    font-family: 'Fellix SemiBold';
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.contact__content__right input {
+    margin-bottom: 2.4em;
+    margin-top: 1.6em;
+}
+
+
+
+.contact__content__right button{
+    margin-top: 2.4em;
+}
+
+/* Section FOOTER */
+
+.footer{
+    margin-top: 20em;
+    padding-bottom: 10em;
+}
+
+.footer-separator{
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    margin-top: 3.2em;
+    margin-bottom: 3.2em;
+}
+
+.footer-bottom{
+    text-align: center;
+}
+
+.footer-bottom span {
+    color:#fff;
+    font-size: 1.6em;
+    margin-right: 2.4em;
 }
