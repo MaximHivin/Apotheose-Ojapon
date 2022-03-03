@@ -76,6 +76,58 @@
   </section>
 </div>
 
+<div class="personnaliser">
+
+  <div class="personnaliser-background">
+    <img src="../assets/images/background_personnaliser.png">
+  </div>
+
+  <div class="main_container">
+    <section class="personnaliser__experience">
+      <h2 class="personnaliser__experience-title">Personnaliser votre voyage
+<br>ou partager votre expérience</h2>
+<p>L'écosystème de notre site internet est axé sur deux fonctionnalités principales : <br>le partage d'expérience et la personnalisation d'expérience, un seul mot d'ordre : la collaboration</p>
+<div class="personnaliser__experience-action">
+    <a href="#">Personnaliser mon voyage</a>
+    <Button btnName="Créer mon expérience" />
+</div>
+
+    </section>
+  </div>
+</div>
+
+
+
+
+
+<div class="main_container">
+  <section class="pi">
+    <div class="pi__content">
+      <div class="pi__content-title">
+        <h2>Parcourez nos lieux insolites</h2>
+      </div>
+      <div class="content-btn">
+        <Button btnName="Afficher tout" />
+      </div>
+    </div>
+    <p>Découvrez les points d'intérêt sélectionnés par l'équipe O'Japon. Vous pouvez accéder aux informations des différents P.I en cliquant dessus. Alors n'hésitez pas :-)</p>
+
+    <div class="pi__list__top">
+      <div class="pi__list__top-left"><span>Osaka</span></div>
+      <div class="pi__list__top-center"></div>
+      <div class="pi__list__top-right"><span>Matsumoto</span></div>
+    </div>
+
+    <div class="pi__list__bottom">
+      <div class="pi__list__bottom-right"></div>
+      <div class="pi__list__bottom-center"><span>Mont Fuji</span></div>
+      <div class="pi__list__bottom-left"></div>
+    </div>
+
+  </section>
+</div>
+
+
 </body>
 
 

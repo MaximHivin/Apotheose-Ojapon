@@ -216,3 +216,53 @@ body,html{
 }
 
 
+
+/* Section Personnaliser votre experience */
+
+/* background_personnaliser.png */
+
+.personnaliser{
+    margin-top: 20em;
+    margin-bottom: 20em;
+    background-color:grey;
+    position: relative;
+    /* background-image: url('../images/background_personnaliser.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 10em;
+    padding-bottom: 10em; */
+}
+
+.personnaliser-background{
+    position: absolute;
+}
+
+.personnaliser__experience{
+    margin: 0 auto;
+}
+
+.personnaliser__experience-title{
+    font-family: 'Fellix SemiBold';
+    color: #fff;
+    font-size: 3.8em;
+    text-align: center;
+}
+
+.personnaliser__experience p {
+    font-family: 'Fellix Regular';
+    font-size: 1.8em;
+    color:#fff;
+    text-align: center;
+}
+
+.personnaliser__experience-action{
+    text-align: center;
+}
+
+.personnaliser__experience-action a {
+    font-family: 'Fellix Bold';
+    font-size: 1.8em;
+    color:#fff;
+    text-decoration: none;
+}
