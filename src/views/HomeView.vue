@@ -16,7 +16,7 @@
 <script>
 // @ is an alias to /src
 
-import HeaderLayout from '@/components/HeaderLayout.vue'
+// import HeaderLayout from '@/components/HeaderLayout.vue'
 // import Card from '@/components/Card.vue'
 // import InputSearch from '@/components/formulaire/InputSearch.vue'
 // import TextArea from '@/components/formulaire/TextArea.vue'
@@ -34,7 +34,7 @@ export default {
   name: 'HomeView',
   components: {
 
-HeaderLayout
+// HeaderLayout
   // Supprimer
   // Retour,
   // ButtonBack
