@@ -1,61 +1,127 @@
 <template>
 <section>
     <div class="main_container">
-        <div class="inscription">
+        <div class="titre-principal">
             <h1>Inscrivez-vous</h1>
-            </div>
-            <div class="prenom_email">
-            <p class="prenom">Votre prénom:</p>
-            <p class="email">Votre email:</p>
-            </div>
-            <div class="container_inputText">
-                <div class="input_top_left">
-      <input type="text" name="inputText" id="inputText" placeholder="Votre texte" class="container__inputText-content"> 
-      </div>   
-            
-      <div class="input_top_right">    
-      <input type="text" name="inputText" id="inputText" placeholder="Votre texte" class="container__inputText-content">
-  </div>
-  </div>
-            <div class="mdp_cmdp">
-            <p class="mdp">Votre mot de passe:</p>
-            <p class="cmdp">Confirmez votre mot de passe:</p>
-            </div>
-            <div class="container_inputText_bottom">
-                <div class="container_bottom_left">
-      <input type="text" name="inputText" id="inputText" placeholder="Votre texte" class="container__inputText-content">
-      </div>
-      <div class="container_bottom_right">
-      <input type="text" name="inputText" id="inputText" placeholder="Votre texte" class="container__inputText-content">
-  </div>
-  </div>
-  
-            <div class="button_top">
-            <a href="#" class="btn_connexion">Créez mon compte</a>
         </div>
+            <div class="errors" v-if="errors.length > 0">
+                <p v-for="error in errors" :key="error">{{ error }}</p>
+                </div>
+                <div class="success" v-if="success">
+                    <p>{{ success }}</p>
+                </div>
+        <div>
+            <p>Résultat : {{ formData }}</p>
+            <fieldset>
+                <label class="mdp_cmdp" for="username">Votre nom d'utilisateur :</label> 
+                <InputText name="username" id="username" placeholder="johndoe" type="text" @inputChange="updateInputValue" /> 
+            </fieldset>   
+                
+            <fieldset>  
+                <label class="mdp_cmdp" for="email">Votre email :</label>
+                <InputText name="email" id="email" placeholder="email@ojapon.com" type="text" @inputChange="updateInputValue" /> 
+            </fieldset>
+                
+            <fieldset>
+                <label class="mdp_cmdp" for="password">Votre mot de passe:</label>
+                <InputText name="password" id="password" placeholder="******" type="password" @inputChange="updateInputValue" /> 
+            </fieldset>
+            <fieldset>
+                <label class="mdp_cmdp" for="password_check">Confirmez votre mot de passe:</label>
+                <InputText name="password_check" id="password_check" placeholder="*****" type="password" @inputChange="updateInputValue" /> 
+            </fieldset>
 
-        <div class="Connection">
-            <h2>Vous avez déjà un compte ?</h2>
+            <Button v-on:click="sendForm" btnName="Créez un compte"/>
         </div>
-
-        <div class="button_bottom">
-            <a href="#" class="btn_create">Se connecter</a>
+        <div>
+            <h2 class="titre-principal">Vous avez déjà un compte ?</h2>
+            <Button btnName="Se connecter"/>
         </div>
-
-            
-
-
-        
-        
-
 
     </div>
 </section>
 </template>
 
 <script>
+import InputText from '@/components/formulaire/InputText.vue';
+import Button from '@/components/Button.vue';
+import UsersService from '@/services/UsersService.js';
+
 export default {
     name: "RegistrationForm",
+    components: {
+        InputText,
+        Button,
+    
+    },
+    data () {
+        return {
+            errors: [],
+            success: null,
+            formData: {
+                email: null,
+                username: null,
+                password: null,
+                password_check: null,
+                role: "traveler"
+            }
+        }
+    },
+    methods: {
+        updateInputValue: function (value) {
+            this.formData[value.name] = value.value
+        },
+        sendForm() {
+            //we start by emptying the error table (in the event of a second submit following an error, there is at least one element in it, and we want to avoid duplicate error messages)
+            this.errors.length = 0;
+            //retrieve all form data
+                // we already have them in data...
+            // validate this data
+            if(!this.formData.email) {
+                this.errors.push('Email cannot be empty');
+            } else {
+                // we check that it is a valid email
+                const regex = new RegExp(/^[^\W][a-zA-Z0-9\-._]+[^\W]@[^\W][a-zA-Z0-9\-._]+[^\W]\.[a-zA-Z]{2,6}$/gm);
+                if(!regex.test(this.formData.email)) {
+                    this.errors.push('Email format is invalid');
+                }
+            }
+            if(!this.formData.username) {
+                this.errors.push('Username cannot be empty');
+            }
+            if(!this.formData.password || !this.formData.password_check) {
+                this.errors.push('Password and Validate password cannot be empty');
+            } else {
+                if (this.formData.password != this.formData.password_check) {
+                    this.errors.push('Passwords do not match');
+                }
+            }
+            
+            // return error messages in case of non-validation
+            // run an asynchronous request to register a new user
+            if (this.errors.length > 0) {
+                console.log("Ça va pas du tout, fais ça correctement stp !");
+                console.log(this.errors);
+            } else {
+                UsersService.register({
+                    username: this.formData.username,
+                    email: this.formData.email,
+                    password: this.formData.password,
+                    role: this.formData.role
+                }, (data) => {
+                    // I check the type of response and I display
+                    // the message accordingly
+                    if(data.type === "success") {
+                        this.success = data.message;
+                    } else {
+                        this.errors.push(data.message);
+                    }
+                });
+                
+            }
+        }
+    }
+
 }
 </script>
 
@@ -68,7 +134,7 @@ export default {
     
 }
 
-.inscription {
+.titre-principal {
     text-align: left;
     color: black;
     padding-left: 3.5em;
@@ -76,6 +142,16 @@ export default {
     margin-top: 2.188em;
     font-family: "Fellix SemiBold";
     font-size: 2.0em;
+}
+
+.Connection {
+   text-align: left;
+    margin-left: 3.7em;
+    margin-top: 6.063em;
+    margin-bottom: 3.375em;
+    font-family: "Fellix SemiBold";
+    font-size: 2em;
+    color: black;
 }
 
 .prenom_email {
@@ -144,6 +220,7 @@ export default {
     color: black;
     font-family: "Fellix SemiBold";
     font-size: 1.500em;
+    margin-bottom: 10px;
 }
 
 .mdp {
@@ -210,15 +287,6 @@ export default {
     text-decoration: none;
 }
 
-.Connection {
-   text-align: left;
-    margin-left: 3.7em;
-    margin-top: 6.063em;
-    margin-bottom: 3.375em;
-    font-family: "Fellix SemiBold";
-    font-size: 2em;
-    color: black;
-}
 
 .button_bottom {
     width: 7.813em;
@@ -245,7 +313,15 @@ export default {
 }
 
 
-
+.center-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+fieldset {
+    border: 0;
+    margin-bottom: 2em;
+}
 
 
 

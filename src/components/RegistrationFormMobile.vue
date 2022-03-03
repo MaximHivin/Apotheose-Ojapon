@@ -3,6 +3,12 @@
         <div class="main_container">
             <div class="inscription">
             <h1>Inscrivez-vous</h1>
+                <div class="errors" v-if="errors.length > 0">
+                    <p v-for="error in errors" :key="error">{{ error }}</p>
+                </div>
+                <div class="success" v-if="success">
+                    <p>{{ success }}</p>
+                </div>
         </div>
         <p class="prenom">Votre prénom:</p>
         <input type="text" name="inputText" id="inputText" placeholder="Votre texte" class="container__inputText-content">
