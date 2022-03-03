@@ -77,11 +77,6 @@
 </div>
 
 <div class="personnaliser">
-
-  <div class="personnaliser-background">
-    <img src="../assets/images/background_personnaliser.png">
-  </div>
-
   <div class="main_container">
     <section class="personnaliser__experience">
       <h2 class="personnaliser__experience-title">Personnaliser votre voyage

@@ -219,23 +219,24 @@ body,html{
 
 /* Section Personnaliser votre experience */
 
-/* background_personnaliser.png */
-
 .personnaliser{
     margin-top: 20em;
     margin-bottom: 20em;
-    background-color:grey;
-    position: relative;
-    /* background-image: url('../images/background_personnaliser.png');
-    background-size: cover;
+    background-image: url('../images/background_personnaliser.png');
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 10em;
-    padding-bottom: 10em; */
+    /* A revoir */
+    padding-top: 25em;
+    padding-bottom: 25em;
+
 }
 
 .personnaliser-background{
     position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }
 
 .personnaliser__experience{
