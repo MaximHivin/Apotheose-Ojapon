@@ -1,6 +1,7 @@
 <template>
 
-      <a href="" class="button-content">{{ btnName }}</a>
+      <!-- <a href="" class="button-content">{{ btnName }}</a> -->
+      <button class="button-content">{{ btnName }}</button>
 
 </template>
 
@@ -26,6 +27,7 @@ export default {
   text-decoration: none;
   font-family: 'Fellix Bold';
   border-radius: 10px;
+  border: 0;
 }
 
 .button-content:hover{
