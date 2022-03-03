@@ -1,27 +1,31 @@
 <template>
-<div class="card">
 
-      <img class="img-card" alt="image" src="../assets/japan-card1.jpg">
+        <div class="card">
+            <div class="card__content-top">
+                    <!-- <img class="card__img" alt="image" src="../assets/japan-card1.jpg"> -->
+            </div>
 
-      <h2>Nom du point d'intérêt</h2>
+            <div class="card__content__bottom">
+                <h3>{{namePI}}</h3>
+                    <span class="card__content__bottom-localisation">
+                        <img class="pin" alt="logo map pin" src="../assets/map-pin.svg"><p>Localisation</p>
+                     </span>
+                <div class="card__content_bottom-tag">
+                    <p>Tag 2, Tag 3</p>
+                </div>
 
-        <div class="map-pin">
+            </div>
 
-                <span>
-                     <img class="pin" alt="logo map pin" src="../assets/map-pin.svg">
-                Localisation</span>
-        
         </div>
 
-        <span class="tag">Tag 2, Tag 3</span>
-
-
-</div>
 </template>
 
 <script>
 export default {
     name: 'Card',
+    props: {
+        namePI: String
+    }
 
 
 }
@@ -29,82 +33,51 @@ export default {
 
 <style>
 
+@import url('../assets/css/style.css');
+
+
 .card {
-    width: 536px;
-    height: 429px;
     box-shadow: 0px 7px 40px #0000001A;
     border-radius: 5px;
-    margin: 10px auto;
-    display: flex;
-    flex-direction: column;
-   
+    background-color: #fff;
 }
 
-.img-card {
+.card__content-top{
+    width:100%;
     height: 250px;
-    width: 536px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-
+    background-image: url('../assets/japan-card1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-h2,span {
-    display: flex;
-    justify-content: left;
-    padding-left: 24px;
-    color: #1d1d1d;
-    
+
+.card__content__bottom{
+    padding: 2.4em;
 }
 
-.map-pin {
-    display: flex;
-    color: #adadad;
-    line-height: 2;
+.card__content__bottom h3{
+    color: var(--secondary-color);
+    font-family: 'Fellix SemiBold';
+    font-size: 2.4em;
 }
 
-.pin {
-    margin-right: 8px;
+.card__content__bottom-localisation{
+    display:flex;
+    align-items: center;
 }
 
-span {
-    color: #adadad;
+.card__content__bottom-localisation p, .card__content_bottom-tag p{
+    margin-left: 0.8em;
+    color: var(--regular-black);
+    font-family: 'Fellix Regular';
+    font-size: 1.8em;
 }
 
-span.tag {
-
-    margin-top: 20px;
-    color: #1d1d1d;
+.card__content_bottom-tag p{
+    margin-left: 0;
+    color: var(--secondary-color);
 }
 
-@media screen and (max-width: 375px) {
-
-    .card {
-        width: 302px;
-        height: 256px;
-    }
-
-    .img-card {
-       width: 302px;
-       height: 135px; 
-    }
-
-    h2 {
-        font-size: 18px;
-    }
-
-    .map-pin {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    .pin {
-        height: 18px;
-        width: 22px;
-    }
-
-    span.tag {
-        font-size: 14px;
-    }
-}
 
 </style>

@@ -8,10 +8,10 @@
 
         <div class="container__backoffice__link">
            
-            <CreationGuide LinkContent="Créer un guide voyage" />
-            <CreationGuide LinkContent="Créer un guide voyage" />
-            <CreationGuide LinkContent="Créer un guide voyage" />
-            <CreationGuide LinkContent="Créer un guide voyage" />
+            <ButtonBack LinkContent="Créer un guide voyage" />
+            <ButtonBack LinkContent="Créer un guide voyage" />
+            <ButtonBack LinkContent="Créer un guide voyage" />
+            <ButtonBack LinkContent="Créer un guide voyage" />
 
         </div>
 
@@ -30,12 +30,12 @@
 // import FooterLayout from '@/components/FooterLayout.vue'
 // import FooterLayoutMobile from '@/components/FooterLayoutMobile.vue'
 
-import CreationGuide from '@/components/CTA/CreationGuide.vue'
+import ButtonBack from '@/components/CTA/ButtonBack.vue'
 
 export default {
     name: 'BackOffice',
     components: {
-        CreationGuide
+        ButtonBack,
         // FooterLayoutMobile
 
     }
@@ -70,6 +70,7 @@ p {
     font-size: 18px;
     margin: 24px 20px 20px;
 }
+
 
 
 

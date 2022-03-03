@@ -8,12 +8,12 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/Le_Japon',
-    name: 'Le Japon',
+    path: '/lejapon',
+    name: 'LeJapon',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Le_JaponView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/LeJaponView.vue')
   },
   {
     path: '/register',
@@ -24,8 +24,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/RegisterLayout.vue')
   },
   {
-    path: '/Pointsinterets',
-    name: 'Points d\'intérêts',
+    path: '/pointsinteret',
+    name: 'PointsInteret',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -33,7 +33,7 @@ const routes = [
   },
   {
     path: '/blogs',
-    name: 'Blogs Voyageurs',
+    name: 'BlogsVoyageurs',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -56,8 +56,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/ContactView.vue')
   },
   {
-    path: '/connect',
-    name: 'Connexion',
+    path: '/login',
+    name: 'SeConnecter',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -70,6 +70,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/BackOffice.vue')
+  },
+  {
+    path: '/listeguidesdevoyages',
+    name: 'ListeGuidesDeVoyages',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/ListeGuidesDeVoyages.vue')
   },
 ]
 
