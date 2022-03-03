@@ -9,13 +9,7 @@
     <CirclePi localisationPI="Texte à mettre" namePI="Texte à mettre"/>
     <InputText />
     <Tag TagContent="Nom du tag"/>
-<<<<<<< HEAD
     <TextArea /> -->
-=======
-    <TextArea />
-    <InputSearch /> -->
-    <HeaderLayout />
->>>>>>> develop
   </div>
 </template>
 
