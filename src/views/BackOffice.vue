@@ -3,15 +3,15 @@
 
     <div class="main_container">
 
-            <h1>Bonjour <span>User</span></h1>
+            <h1>Bonjour User</h1>
             <p>Vous souhaitez :</p>
 
         <div class="container__backoffice__link">
            
-            <ButtonBack LinkContent="Créer un guide voyage" />
-            <ButtonBack LinkContent="Créer un guide voyage" />
-            <ButtonBack LinkContent="Créer un guide voyage" />
-            <ButtonBack LinkContent="Créer un guide voyage" />
+            <ButtonBack linkContent="Créer un guide voyage" />
+            <ButtonBack linkContent="Créer un guide voyage" />
+            <ButtonBack linkContent="Créer un guide voyage" />
+            <ButtonBack linkContent="Créer un guide voyage" />
 
         </div>
 
@@ -57,10 +57,6 @@ h1 {
     margin: 40px 20px 0;
     text-align: left;
 
-}
-
-span {
-    color: #CE1137
 }
 
 p {
