@@ -1,5 +1,5 @@
 <template>
-      <input :type="type" :name="name" :id="id" v-on:keyup="handleKeyUp" :placeholder="placeholder" class="container__inputText-content">
+      <input :type="type" :name="name" :id="id" v-on:keyup="handleKeyUp" :placeholder="placeholder" class="container__inputText-content" >
 </template>
 
 <script>
