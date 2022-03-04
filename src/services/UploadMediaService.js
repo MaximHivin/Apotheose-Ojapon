@@ -15,6 +15,7 @@ export default {
     uploadMedia(data, callback) {
         apiClient.post('/wp/v2/media', data, {
             headers: {
+                'Content-Type': 'multipart/form-data',
                 'Authorization': 'Bearer ' + store.state.token
             }
         })
@@ -37,16 +38,3 @@ export default {
     }
 }
 
-/*createRecipe(data, callback) {
-        apiClient.post('/recipes?_embed', data, {
-            headers: {
-                'Authorization': 'Bearer ' + store.state.token
-            }
-        })
-        .then(
-            (response) => {
-                console.log(response);
-                callback();
-            }
-        )
-    },*/

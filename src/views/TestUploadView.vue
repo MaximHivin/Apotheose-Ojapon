@@ -1,6 +1,12 @@
 <template>
   <div>
-      <h1>Test upload API</h1>
+        <h1>Test upload API</h1>
+        <div class="errors" v-if="errors.length > 0">
+            <p v-for="error in errors" :key="error">{{ error }}</p>
+        </div>
+        <div class="success" v-if="success">
+            <p>{{ success }}</p>
+        </div>
       <fieldset>
             <label for="file">Choisir un fichier :</label>
             <input @change="upload($event)" name="file" id="file" placeholder="choose a file..." type="file" class="container__inputText-content">
@@ -24,26 +30,19 @@ export default {
         return {
             errors: [],
             success: null,
-            formData: FormData,
+            dataForm: new FormData(),
             file: File
         }
     },
     methods: {
         upload: function (event) {
-            console.log('method upload file input');
-            console.log(event);
             this.file = event.target.files[0];
-            console.log(this.file);
-            console.log(this.formData);
-            this.formData.append('file', this.file);
-            this.formData.append('title', 'Generic title');
-            // prépare les data
-            //this.formData[value.name] = value.value
+            this.dataForm.append('file', this.file);
         },
         uploadImg() {
             // call to api
             console.log('uploadImg et call to api');
-            UploadMediaService.uploadMedia(this.formData, (data) => {
+            UploadMediaService.uploadMedia(this.dataForm, (data) => {
                     // I check the type of response and I display
                     // the message accordingly
                     if(data.type === "success") {
