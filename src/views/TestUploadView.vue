@@ -14,6 +14,7 @@
         <div class="center-button">
             <Button v-on:click="uploadImg" btnName="Télécharger"/>
         </div>
+        
   </div>
 </template>
 
