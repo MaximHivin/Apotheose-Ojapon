@@ -13,9 +13,10 @@
 
 <script>
 import Button from '@/components/Button.vue';
+import UploadMediaService from '@/services/UploadMediaService.js';
 
 export default {
-    name: 'TestUploadView', 
+    name: 'TestUploadView',
     components: {
         Button
     },
@@ -23,20 +24,34 @@ export default {
         return {
             errors: [],
             success: null,
-            formData: {
-                password: '',
-                username: ''
-            }
+            formData: FormData,
+            file: File
         }
     },
     methods: {
         upload: function (event) {
             console.log('method upload file input');
             console.log(event);
+            this.file = event.target.files[0];
+            console.log(this.file);
+            console.log(this.formData);
+            this.formData.append('file', this.file);
+            this.formData.append('title', 'Generic title');
+            // prépare les data
             //this.formData[value.name] = value.value
         },
         uploadImg() {
-            
+            // call to api
+            console.log('uploadImg et call to api');
+            UploadMediaService.uploadMedia(this.formData, (data) => {
+                    // I check the type of response and I display
+                    // the message accordingly
+                    if(data.type === "success") {
+                        this.success = data.message;
+                    } else {
+                        this.errors.push(data.message);
+                    }
+                });
         }
     }
 }
