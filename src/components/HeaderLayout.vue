@@ -11,8 +11,16 @@
       </div>
       <div class="header__right">
           <ul>
-              <li class="header__right-inscription"><a href="#">Inscription</a></li>
-              <li><Button btnName="Se connecter"/></li>
+              <li class="header__right-inscription">
+                  <router-link to="/register">
+                      Inscription
+                  </router-link>
+                  </li>
+              <li>
+                  <router-link to="/login">
+                        <Button btnName="Se connecter"/>
+                  </router-link>
+            </li>
           </ul>
       </div>
   </nav>

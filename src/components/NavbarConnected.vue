@@ -12,7 +12,11 @@
       <div class="header__right">
           <ul>
               <li class="header__right-inscription"><a href="#">Se deconnecter</a></li>
-              <li><Button btnName="Accès à mon back office"/></li>
+              <li>
+                  <router-link to="/backoffice">
+                        <Button btnName="Accès à mon back office"/>
+                  </router-link>
+                </li>
           </ul>
       </div>
   </nav>
