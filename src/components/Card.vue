@@ -1,21 +1,20 @@
 <template>
 
         <div class="card">
-            <div class="card__content-top">
-                    <!-- <img class="card__img" alt="image" src="../assets/japan-card1.jpg"> -->
-            </div>
-
-            <div class="card__content__bottom">
-                <h3>{{namePI}}</h3>
-                    <span class="card__content__bottom-localisation">
-                        <img class="pin" alt="logo map pin" src="../assets/map-pin.svg"><p>Localisation</p>
-                     </span>
-                <div class="card__content_bottom-tag">
-                    <p>Tag 2, Tag 3</p>
+            <div class="card__top">
+                <div class="card__top-img">
+                     <img :src="image">
                 </div>
-
             </div>
 
+            <div class="card__bottom">
+                <h3>{{ name }}</h3>
+                <div class="card__bottom-localisation">
+                    <img src="../assets/map-pin.svg">
+                    <p>{{ localisation }}</p>
+                </div>
+                <p class="card__bottom-tag">{{ genre }}</p>
+            </div>
         </div>
 
 </template>
@@ -24,10 +23,12 @@
 export default {
     name: 'Card',
     props: {
-        namePI: String
+        name: String,
+        localisation: String,
+        url: String,
+        image: String,
+        genre: String
     }
-
-
 }
 </script>
 
@@ -35,49 +36,61 @@ export default {
 
 @import url('../assets/css/style.css');
 
+.card{
+    width: 31%;
 
-.card {
-    box-shadow: 0px 7px 40px #0000001A;
-    border-radius: 5px;
+    margin-right: 1.6em;
+    margin-bottom: 1.6em;
+}
+
+.card__top{
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%;
+}
+
+.card__top-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index:2;
+}
+
+.card__bottom{
+    padding-top: 2.4em;
+    padding-left: 2.4em;
+    padding-bottom: 2.4em;
     background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-.card__content-top{
-    width:100%;
-    height: 250px;
-    background-image: url('../assets/japan-card1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-.card__content__bottom{
-    padding: 2.4em;
-}
-
-.card__content__bottom h3{
+.card__bottom h3{
     color: var(--secondary-color);
-    font-family: 'Fellix SemiBold';
     font-size: 2.4em;
+    font-family: 'Fellix SemiBold';
+    margin: 0;
 }
 
-.card__content__bottom-localisation{
-    display:flex;
+.card__bottom-localisation{
+    display: flex;
     align-items: center;
 }
 
-.card__content__bottom-localisation p, .card__content_bottom-tag p{
-    margin-left: 0.8em;
+.card__bottom-localisation p {
     color: var(--regular-black);
-    font-family: 'Fellix Regular';
+    margin-left: 0.8em;
     font-size: 1.8em;
+    font-family: 'Fellix Regular';
 }
 
-.card__content_bottom-tag p{
-    margin-left: 0;
+.card__bottom-tag p{
+    font-family: 'Fellix Regular';
+    font-size: 1.6em;
     color: var(--secondary-color);
 }
-
 
 </style>

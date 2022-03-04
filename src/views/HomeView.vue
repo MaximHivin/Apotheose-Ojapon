@@ -182,7 +182,6 @@ import TextArea from '@/components/formulaire/TextArea.vue'
 export default {
   name: 'HomeView',
   components: {
-
     HeaderLayout,
     InputSearch,
     Button,
