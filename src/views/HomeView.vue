@@ -2,7 +2,8 @@
 
 <body class="black_color">
   <div class="header__desktop">
-        <HeaderLayout />
+          <NavbarConnected v-if="this.$store.state.token"/>
+          <HeaderLayout v-else />
         <div class="main_container">
 
           <div class="header__desktop-title">
@@ -172,6 +173,7 @@
 // @ is an alias to /src
 
 import HeaderLayout from '@/components/HeaderLayout.vue'
+import NavbarConnected from '@/components/NavbarConnected.vue'
 import InputSearch from '@/components/formulaire/InputSearch.vue'
 import Button from '@/components/Button.vue'
 import CirclePi from '@/components/CirclePi.vue'
@@ -182,6 +184,7 @@ import TextArea from '@/components/formulaire/TextArea.vue'
 export default {
   name: 'HomeView',
   components: {
+    NavbarConnected,
     HeaderLayout,
     InputSearch,
     Button,

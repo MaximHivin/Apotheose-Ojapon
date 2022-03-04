@@ -1,41 +1,45 @@
 <template>
+
+ <div class="main_container">
+    <HeaderLayout />
+</div>
+
 <section class="backoffice">
-
     <div class="main_container">
-
-            <h1>Bonjour <span>User</span></h1>
-            <p>Vous souhaitez :</p>
-
-        <div class="container__backoffice__link">
-           
-            <ButtonBack LinkContent="Créer un guide voyage" />
-            <ButtonBack LinkContent="Créer un guide voyage" />
-            <ButtonBack LinkContent="Créer un guide voyage" />
-            <ButtonBack LinkContent="Créer un guide voyage" />
-
+        <div class="backoffice-title">
+            <h2>Bonjour <span>A DYNAMISER </span></h2>
+            <h3>Vous souhaitez :</h3>
         </div>
-
+        <div class="backoffice__card">
+            <div class="backoffice__card-content">
+                <ButtonBack linkContent="Créer votre guide de voyage"/>
+            </div>
+            <div class="backoffice__card-content">
+                <ButtonBack linkContent="Créer un point d'intérêt"/>
+            </div>
+            <div class="backoffice__card-content">
+                <ButtonBack linkContent="Accéder à mes guides de voyage"/>
+            </div>
+            <div class="backoffice__card-content">
+                <ButtonBack linkContent="Accéder à la liste des points d'intérêts"/>
+            </div>
+        </div>
     </div>
-  
-
-    <!-- <FooterLayoutMobile /> -->
-</section>
+ </section>
 
   
 </template>
 
 <script>
 
-// import HeaderLayout from '@/components/HeaderLayout.vue'
-// import FooterLayout from '@/components/FooterLayout.vue'
-// import FooterLayoutMobile from '@/components/FooterLayoutMobile.vue'
-
+import HeaderLayout from '@/components/HeaderLayout.vue'
 import ButtonBack from '@/components/CTA/ButtonBack.vue'
 
 export default {
     name: 'BackOffice',
     components: {
-        ButtonBack,
+        HeaderLayout,
+        ButtonBack
         // FooterLayoutMobile
 
     }
@@ -46,31 +50,8 @@ export default {
 
 
 <style>
-
-body {
-    background-color: #fff;
-}
-
-h1 {
-    color: #1d1d1d;
-    font-size: 24px;
-    margin: 40px 20px 0;
-    text-align: left;
-
-}
-
-span {
-    color: #CE1137
-}
-
-p {
-    color: #1d1d1d;
-    font-weight: bold;
-    text-align: left;
-    font-size: 18px;
-    margin: 24px 20px 20px;
-}
-
+@import url('../assets/css/style.css');
+@import url('../assets/css/backoffice.css');
 
 
 
