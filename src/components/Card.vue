@@ -13,7 +13,7 @@
                     <img src="../assets/map-pin.svg">
                     <p>{{ localisation }}</p>
                 </div>
-                <p class="card__bottom-tag">{{ tag }}</p>
+                <p class="card__bottom-tag">{{ genre }}</p>
             </div>
         </div>
 
@@ -27,7 +27,7 @@ export default {
         localisation: String,
         url: String,
         image: String,
-        tag: String
+        genre: String
     }
 }
 </script>
@@ -38,6 +38,7 @@ export default {
 
 .card{
     width: 31%;
+
     margin-right: 1.6em;
     margin-bottom: 1.6em;
 }
@@ -71,6 +72,7 @@ export default {
     color: var(--secondary-color);
     font-size: 2.4em;
     font-family: 'Fellix SemiBold';
+    margin: 0;
 }
 
 .card__bottom-localisation{
