@@ -1,7 +1,7 @@
 <template>
 
       <!-- <a href="" class="button-content">{{ btnName }}</a> -->
-      <button class="button-content">{{ btnName }}</button>
+      <button class="button-content" v-html="btnName"></button>
 
 </template>
 

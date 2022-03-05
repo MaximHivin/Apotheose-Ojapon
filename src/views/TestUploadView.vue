@@ -1,42 +1,58 @@
 <template>
-  <div>
+  <div class="main_container">
         <h1>Test upload API</h1>
-        <div class="errors" v-if="errors.length > 0">
-            <p v-for="error in errors" :key="error">{{ error }}</p>
-        </div>
-        <div class="success" v-if="success">
-            <p>{{ success }}</p>
-        </div>
-      <fieldset>
-            <label for="file">Choisir un fichier :</label>
-            <input @change="upload($event)" name="file" id="file" placeholder="choose a file..." type="file" class="container__inputText-content">
+        <p>Attention, ce formulaire n'est pas fonctionnel, à part pour le composant UploadFile !! </p>
+        <p>Les autres champs sont uniquement des copier/coller du formulaire d'inscription, sans traitement derrière.</p>
+        <fieldset>
+            <label class="mdp_cmdp" for="username">Votre nom d'utilisateur :</label> 
+            <InputText name="username" id="username" placeholder="johndoe" type="text" @inputChange="updateInputValue" /> 
+        </fieldset>   
+            
+        <fieldset>  
+            <label class="mdp_cmdp" for="email">Votre email :</label>
+            <InputText name="email" id="email" placeholder="email@ojapon.com" type="text" @inputChange="updateInputValue" /> 
         </fieldset>
-        <div class="center-button">
-            <Button v-on:click="uploadImg" btnName="Télécharger"/>
-        </div>
+            
+        <fieldset>
+            <label class="mdp_cmdp" for="password">Votre mot de passe:</label>
+            <InputText name="password" id="password" placeholder="******" type="password" @inputChange="updateInputValue" /> 
+        </fieldset>
+        <fieldset>
+            <label class="mdp_cmdp" for="password_check">Confirmez votre mot de passe:</label>
+            <InputText name="password_check" id="password_check" placeholder="*****" type="password" @inputChange="updateInputValue" /> 
+        </fieldset>
+
+        <UploadFile @uploadComplete="getFileId"/>
         
   </div>
 </template>
 
 <script>
-import Button from '@/components/Button.vue';
-import UploadMediaService from '@/services/UploadMediaService.js';
+import UploadFile from '@/components/formulaire/UploadFile.vue';
+import InputText from '@/components/formulaire/InputText.vue';
 
 export default {
     name: 'TestUploadView',
     components: {
-        Button
+        InputText,
+        UploadFile
     },
     data () {
         return {
             errors: [],
             success: null,
-            dataForm: new FormData(),
-            file: File
-        }
+            formData: {
+                attachmentId: null
+            }
+            /* dataForm: new FormData(),
+            file: File*/
+        } 
     },
     methods: {
-        upload: function (event) {
+        getFileId: function (value) {
+            this.formData.attachmentId = value.fileId
+        }
+        /* upload: function (event) {
             this.file = event.target.files[0];
             this.dataForm.append('file', this.file);
         },
@@ -52,29 +68,16 @@ export default {
                         this.errors.push(data.message);
                     }
                 });
-        }
+        } */
     }
 }
 </script>
 
-<style>
-.container__inputText-content{
-    padding-left: 2.4em;
-    padding-top: 1.6em;
-    padding-bottom: 1.6em; 
-    border-radius: 5px;
-    border:none;
-    background-color:#F1F1F1 ;
-    color: var(--secondary-color);
-    font-size: 1.6em;
-    font-family: 'Fellix Medium';
-    font-weight: 500;
-    width: 100%;
-    box-sizing: border-box; 
+<style scoped>
+.main_container {
+    background-color: #fff;
 }
-
-.container__inputText-content::placeholder{
-    color:var(--regular-black);
-    font-weight: 500;
+p, label {
+    font-size: 1.8em;
 }
 </style>

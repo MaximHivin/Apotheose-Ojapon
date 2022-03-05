@@ -29,9 +29,11 @@ export default {
         )
         .then(
             (response) => {
+                console.log(response);
                 callback({
                     type: 'success',
-                    message: response.data.message
+                    message: 'Le fichier a été téléchargé avec succès',
+                    newFileInfo: response.data
                 });
             }
         );
