@@ -36,6 +36,7 @@
 import HeaderLayout from '@/components/HeaderLayout.vue'
 import NavbarConnected from '@/components/NavbarConnected.vue'
 import ButtonBack from '@/components/CTA/ButtonBack.vue'
+// import UsersService from '@/services/UsersService.js'
 
 export default {
     name: 'BackOffice',
@@ -45,8 +46,10 @@ export default {
         ButtonBack
         // FooterLayoutMobile
     },
-    props: {
-        username: String
+    data(){
+        return{
+            username: this.$store.state.userName
+        }
     }
 }
 
