@@ -2,7 +2,7 @@
 <section>
     <div class="main_container">
         <div class="titre-principal">
-            <h1>Inscrivez-vous</h1>
+            <h1>Votre Point d'intérêt</h1>
         </div>
             <div class="errors" v-if="errors.length > 0">
                 <p v-for="error in errors" :key="error">{{ error }}</p>
@@ -21,6 +21,7 @@
                 <label class="mdp_cmdp" for="title">Description :</label>
                 <TextArea name="content" id="content" placeholder="Description du point d'intérêt : privilégiez une description objective, indépendante de votre expérience personnelle..." @inputChange="updateInputValue" /> 
             </fieldset>
+            
 
 
             <Button v-on:click="sendForm" btnName="Créez votre Point d'intérêt"/>
@@ -44,9 +45,7 @@ export default {
         InputText,
         UploadFile,
         TextArea,
-        Button,
-        
-    
+        Button
     },
     data () {
         return {
@@ -56,7 +55,8 @@ export default {
                 title: null,
                 content: null,
                 attachmentId: null
-            }
+            },
+            userID : this.$store.state.userID
         }
     },
     methods: {
@@ -89,12 +89,24 @@ export default {
                 console.log(this.errors);
             } else {
                 // call to PoiServices
-                POIService.add();
-                
+                POIService.add({
+                    title: this.formData.title,
+                    content: this.formData.content,
+                    status: 'pending',
+                    featured_media: this.formData.attachmentId,
+                    author: this.userID
+                }, (data) => {
+                    // I check the type of response and I display
+                    // the message accordingly
+                    if(data.type === "success") {
+                        this.success = data.message;
+                    } else {
+                        this.errors.push(data.message);
+                    }
+                });             
             }
         }
     }
-
 }
 </script>
 
