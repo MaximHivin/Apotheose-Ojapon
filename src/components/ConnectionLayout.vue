@@ -33,6 +33,7 @@
                 <Button btnName="S'inscrire" />
             </div>
             <router-link :to="'/test-upload'">Test upload</router-link>
+            <router-link :to="'/test-createguide'">Test CreateGuide</router-link>
             
 
         </div> 
