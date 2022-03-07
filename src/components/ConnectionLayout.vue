@@ -33,6 +33,7 @@
                 <Button btnName="S'inscrire" />
             </div>
             <router-link :to="'/test-upload'">Test upload</router-link>
+        <router-link :to="'/backoffice/poi/add'">Add POI</router-link>
             
 
         </div> 

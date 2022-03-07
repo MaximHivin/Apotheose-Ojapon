@@ -12,5 +12,8 @@ const apiClient = axios.create({
 export default {
     findAll() {
         return apiClient.get('/poi?_embed');
+    },
+    add() {
+        
     }
 };
