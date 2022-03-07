@@ -21,6 +21,24 @@
                 <label class="mdp_cmdp" for="title">Description :</label>
                 <TextArea name="content" id="content" placeholder="Description du point d'intérêt : privilégiez une description objective, indépendante de votre expérience personnelle..." @inputChange="updateInputValue" /> 
             </fieldset>
+            <div>
+                <p v-for="location in locations" :key="location.name">{{ location.name }}</p>
+                <!--<CommentLayout v-for="comment in comments" :key="comment.id"
+                    :author="comment.author_name" 
+                    :content="comment.content.rendered"  
+                />
+
+                <RecipeLayout 
+                    v-for="recipe in recipes" :key="recipe.title" 
+                    :id="recipe.id"
+                    :title="recipe.title.rendered" 
+                    :excerpt="recipe.excerpt.rendered"
+                    :image="getMedia(recipe)"
+                    :ingredients="getIngredients(recipe)"
+                />-->
+                 
+                
+            </div>
             
 
 
@@ -37,6 +55,7 @@ import InputText from '@/components/formulaire/InputText.vue';
 import TextArea from '@/components/formulaire/TextArea.vue';
 import UploadFile from '@/components/formulaire/UploadFile.vue';
 import Button from '@/components/Button.vue';
+import TaxonomiesService from '@/services/TaxonomiesService.js';
 import POIService from '@/services/POIService.js';
 
 export default {
@@ -45,12 +64,14 @@ export default {
         InputText,
         UploadFile,
         TextArea,
-        Button
+        Button,
+        
     },
     data () {
         return {
             errors: [],
             success: null,
+            locations: null,
             formData: {
                 title: null,
                 content: null,
@@ -58,6 +79,18 @@ export default {
             },
             userID : this.$store.state.userID
         }
+    },
+    mounted() {
+        // call to API to get taxonomies
+        // Attention, on ne traite pas pour l'instant les cas d'erreurs
+        TaxonomiesService.getTerms('locations').then(
+            // Executer le code qui permet de recuperer le résultat de ma requete
+            // Permet de garder le contexte et de recuperer response
+            (response) => {
+                console.log(response.data);
+                this.locations = response.data;
+            }
+        );
     },
     methods: {
         updateInputValue: function (value) {
@@ -92,7 +125,7 @@ export default {
                 POIService.add({
                     title: this.formData.title,
                     content: this.formData.content,
-                    status: 'pending',
+                    status: 'publish',
                     featured_media: this.formData.attachmentId,
                     author: this.userID
                 }, (data) => {

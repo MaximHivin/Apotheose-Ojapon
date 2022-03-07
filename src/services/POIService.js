@@ -15,7 +15,7 @@ export default {
         return apiClient.get('/poi?_embed');
     },
     add(data, callback) {
-        apiClient.post('/wp/v2/poi', data, {
+        apiClient.post('/poi', data, {
             headers: {
                 'Authorization': 'Bearer ' + store.state.token
             }
