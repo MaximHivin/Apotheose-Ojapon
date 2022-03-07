@@ -51,6 +51,7 @@ export default {
                 // param 2 : la data
                 store.commit('setToken', response.data.data.token);
                 store.commit('setUserID', response.data.data.id);
+                store.commit('setUserName', response.data.data.username);
                 store.commit('setUserRole', response.data.data.roles);
                 callback({
                     type: 'success',
