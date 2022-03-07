@@ -5,18 +5,14 @@ const apiClient = axios.create({
     baseURL: 'http://ojapon.local/wp-json/wp/v2',
     headers: {
         Accept: 'application/json',
-        'Authorization': 'Bearer' + sessionStorage.getItem('token')
+        'Authorization': 'Bearer' + store.state.token
     },
     timeout: 10000
 })
 
 export default {
     insert(data, callback){
-        apiClient.post('/travelguide', data, {
-            headers: {
-                'Authorization': 'Bearer' + store.state.token
-            }
-        })
+        apiClient.post('/travelguide', data,)
         .then(
             (response) => {
                 console.log('ICI', response);

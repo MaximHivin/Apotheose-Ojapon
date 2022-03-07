@@ -31,7 +31,7 @@
 
 <script>
 import Button from '@/components/Button.vue'
-import CreateGuide from'@/services/CreateGuide.js'
+// import CreateGuide from'@/services/CreateGuide.js'
 export default {
     name: 'FormBackCreateGuide',
     components: {
@@ -47,19 +47,19 @@ export default {
 
         }
     },
-    methods: {
-        createGuide(){
-            CreateGuide.insert({
-                title: this.title,
-                startguide: this.startguide,
-                endguide: this.endguide,
-                status: 'publish'
-            },() => {
-                this.$emit('new_guide', true)
-                console.log('Guide de voyage ajoutée');
-            })
-        }
-    }
+    // methods: {
+    //     createGuide(){
+    //         CreateGuide.insert({
+    //             title: this.title,
+    //             startguide: this.startguide,
+    //             endguide: this.endguide,
+    //             status: 'publish'
+    //         },() => {
+    //             this.$emit('new_guide', true)
+    //             console.log('Guide de voyage ajoutée');
+    //         })
+    //     }
+    // }
     
 }
 </script>

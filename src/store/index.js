@@ -9,7 +9,8 @@ export default createStore({
     state: {
         token: null,
         userID: null,
-        userRole: null
+        userRole: null,
+        userName: null
     },
     getters: {
         checkUserRole: (state) => (roles) => {
@@ -28,6 +29,9 @@ export default createStore({
         },
         setUserID(state, newUserID) {
             state.userID = newUserID;
+        },
+        setUserName(state, newUserName) {
+            state.userName = newUserName;
         },
         setUserRole(state, newUserRole) {
             state.userRole = newUserRole;
