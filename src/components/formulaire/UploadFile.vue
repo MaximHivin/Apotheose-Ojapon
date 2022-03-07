@@ -64,7 +64,7 @@ export default {
         uploadFile() {
             // toggles the loader
             this.loading = true;
-            this.dataForm.append('title', this.title);
+            if(this.title) this.dataForm.append('title', this.title);
             // call to api
             console.log('uploadImg et call to api');
             UploadMediaService.uploadMedia(this.dataForm, (data) => {
