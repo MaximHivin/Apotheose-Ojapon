@@ -1,13 +1,14 @@
 <template>
 
  <div class="main_container">
-    <HeaderLayout />
+    <NavbarConnected v-if="this.$store.state.token"/>
+    <HeaderLayout v-else />
 </div>
 
 <section class="backoffice">
     <div class="main_container">
         <div class="backoffice-title">
-            <h2>Bonjour <span>A DYNAMISER </span></h2>
+            <h2>Bonjour <span>{{ username }}</span></h2>
             <h3>Vous souhaitez :</h3>
         </div>
         <div class="backoffice__card">
@@ -33,17 +34,20 @@
 <script>
 
 import HeaderLayout from '@/components/HeaderLayout.vue'
+import NavbarConnected from '@/components/NavbarConnected.vue'
 import ButtonBack from '@/components/CTA/ButtonBack.vue'
 
 export default {
     name: 'BackOffice',
     components: {
         HeaderLayout,
+        NavbarConnected,
         ButtonBack
         // FooterLayoutMobile
-
+    },
+    props: {
+        username: String
     }
-
 }
 
 </script>
