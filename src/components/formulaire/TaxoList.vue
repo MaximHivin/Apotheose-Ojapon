@@ -1,65 +1,76 @@
 <template>
   <div>
-    <button class="accordion">Section 1</button>
-        <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
+    <div>
+      <label
+        for="search"
+      >
+        Type the name of a country to search
+      </label>
 
-    <button class="accordion">Section 2</button>
-        <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
+      <input type="text" id="search" v-model="searchTerm" placeholder="Type here..." >
 
-    <button class="accordion">Section 3</button>
-        <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <ul v-if="searchCountries.length">
+        <li>
+          Showing {{ searchCountries.length }} of {{ countries.length }} results
+        </li>
+        <li v-for="country in searchCountries"
+            :key="country.name"
+            @click="selectCountry(country.name)"
+        >
+          {{ country.name }}
+        </li>
+      </ul>
+
+      <p v-if="selectedCountry" >
+        You have selected: <span>{{ selectedCountry }}</span>
+      </p>
     </div>
   </div>
 </template>
 
 <script>
+import {ref, computed} from 'vue'
+import countries from '@/assets/countries.json';
+
 
 export default {
-    name: 'TaxoList'
+    name: 'TaxoList',
+    setup() {
+      let searchTerm = ref('');
+      const searchCountries = computed(() => {
+        if (searchTerm.value === '') {
+          return []
+        }
+
+        let matches = 0
+
+        return countries.filter(country => {
+          if (
+            country.name.toLowerCase().includes(searchTerm.value.toLowerCase())
+            && matches < 10
+          ) {
+            matches++
+            return country
+          }
+        })
+      });
+
+    const selectCountry = (country) => {
+      selectedCountry.value = country
+      searchTerm.value = ''
+    }
+    let selectedCountry = ref('')
+    return {
+      countries,
+      searchTerm,
+      searchCountries,
+      selectCountry,
+      selectedCountry
+    }
+  }
 }
 </script>
 
-<style scoped>
+<style>
 
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
-
-.active, .accordion:hover {
-  background-color: #ccc;
-}
-
-.accordion:after {
-  content: '\002B';
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
 </style>

@@ -22,26 +22,10 @@
                 <TextArea name="content" id="content" placeholder="Description du point d'intérêt : privilégiez une description objective, indépendante de votre expérience personnelle..." @inputChange="updateInputValue" /> 
             </fieldset>
             <div>
-                <p v-for="location in locations" :key="location.name">{{ location.name }}</p>
-                <!--<CommentLayout v-for="comment in comments" :key="comment.id"
-                    :author="comment.author_name" 
-                    :content="comment.content.rendered"  
-                />
+                <p>Localisation sélectionnée {{ locationsSelected }}</p>
+                <SearchAutocomplete :items="locations" @itemSelected="updateLocation"/>
 
-                <RecipeLayout 
-                    v-for="recipe in recipes" :key="recipe.title" 
-                    :id="recipe.id"
-                    :title="recipe.title.rendered" 
-                    :excerpt="recipe.excerpt.rendered"
-                    :image="getMedia(recipe)"
-                    :ingredients="getIngredients(recipe)"
-                />-->
-                 
-                
             </div>
-            
-
-
             <Button v-on:click="sendForm" btnName="Créez votre Point d'intérêt"/>
         </div>
 
@@ -55,6 +39,7 @@ import InputText from '@/components/formulaire/InputText.vue';
 import TextArea from '@/components/formulaire/TextArea.vue';
 import UploadFile from '@/components/formulaire/UploadFile.vue';
 import Button from '@/components/Button.vue';
+import SearchAutocomplete from '@/components/formulaire/SearchAutocomplete.vue';
 import TaxonomiesService from '@/services/TaxonomiesService.js';
 import POIService from '@/services/POIService.js';
 
@@ -65,19 +50,21 @@ export default {
         UploadFile,
         TextArea,
         Button,
+        SearchAutocomplete
         
     },
     data () {
         return {
             errors: [],
             success: null,
-            locations: null,
+            locations: [],
             formData: {
                 title: null,
                 content: null,
                 attachmentId: null
             },
-            userID : this.$store.state.userID
+            userID : this.$store.state.userID,
+            locationsSelected: []
         }
     },
     mounted() {
@@ -88,13 +75,21 @@ export default {
             // Permet de garder le contexte et de recuperer response
             (response) => {
                 console.log(response.data);
-                this.locations = response.data;
+                const localisations = response.data;
+                for(const location of localisations) {
+                    this.locations.push(location.name);
+                }
+                //this.locations = response.data;
             }
         );
     },
     methods: {
         updateInputValue: function (value) {
             this.formData[value.name] = value.value
+        },
+        updateLocation: function (value) {
+            console.log(value);
+            this.locationsSelected.push(value);
         },
         getFileId: function (value) {
             this.formData.attachmentId = value.fileId
@@ -127,7 +122,8 @@ export default {
                     content: this.formData.content,
                     status: 'publish',
                     featured_media: this.formData.attachmentId,
-                    author: this.userID
+                    author: this.userID,
+                    categories: this.locationsSelected
                 }, (data) => {
                     // I check the type of response and I display
                     // the message accordingly

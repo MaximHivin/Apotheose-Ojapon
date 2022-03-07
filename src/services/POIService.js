@@ -15,6 +15,7 @@ export default {
         return apiClient.get('/poi?_embed');
     },
     add(data, callback) {
+        console.log(data);
         apiClient.post('/poi', data, {
             headers: {
                 'Authorization': 'Bearer ' + store.state.token
