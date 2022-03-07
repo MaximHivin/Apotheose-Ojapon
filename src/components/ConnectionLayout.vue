@@ -32,6 +32,7 @@
             <div class="center-button">
                 <Button btnName="S'inscrire" />
             </div>
+            <router-link :to="'/test-upload'">Test upload</router-link>
             
 
         </div> 
