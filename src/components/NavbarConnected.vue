@@ -11,16 +11,12 @@
       </div>
       <div class="header__right">
           <ul>
-              <li class="header__right-inscription">
-                  <router-link to="/register">
-                      Inscription
-                  </router-link>
-                  </li>
+              <li class="header__right-inscription"><a href="#">Se deconnecter</a></li>
               <li>
-                  <router-link to="/login">
-                        <Button btnName="Se connecter"/>
+                  <router-link to="/backoffice">
+                        <Button btnName="Accès à mon back office"/>
                   </router-link>
-            </li>
+                </li>
           </ul>
       </div>
   </nav>
@@ -32,7 +28,7 @@
 <script>
 import Button from '@/components/Button.vue'
 export default {
-    name:'HeaderLayout',
+    name:'NavbarConnected',
     components: {
         Button
     },
