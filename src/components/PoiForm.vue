@@ -92,7 +92,7 @@ export default {
             idLocationsSelected: [],
             genresSelected: [],
             idGenresSelected: [],
-            SeasonsSelected: [],
+            seasonsSelected: [],
             idSeasonsSelected: [],
         }
     },
@@ -169,7 +169,7 @@ export default {
         },
         updateSeason: function (value) {
             console.log(value);
-            this.SeasonsSelected.push(value);
+            this.seasonsSelected.push(value);
             this.idSeasonsSelected.push(value.id);
         },
 
@@ -205,7 +205,9 @@ export default {
                     status: 'publish',
                     featured_media: this.formData.attachmentId,
                     author: this.userID,
-                    locations: this.idLocationsSelected
+                    locations: this.idLocationsSelected,
+                    genres: this.idGenresSelected,
+                    seasons: this.idSeasonsSelected
                 }, (data) => {
                     // I check the type of response and I display
                     // the message accordingly
