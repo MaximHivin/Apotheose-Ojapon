@@ -23,7 +23,7 @@
             <div>
                 <p>Localisation (plusieurs choix possibles)</p>
                 <SearchAutocomplete :items="locations" @itemSelected="updateLocation"/>
-                <div v-for="locSelected in locationsSelected" :key="locSelected">
+                <div v-for="locSelected in locationsSelected" :key="locSelected.id">
                     <input type="checkbox" :id="locSelected.id" :name="locSelected.name" checked>
                     <label for="locSelected">{{ locSelected.name }}</label>
                 </div>
@@ -32,9 +32,19 @@
             <div>
                 <p>Genres (plusieurs choix possibles)</p>
                 <SearchAutocomplete :items="genres" @itemSelected="updateGenre"/>
-                <div v-for="genreSelected in genresSelected" :key="genreSelected">
+                <div v-for="genreSelected in genresSelected" :key="genreSelected.id">
                     <input type="checkbox" :id="genreSelected.id" :name="genreSelected.name" checked>
                     <label for="genreSelected">{{ genreSelected.name }}</label>
+                </div>
+
+            </div>
+
+            <div>
+                <p>Seasons (plusieurs choix possibles)</p>
+                <SearchAutocomplete :items="seasons" @itemSelected="updateSeason"/>
+                <div v-for="seasonSelected in seasonsSelected" :key="seasonSelected.id">
+                    <input type="checkbox" :id="seasonSelected.id" :name="seasonSelected.name" checked>
+                    <label for="seasonSelected.name">{{ seasonSelected.name }}</label>
                 </div>
 
             </div>
@@ -71,6 +81,7 @@ export default {
             success: null,
             locations: [],
             genres: [],
+            seasons: [],
             formData: {
                 title: null,
                 content: null,
@@ -81,6 +92,8 @@ export default {
             idLocationsSelected: [],
             genresSelected: [],
             idGenresSelected: [],
+            SeasonsSelected: [],
+            idSeasonsSelected: [],
         }
     },
     mounted() {
@@ -120,6 +133,25 @@ export default {
                 //this.locations = response.data;
             }
         );
+        TaxonomiesService.getTerms('seasons').then(
+            // Executer le code qui permet de recuperer le résultat de ma requete
+            // Permet de garder le contexte et de recuperer response
+            (response) => {
+                console.log(response.data);
+                const seasons = response.data;
+                for(const season of seasons) {
+                    this.seasons.push({
+                        id: season.id,
+                        name: season.name
+                    } );
+                    /* 
+                    location.id.toString()*/
+                }
+                //this.locations = response.data;
+            }
+        );
+
+
     },
     methods: {
         updateInputValue: function (value) {
@@ -135,6 +167,12 @@ export default {
             this.genresSelected.push(value);
             this.idGenresSelected.push(value.id);
         },
+        updateSeason: function (value) {
+            console.log(value);
+            this.SeasonsSelected.push(value);
+            this.idSeasonsSelected.push(value.id);
+        },
+
         getFileId: function (value) {
             this.formData.attachmentId = value.fileId
         },
@@ -167,8 +205,7 @@ export default {
                     status: 'publish',
                     featured_media: this.formData.attachmentId,
                     author: this.userID,
-                    locations: this.idLocationsSelected,
-                    genres: this.idGenresSelected
+                    locations: this.idLocationsSelected
                 }, (data) => {
                     // I check the type of response and I display
                     // the message accordingly
