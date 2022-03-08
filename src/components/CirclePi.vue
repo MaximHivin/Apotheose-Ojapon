@@ -46,5 +46,10 @@ export default {
     font-family: 'Fellix SemiBold';
 }
 
+@media screen and (max-width: 375px){
+    .card__pi{
+        display: none;
+    }
+}
 
 </style>
