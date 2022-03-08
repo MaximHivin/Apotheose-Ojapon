@@ -458,7 +458,8 @@ body,html{
 
     .header__desktop__action{
         display: block;
-        margin: 0 auto
+        margin: 0 auto;
+        width: 302px;
     }
     .header__desktop__action__container-search{
         width: 100%;
