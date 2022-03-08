@@ -28,8 +28,8 @@
         @click="setResult(result)"
         class="autocomplete-result"
         :class="{ 'is-active': i === arrowCounter }"
+        v-html="result.name"
       >
-        {{ result.name }}
       </li>
     </ul>
   </div>

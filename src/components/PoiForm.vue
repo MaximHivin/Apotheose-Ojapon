@@ -25,7 +25,7 @@
                 <SearchAutocomplete :items="locations" @itemSelected="updateLocation"/>
                 <div v-for="locSelected in locationsSelected" :key="locSelected.id">
                     <input type="checkbox" :id="locSelected.id" :name="locSelected.name" checked>
-                    <label for="locSelected">{{ locSelected.name }}</label>
+                    <label for="locSelected" v-html="locSelected.name"></label>
                 </div>
 
             </div>
@@ -34,7 +34,7 @@
                 <SearchAutocomplete :items="genres" @itemSelected="updateGenre"/>
                 <div v-for="genreSelected in genresSelected" :key="genreSelected.id">
                     <input type="checkbox" :id="genreSelected.id" :name="genreSelected.name" checked>
-                    <label for="genreSelected">{{ genreSelected.name }}</label>
+                    <label for="genreSelected" v-html="genreSelected.name"></label>
                 </div>
 
             </div>
@@ -44,7 +44,7 @@
                 <SearchAutocomplete :items="seasons" @itemSelected="updateSeason"/>
                 <div v-for="seasonSelected in seasonsSelected" :key="seasonSelected.id">
                     <input type="checkbox" :id="seasonSelected.id" :name="seasonSelected.name" checked>
-                    <label for="seasonSelected.name">{{ seasonSelected.name }}</label>
+                    <label for="seasonSelected.name" v-html="seasonSelected.name"></label>
                 </div>
 
             </div>
