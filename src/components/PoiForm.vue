@@ -11,7 +11,6 @@
                     <p>{{ success }}</p>
                 </div>
         <div>
-            <p>Résultat : {{ formData }}</p>
             <fieldset>
                 <label class="mdp_cmdp" for="title">Nom :</label> 
                 <InputText name="title" id="title" placeholder="Osaka" type="text" @inputChange="updateInputValue" /> 
