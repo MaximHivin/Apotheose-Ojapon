@@ -121,4 +121,10 @@ export default {
     transition: 0.5s;
 }
 
+@media screen and (max-width: 375px){
+    .header{
+        display: none;
+    }
+}
+
 </style>
