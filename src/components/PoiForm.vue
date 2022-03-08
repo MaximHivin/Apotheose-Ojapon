@@ -79,7 +79,7 @@ export default {
             userID : this.$store.state.userID,
             locationsSelected: [],
             idLocationsSelected: [],
-            genresSlected: [],
+            genresSelected: [],
             idGenresSelected: [],
         }
     },
