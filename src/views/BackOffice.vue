@@ -13,13 +13,17 @@
         </div>
         <div class="backoffice__card">
             <div class="backoffice__card-content">
+                <router-link to="/createguide">
                 <ButtonBack linkContent="Créer votre guide de voyage"/>
+                </router-link>
             </div>
             <div class="backoffice__card-content">
                 <ButtonBack linkContent="Créer un point d'intérêt"/>
             </div>
             <div class="backoffice__card-content">
+                <router-link to="/listeguidesdevoyages">
                 <ButtonBack linkContent="Accéder à mes guides de voyage"/>
+                </router-link>
             </div>
             <div class="backoffice__card-content">
                 <ButtonBack linkContent="Accéder à la liste des points d'intérêts"/>
@@ -60,6 +64,9 @@ export default {
 @import url('../assets/css/style.css');
 @import url('../assets/css/backoffice.css');
 
+a{
+    text-decoration: none;
+}
 
 
 </style>

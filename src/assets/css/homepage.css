@@ -429,3 +429,176 @@ body,html{
     font-size: 1.6em;
     margin-right: 2.4em;
 }
+
+
+/* PARTIE RESPONSIVE 375PX */
+
+@media screen and (max-width: 375px){
+
+    /* Section HEADER */
+    .header{
+        display: none;
+    }
+
+    .header__desktop{
+        display: grid;
+    }
+
+    .header__desktop-title{
+        margin-top:1.6em;
+    }
+
+    .header__desktop-title span{
+        font-size: 4.2em;
+    }
+
+    .header__desktop-title h1{
+        font-size: 7.2em;
+    }
+
+    .header__desktop__action{
+        display: block;
+        margin: 0 auto;
+        width: 302px;
+    }
+    .header__desktop__action__container-search{
+        width: 100%;
+        margin-bottom: 1.6em;
+    }
+
+    .header__desktop__action__container-btn{
+        text-align: center;
+    }
+    
+    /* SECTION LE JAPON */
+
+    .lejapon{
+        margin-top: 10em;
+        margin-bottom: 10em;
+        display: block;
+    }
+
+    .lejapon__content-left{
+        width: 100%;
+        padding-bottom: 100%;
+    }
+    .lejapon__content-left img{
+        height: 100%;
+    }
+
+    .lejapon__text-mobile{
+        display: none;
+    }
+    .lejapon__content-right{
+        width: 100%;
+    }
+
+    .lejapon__content__right-text{
+        margin-left:0;
+        margin-top: 2.4em;
+    }
+
+    .lejapon__content__right-text p{
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .lejapon__content__right-img{
+        display: none;
+    }
+
+    .lejapon_word{
+        display: none;
+    }
+
+    /* SECTION PARCOUREZ NOS LIEUX INSOLITES */
+
+    .lejapon, .pi, .personnaliser__experience, .contact{
+        margin-top:8em;
+        margin-bottom: 8em;
+        padding:0;
+    }
+    .pi__content{
+        display: block;
+    }
+
+    .pi p {
+        width: 100%;
+    }
+    
+    .pi span {
+        font-size: 7.2em;
+        text-align: center;
+        display: block;
+        margin-bottom: 0.4em;
+    }
+    .pi__list__bottom-left{
+        display: none;
+    }
+
+    .pi__list__top-center, .pi__list__bottom-right{
+        margin-bottom: 24px
+    }
+
+    .pi__list__top, .pi__list__bottom{
+        margin-top: 2.4em;
+        margin-bottom: 0;
+    }
+
+    .personnaliser__experience-action{
+        margin-top: 2.4em;
+    }
+
+    .personnaliser__experience-action a {
+        text-align: center;
+        margin-right:0;
+    }
+
+    .personnaliser__experience-action button {
+        margin-top: 1.6em;
+    }
+
+
+    /* GALERIE */
+
+    .galerie-word{
+        display: none;
+    }
+    .galerie__img {
+        display: block;
+    }
+    .galerie__img-1, .galerie__img-2{
+        margin-right: 0;
+    }
+    .galerie__img-2 img, .galerie__img-1 img {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .galerie__img-3{
+        display: none;
+    }
+
+/* SECTION CONTACT */ 
+
+    .contact {
+        display: block;
+    }
+
+    .contact__content-left{
+        display: none;
+    }
+
+    .contact__content__right{
+        width: auto;
+        padding: 0.8em;
+        background-color: var(--secondary-color);
+    }
+    .contact__content__right h2 {
+        color:#fff;
+    }
+
+    .contact__content__right label {
+        color:#fff;
+    }
+
+}

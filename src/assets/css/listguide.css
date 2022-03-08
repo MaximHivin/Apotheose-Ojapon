@@ -1,0 +1,30 @@
+.listguide{
+    width: 100%;
+    background-color: #fff;
+    padding-top:8em;
+    padding-bottom: 8em;
+    height: 70vh;
+}
+
+
+.listguide__menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4em;
+}
+
+.listguide__menu-left h2{
+    font-family: 'Fellix Bold';
+    color: var(--secondary-color);
+    font-size: 5.4em;
+}
+
+
+.listguide__menu-left span{
+    color: var(--primary-color);
+}
+
+.listguide__menu-right a{
+    color: #fff;
+}
