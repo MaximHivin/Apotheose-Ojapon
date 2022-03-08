@@ -22,8 +22,12 @@
                 <TextArea name="content" id="content" placeholder="Description du point d'intérêt : privilégiez une description objective, indépendante de votre expérience personnelle..." @inputChange="updateInputValue" /> 
             </fieldset>
             <div>
-                <p>Localisation sélectionnée {{ locationsSelected }}</p>
+                <p>Localisation (plusieurs choix possibles)</p>
                 <SearchAutocomplete :items="locations" @itemSelected="updateLocation"/>
+                <div v-for="locSelected in locationsSelected" :key="locSelected">
+                    <input type="checkbox" :id="locSelected.id" :name="locSelected.name" checked>
+                    <label for="locSelected">{{ locSelected.name }}</label>
+                </div>
 
             </div>
             <Button v-on:click="sendForm" btnName="Créez votre Point d'intérêt"/>
@@ -64,7 +68,8 @@ export default {
                 attachmentId: null
             },
             userID : this.$store.state.userID,
-            locationsSelected: []
+            locationsSelected: [],
+            idLocationsSelected: []
         }
     },
     mounted() {
@@ -77,7 +82,12 @@ export default {
                 console.log(response.data);
                 const localisations = response.data;
                 for(const location of localisations) {
-                    this.locations.push(location.name);
+                    this.locations.push({
+                        id: location.id,
+                        name: location.name
+                    } );
+                    /* 
+                    location.id.toString()*/
                 }
                 //this.locations = response.data;
             }
@@ -90,6 +100,7 @@ export default {
         updateLocation: function (value) {
             console.log(value);
             this.locationsSelected.push(value);
+            this.idLocationsSelected.push(value.id);
         },
         getFileId: function (value) {
             this.formData.attachmentId = value.fileId
@@ -123,7 +134,7 @@ export default {
                     status: 'publish',
                     featured_media: this.formData.attachmentId,
                     author: this.userID,
-                    categories: this.locationsSelected
+                    locations: this.idLocationsSelected
                 }, (data) => {
                     // I check the type of response and I display
                     // the message accordingly

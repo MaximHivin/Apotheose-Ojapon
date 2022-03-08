@@ -23,12 +23,13 @@
       <li
         v-else
         v-for="(result, i) in results"
+        :id="result.id"
         :key="i"
         @click="setResult(result)"
         class="autocomplete-result"
         :class="{ 'is-active': i === arrowCounter }"
       >
-        {{ result }}
+        {{ result.name }}
       </li>
     </ul>
   </div>
@@ -78,10 +79,11 @@
         this.search = result;
         this.isOpen = false;
         this.$emit('itemSelected', this.search);
+        this.search = '';
       },
       filterResults() {
         this.results = this.items.filter((item) => {
-          return item.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
+          return item.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
         });
       },
       onChange() {

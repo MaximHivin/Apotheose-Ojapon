@@ -15,8 +15,10 @@ export default {
         return apiClient.get('/poi?_embed');
     },
     add(data, callback) {
-        console.log(data);
-        apiClient.post('/poi', data, {
+        let arrayToString = JSON.stringify(Object.assign({}, data));  // convert array to string
+        //let stringToJsonObject = JSON.parse(arrayToString);  // convert string to json object
+        console.log(arrayToString);
+        apiClient.post('/poi', arrayToString, {
             headers: {
                 'Authorization': 'Bearer ' + store.state.token
             }
