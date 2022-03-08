@@ -167,7 +167,8 @@ export default {
                     status: 'publish',
                     featured_media: this.formData.attachmentId,
                     author: this.userID,
-                    locations: this.idLocationsSelected
+                    locations: this.idLocationsSelected,
+                    genres: this.idGenresSelected
                 }, (data) => {
                     // I check the type of response and I display
                     // the message accordingly
