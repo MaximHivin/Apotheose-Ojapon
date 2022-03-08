@@ -29,6 +29,15 @@
                 </div>
 
             </div>
+            <div>
+                <p>Genres (plusieurs choix possibles)</p>
+                <SearchAutocomplete :items="genres" @itemSelected="updateGenre"/>
+                <div v-for="genreSelected in genresSelected" :key="genreSelected">
+                    <input type="checkbox" :id="genreSelected.id" :name="genreSelected.name" checked>
+                    <label for="genreSelected">{{ genreSelected.name }}</label>
+                </div>
+
+            </div>
             <Button v-on:click="sendForm" btnName="Créez votre Point d'intérêt"/>
         </div>
 
@@ -61,6 +70,7 @@ export default {
             errors: [],
             success: null,
             locations: [],
+            genres: [],
             formData: {
                 title: null,
                 content: null,
@@ -68,7 +78,9 @@ export default {
             },
             userID : this.$store.state.userID,
             locationsSelected: [],
-            idLocationsSelected: []
+            idLocationsSelected: [],
+            genresSlected: [],
+            idGenresSelected: [],
         }
     },
     mounted() {
@@ -91,6 +103,23 @@ export default {
                 //this.locations = response.data;
             }
         );
+        TaxonomiesService.getTerms('genres').then(
+            // Executer le code qui permet de recuperer le résultat de ma requete
+            // Permet de garder le contexte et de recuperer response
+            (response) => {
+                console.log(response.data);
+                const genres = response.data;
+                for(const genre of genres) {
+                    this.genres.push({
+                        id: genre.id,
+                        name: genre.name
+                    } );
+                    /* 
+                    location.id.toString()*/
+                }
+                //this.locations = response.data;
+            }
+        );
     },
     methods: {
         updateInputValue: function (value) {
@@ -100,6 +129,11 @@ export default {
             console.log(value);
             this.locationsSelected.push(value);
             this.idLocationsSelected.push(value.id);
+        },
+        updateGenre: function (value) {
+            console.log(value);
+            this.genresSelected.push(value);
+            this.idGenresSelected.push(value.id);
         },
         getFileId: function (value) {
             this.formData.attachmentId = value.fileId
