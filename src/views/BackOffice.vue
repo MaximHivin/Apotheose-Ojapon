@@ -12,7 +12,9 @@
         </div>
         <div class="backoffice__card">
             <div class="backoffice__card-content">
-                <ButtonBack linkContent="Créer votre guide de voyage"/>
+                <router-link to="/createguide">
+                    <ButtonBack linkContent="Créer votre guide de voyage"/>
+                </router-link>
             </div>
             <div class="backoffice__card-content">
                 <ButtonBack linkContent="Créer un point d'intérêt"/>
