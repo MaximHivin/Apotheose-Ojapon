@@ -19,5 +19,13 @@ export default {
                 callback();
             }
         )
+    },
+
+    findAll(){
+        return apiClient.get('/travelguide?_embed')
+    },
+
+    delete(idGuide){
+        return apiClient.delete('/travelguide/'+ idGuide)
     }
 }

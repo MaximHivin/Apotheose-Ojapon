@@ -38,7 +38,6 @@ export default {
 
 .card{
     width: 31%;
-
     margin-right: 1.6em;
     margin-bottom: 1.6em;
 }
