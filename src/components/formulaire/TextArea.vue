@@ -1,11 +1,28 @@
 <template>
-
-    <textarea name="textarea" id="textarea" class="container__textarea-content" placeholder="Merci d'écrire votre message.."></textarea>
-
+    <textarea :name="name" :id="id" v-on:blur="handleBlur" :placeholder="placeholder" class="container__textarea-content"></textarea>
 </template>
 
 <script>
 export default {
+    name: 'TextArea',
+    props: {
+        name: String,
+        id: String,
+        placeholder: String
+    },
+    data () {
+        return {
+            localInputValue: ''
+        }
+    },
+    methods: {
+        handleBlur: function (event) {
+        this.$emit('inputChange', {
+            name: this.name,
+            value: event.target.value
+        })
+        }
+    }
 
 }
 </script>

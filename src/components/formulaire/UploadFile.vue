@@ -7,12 +7,12 @@
             <img v-if="newFileInfo.media_type == 'image'" v-bind:src="newFileInfo.media_details.sizes.medium.source_url" />
         </div>
         <div v-else>
-            <fieldset>
+            
                 <label for="file">Choisissez un fichier</label>
                 <input :disabled="loading" @change="upload($event)" name="file" id="file" placeholder="choose a file..." type="file" class="container__inputText-content">
                 <label for="title">Titre de votre fichier</label> 
                 <InputText :disabled="loading" name="title" id="title" placeholder="Titre du fichier" type="text" @inputChange="updateInputValue" /> 
-            </fieldset>
+            
             <div class="center-button">
                 <img src="../../assets/images/upload.svg" v-on:click="uploadFile" />
                 <div class="loader" v-if="loading"></div>

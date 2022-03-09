@@ -22,7 +22,7 @@
 // import axios from 'axios'
 import HeaderLayout from '@/components/HeaderLayout.vue'
 import Card from '@/components/Card.vue'
-import PointsInteret from '@/services/PointsInteret.js'
+import PointsInteret from '@/services/POIService.js'
 export default {
     name: 'PointsInteretView',
     components: {

@@ -1,18 +1,18 @@
 <template>
   <HeaderLayout/>
-  <RegistrationForm/>
+  <PoiForm/>
 </template>
 
 <script>
 import HeaderLayout from '@/components/HeaderLayout.vue';
-import RegistrationForm from '@/components/RegistrationForm.vue';
+import PoiForm from '@/components/PoiForm.vue';
 
 
 export default {
-    name: 'RegisterLayout',
+    name: 'CreatePoiView',
     components: {
         HeaderLayout,
-        RegistrationForm
+        PoiForm
         
     }
 
