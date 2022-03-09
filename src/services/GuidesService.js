@@ -21,8 +21,8 @@ export default {
         )
     },
 
-    findAll(){
-        return apiClient.get('/travelguide?_embed')
+    findAllByAuthor(authorID){
+        return apiClient.get('/travelguide?_embed&author='+authorID)
     },
 
     delete(idGuide){
