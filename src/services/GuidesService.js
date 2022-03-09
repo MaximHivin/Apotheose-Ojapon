@@ -27,5 +27,9 @@ export default {
 
     delete(idGuide){
         return apiClient.delete('/travelguide/'+ idGuide)
+    },
+
+    findById(idSingleGuide){
+        return apiClient.get(`/travelguide/${idSingleGuide}?_embed`)
     }
 }

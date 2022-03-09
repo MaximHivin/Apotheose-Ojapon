@@ -9,7 +9,9 @@
 
             <div class="cardguide__bottom">
                 <h3>{{ name }}</h3>
-                <a href="#">Accéder à ce guide</a>
+                <router-link :to="{name:'GuideDeVoyageDetail', params:{id:id}}">
+                <p>Accéder à mon guide</p>
+                </router-link>
             </div>
         </div>
 
