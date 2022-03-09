@@ -3,9 +3,13 @@
     background-color: #fff;
     padding-top:8em;
     padding-bottom: 8em;
-    height: 70vh;
 }
 
+
+.listguide__card__container{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .listguide__menu{
     display: flex;
@@ -28,3 +32,4 @@
 .listguide__menu-right a{
     color: #fff;
 }
+
