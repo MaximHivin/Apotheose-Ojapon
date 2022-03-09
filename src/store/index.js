@@ -10,8 +10,7 @@ export default createStore({
         token: null,
         userID: null,
         userRole: null,
-        userName: null,
-        nameGuideSingle: null    
+        userName: null 
     },
     getters: {
         checkUserRole: (state) => (roles) => {
