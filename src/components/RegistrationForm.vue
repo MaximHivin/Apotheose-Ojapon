@@ -118,6 +118,7 @@ export default {
                     // the message accordingly
                     if(data.type === "success") {
                         this.success = data.message;
+                        this.$router.push('/login');
                     } else {
                         this.errors.push(data.message);
                     }

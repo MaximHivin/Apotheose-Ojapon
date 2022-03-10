@@ -102,6 +102,7 @@ export default {
                     // le message en consequence
                     if(data.type === "success") {
                         this.success = data.message;
+                        this.$router.push('/backoffice');
                     } else {
                         this.errors.push(data.message);
                     }

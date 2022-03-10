@@ -18,9 +18,7 @@
                 </router-link>
             </div>
             <div class="backoffice__card-content">
-                <router-link to="/backoffice/poi/add">
                 <ButtonBack linkContent="Créer un point d'intérêt"/>
-                </router-link>
             </div>
             <div class="backoffice__card-content">
                 <router-link to="/listeguidesdevoyages">
