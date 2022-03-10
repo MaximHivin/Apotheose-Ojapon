@@ -2,7 +2,7 @@
 
 <div class="main_container">
       <nav class="header">
-      <div class="header-left"><img src="../assets/logo.png" alt="logo"></div>
+      <div class="header-left"><router-link :to="'/'"><img src="../assets/logo.png" alt="logo"></router-link></div>
       <div class="header__center">
           <ul>
               <li class="header__center-item"><router-link v-for="link in links" :key="link.name" :to="link.route">{{ link.name }}</router-link></li>
@@ -44,15 +44,15 @@ export default {
                         route: '/'
                     },
                     {
-                        name: 'LeJapon',
+                        name: 'Le Japon',
                         route: '/lejapon'
                     },
                     {
-                        name: 'PointsInteret',
+                        name: 'Points d\'intérêt',
                         route: '/pointsinteret'
                     },
                     {
-                        name: 'BlogsVoyageurs',
+                        name: 'Blogs des Voyageurs',
                         route: '/blogs'
                     },
                     {
@@ -63,7 +63,6 @@ export default {
                         name: 'Contact',
                         route: '/contact'
                     }
-                    
                 ]
             }
         }

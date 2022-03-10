@@ -40,15 +40,15 @@ export default {
                         route: '/'
                     },
                     {
-                        name: 'LeJapon',
+                        name: 'Le Japon',
                         route: '/lejapon'
                     },
                     {
-                        name: 'PointsInteret',
+                        name: 'Points d\'intérêt',
                         route: '/pointsinteret'
                     },
                     {
-                        name: 'BlogsVoyageurs',
+                        name: 'Blogs des Voyageurs',
                         route: '/blogs'
                     },
                     {
@@ -59,7 +59,6 @@ export default {
                         name: 'Contact',
                         route: '/contact'
                     }
-                    
                 ]
             }
         }

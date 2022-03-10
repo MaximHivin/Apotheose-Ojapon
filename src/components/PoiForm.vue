@@ -21,7 +21,7 @@
                 <label class="mdp_cmdp" for="title">Nom :</label> 
                 <InputText name="title" id="title" placeholder="Osaka" type="text" @inputChange="updateInputValue" /> 
             </fieldset> 
-            <UploadFile @uploadComplete="getFileId"/>
+            <UploadFile fileTypes="image/*" @uploadComplete="getFileId"/>
             <fieldset>
                 <label class="mdp_cmdp" for="title">Description :</label>
                 <TextArea name="content" id="content" placeholder="Description du point d'intérêt : privilégiez une description objective, indépendante de votre expérience personnelle..." @inputChange="updateInputValue" /> 
