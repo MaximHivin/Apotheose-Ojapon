@@ -1,6 +1,5 @@
 .backoffice{
     background-color: #fff;
-    height: 100vh;
     padding-top: 4em;
     padding-bottom: 4em;
     margin: 0;
@@ -33,4 +32,16 @@
 
 .backoffice__card-content{
     width: 48%;
+}
+
+@media screen and (max-width: 375px){
+    .backoffice__card-content{
+        width: 100%;
+    }
+    .card__back__content{
+        padding: 2.4em
+    }
+    .card__back__content-left{
+        margin-right: 0.8em;
+    }
 }
