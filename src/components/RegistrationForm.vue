@@ -4,41 +4,43 @@
         <div class="titre-principal">
             <h1>Inscrivez-vous</h1>
         </div>
-            <div class="errors" v-if="errors.length > 0">
-                <p v-for="error in errors" :key="error">{{ error }}</p>
-                </div>
-                <div class="success" v-if="success">
-                    <p>{{ success }}</p>
-                </div>
-        <div>
-            <p>Résultat : {{ formData }}</p>
-            <fieldset>
-                <label class="mdp_cmdp" for="username">Votre nom d'utilisateur :</label> 
-                <InputText name="username" id="username" placeholder="johndoe" type="text" @inputChange="updateInputValue" /> 
-            </fieldset>   
-                
-            <fieldset>  
-                <label class="mdp_cmdp" for="email">Votre email :</label>
-                <InputText name="email" id="email" placeholder="email@ojapon.com" type="text" @inputChange="updateInputValue" /> 
-            </fieldset>
-                
-            <fieldset>
-                <label class="mdp_cmdp" for="password">Votre mot de passe:</label>
-                <InputText name="password" id="password" placeholder="******" type="password" @inputChange="updateInputValue" /> 
-            </fieldset>
-            <fieldset>
-                <label class="mdp_cmdp" for="password_check">Confirmez votre mot de passe:</label>
-                <InputText name="password_check" id="password_check" placeholder="*****" type="password" @inputChange="updateInputValue" /> 
-            </fieldset>
-
-            <Button v-on:click="sendForm" btnName="Créez un compte"/>
+        <div class="createguide-error" v-if="errors.length > 0">
+            <b>Merci de corriger ces erreurs : </b>
+            <ul>
+                <li v-for="error in errors" :key="error"> {{error}}</li>
+            </ul>
         </div>
+        <div class="success" v-if="success">
+            <p>{{ success }}</p>
+        </div>
+        <!-- <p>Résultat : {{ formData }}</p> -->
+        <fieldset>
+            <label class="mdp_cmdp" for="username">Votre nom d'utilisateur *</label> 
+            <InputText name="username" id="username" placeholder="johndoe" type="text" @inputChange="updateInputValue" /> 
+        </fieldset>   
+            
+        <fieldset>  
+            <label class="mdp_cmdp" for="email">Votre email * :</label>
+            <InputText name="email" id="email" placeholder="email@ojapon.com" type="text" @inputChange="updateInputValue" /> 
+        </fieldset>
+            
+        <fieldset>
+            <label class="mdp_cmdp" for="password">Votre mot de passe *</label>
+            <InputText name="password" id="password" placeholder="******" type="password" @inputChange="updateInputValue" /> 
+        </fieldset>
+        <fieldset>
+            <label class="mdp_cmdp" for="password_check">Confirmez votre mot de passe *</label>
+            <InputText name="password_check" id="password_check" placeholder="*****" type="password" @inputChange="updateInputValue" /> 
+        </fieldset>
+
+        <Button v-on:click="sendForm" btnName="Créez un compte"/>
         <div>
             <h2 class="titre-principal">Vous avez déjà un compte ?</h2>
             <Button btnName="Se connecter"/>
         </div>
 
     </div>
+
 </section>
 </template>
 
@@ -78,22 +80,22 @@ export default {
                 // we already have them in data...
             // validate this data
             if(!this.formData.email) {
-                this.errors.push('Email cannot be empty');
+                this.errors.push('L\'email ne peut pas être vide');
             } else {
                 // we check that it is a valid email
                 const regex = new RegExp(/^[^\W][a-zA-Z0-9\-._]+[^\W]@[^\W][a-zA-Z0-9\-._]+[^\W]\.[a-zA-Z]{2,6}$/gm);
                 if(!regex.test(this.formData.email)) {
-                    this.errors.push('Email format is invalid');
+                    this.errors.push('Le format de l\'email est invalide');
                 }
             }
             if(!this.formData.username) {
-                this.errors.push('Username cannot be empty');
+                this.errors.push('Le nom d\'utilisateur ne peut pas être vide');
             }
             if(!this.formData.password || !this.formData.password_check) {
-                this.errors.push('Password and Validate password cannot be empty');
+                this.errors.push('Le mot de passe et sa confirmation ne peuvent pas être vides');
             } else {
                 if (this.formData.password != this.formData.password_check) {
-                    this.errors.push('Passwords do not match');
+                    this.errors.push('Les mots de passe ne correspondent pas');
                 }
             }
             
@@ -126,191 +128,8 @@ export default {
 </script>
 
 <style scoped>
-.main_container {
-    max-width: 102.625em;
-    margin: 0 auto;
-    background-color: white;
-    padding-bottom: 15em;
-    
-}
-
-.titre-principal {
-    text-align: left;
-    color: black;
-    padding-left: 3.5em;
-    padding-top: 3.125em;
-    margin-top: 2.188em;
-    font-family: "Fellix SemiBold";
-    font-size: 2.0em;
-}
-
-.Connection {
-   text-align: left;
-    margin-left: 3.7em;
-    margin-top: 6.063em;
-    margin-bottom: 3.375em;
-    font-family: "Fellix SemiBold";
-    font-size: 2em;
-    color: black;
-}
-
-.prenom_email {
-    display: flex;
-    font-weight: bold;
-    color: black;
-    font-family: "Fellix SemiBold";
-    font-size: 1.500em;
-}
-
-.prenom {
-    margin-left: 5em;
-}
-
-.email {
-    margin: auto;
-    padding-right: 6em;
-}
-
-.container_inputText {
-    display: flex;
-}
-
-.container__inputText-content {
-    padding-left: 1.500em;
-    padding-top: 2.000em;
-    padding-bottom: 2.000em; 
-    border-radius: 0.625em;
-    border: 0.063em solid #F1F1F1;
-    background-color:#F1F1F1 ;
-    color: #1d1d1d;
-    font-size: 1.000em;
-    font-weight: 500;
-    width: 100%;
-    box-sizing: border-box;  
-}
-
-.input_top_left {
-    border-radius: 0.625em;
-    border: 0.063em solid #F1F1F1;
-    background-color:#F1F1F1 ;
-    color: #1d1d1d;
-    font-size: 1.000em;
-    font-weight: 500;
-    width: 100%;
-    box-sizing: border-box;
-    margin-left: 7.250em;
-    margin-right: 1.125em;
-}
-
-.input_top_right {
-    border-radius: 0.625em;
-    border: 0.063em solid #F1F1F1;
-    background-color:#F1F1F1 ;
-    color: #1d1d1d;
-    font-size: 1.000em;
-    font-weight: 500;
-    width: 100%;
-    box-sizing: border-box;
-    margin-right: 8.750em;
-}
-
-.mdp_cmdp {
-    display: flex;
-    font-weight: bold;
-    color: black;
-    font-family: "Fellix SemiBold";
-    font-size: 1.500em;
-    margin-bottom: 10px;
-}
-
-.mdp {
-    margin-left: 5em;
-    padding-top: 2.5em;
-}
-
-.cmdp {
-    margin: auto;
-    padding-top: 2.5em;
-    
-}
-
-.container_inputText_bottom {
-    display: flex;
-}
-
-.container_bottom_left {
-    border-radius: 0.625em;
-    border: 0.063em solid #F1F1F1;
-    background-color:#F1F1F1 ;
-    color: #1d1d1d;
-    font-size: 1.000em;
-    font-weight: 500;
-    width: 100%;
-    box-sizing: border-box;
-    margin-left: 7.250em;
-    margin-right: 1.125em;
-}
-
-.container_bottom_right {
-    border-radius: 0.625em;
-    border: 0.063em solid #F1F1F1;
-    background-color:#F1F1F1 ;
-    color: #1d1d1d;
-    font-size: 1.000em;
-    font-weight: 500;
-    width: 100%;
-    box-sizing: border-box;
-    margin-right: 8.750em;
-}
-
-.button_top {
-    width: 180px;
-    height: 3.375em;
-    line-height: 3.375em;
-    background-color: #CE1137;
-    /* padding: 16px 24px; */
-    border-radius: 0.625em;
-    font-weight: bold;
-    /* font-size: 18px; */
-    text-decoration: none;
-    color: #fff;
-    margin-left: 7.5em;
-    margin-top: 2.188em;
-    margin-bottom: 2.5em;
-}
-
-.btn_connexion {
-    
-    border: 0.750em solid #CE1137;
-    color: white;
-    transition: 400ms ease-in-out;
-    text-decoration: none;
-}
-
-
-.button_bottom {
-    width: 7.813em;
-    height: 3.375em;
-    line-height: 3.375em;
-    background-color: #CE1137;
-    /* padding: 16px 24px; */
-    border-radius: 0.625em;
-    font-weight: bold;
-    /* font-size: 18px; */
-    text-decoration: none;
-    color: #fff;
-    margin-left: 7.625em;
-    margin-top: 2.188em;
-    font-family: "Fellix Bold";
-}
-
-.btn_create {
-    border: 0.750em solid #CE1137;
-    color: white;
-    transition: 400ms ease-in-out;
-    text-decoration: none;
-    
-}
+@import url('../assets/css/style.css');
+@import url('../assets/css/createguide.css');
 
 
 .center-button {
@@ -324,7 +143,29 @@ fieldset {
 }
 
 
-
+.mdp_cmdp {
+    display: flex;
+    font-weight: bold;
+    color: black;
+    font-family: "Fellix SemiBold";
+    font-size: 1.500em;
+    margin-bottom: 10px;
+}
+.titre-principal {
+    text-align: left;
+    color: black;
+    padding-left: 3.5em;
+    padding-top: 3.125em;
+    margin-top: 2.188em;
+    font-family: "Fellix SemiBold";
+    font-size: 2.0em;
+}
+.main_container {
+    max-width: 102.625em;
+    margin: 0 auto;
+    background-color: white;
+    padding: 0 5em 15em; 
+}
 </style>
 
 
