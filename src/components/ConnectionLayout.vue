@@ -30,7 +30,9 @@
                 <h1>Pas encore de compte ?</h1>
             </div>
             <div class="center-button">
+                <router-link to="/register">
                 <Button btnName="S'inscrire" />
+                </router-link>
             </div>
             <router-link :to="'/backoffice/poi/add'">Add POI</router-link> | 
             <router-link :to="'/test-createguide'">Test CreateGuide</router-link>
