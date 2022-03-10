@@ -48,9 +48,10 @@ export default {
     },
 
     mounted(){
-      GuidesService.findAll().then(
+      GuidesService.findAllByAuthor(this.$store.state.userID).then(
         (response) => {
           console.log('View', response.data);
+          console.log(this.$store.state.userID)
           this.nameGuides = response.data
         }
       );
