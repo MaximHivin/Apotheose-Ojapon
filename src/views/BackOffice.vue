@@ -28,7 +28,9 @@
                 </router-link>
             </div>
             <div class="backoffice__card-content">
+                <router-link to="/pointsinteret">
                 <ButtonBack linkContent="Accéder à la liste des points d'intérêts"/>
+                </router-link>
             </div>
         </div>
     </div>
