@@ -36,7 +36,10 @@
         <Button v-on:click="sendForm" btnName="Créez un compte"/>
         <div>
             <h2 class="titre-principal">Vous avez déjà un compte ?</h2>
-            <Button btnName="Se connecter"/>
+            <router-link to="/login">
+                <Button btnName="Se connecter"/>
+            </router-link>
+            
         </div>
 
     </div>

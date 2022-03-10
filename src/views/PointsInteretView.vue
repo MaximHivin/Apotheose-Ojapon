@@ -1,7 +1,8 @@
 <template>
 
     <div class="main_container">
-      <HeaderLayout />
+        <NavbarConnected v-if="this.$store.state.token"/>
+        <HeaderLayout v-else />
     </div>
 
     <div class="main_container">
@@ -21,12 +22,14 @@
 <script>
 // import axios from 'axios'
 import HeaderLayout from '@/components/HeaderLayout.vue'
+import NavbarConnected from '@/components/NavbarConnected.vue'
 import Card from '@/components/Card.vue'
 import PointsInteret from '@/services/POIService.js'
 export default {
     name: 'PointsInteretView',
     components: {
         HeaderLayout,
+        NavbarConnected,
         Card
     },
     data() {
