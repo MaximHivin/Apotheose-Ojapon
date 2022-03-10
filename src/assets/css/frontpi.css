@@ -17,3 +17,18 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 375px){
+
+    .poi__card__container{
+        display: block;
+    }
+
+    .card{
+        width: 100%;
+        margin-top: 2.4em;
+        margin-right: 2.4em;
+    }
+}
