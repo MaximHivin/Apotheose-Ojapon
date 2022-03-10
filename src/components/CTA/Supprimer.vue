@@ -7,9 +7,12 @@
 </template>
 
 <script>
-export default {
-    name: 'Ajouter',
 
+export default {
+    name: 'Supprimer',
+    props:{
+        key: Number
+    },
 }
 </script>
 
@@ -18,6 +21,10 @@ export default {
 
     .delete{
         display:inline-block;
+        position: absolute;
+        top:-2.5em;
+        right:0;
+        z-index: 3;
     }
 
     .delete__element {
@@ -37,18 +44,8 @@ export default {
         margin-top: 1.2em;
     }
 
-    img {
+    .delete__element img {
         height: 2.2em;
-    }
-
-    @media screen and (max-width: 375px) {
-        
-        .delete__element {
-            height: 4em;
-            width: 4em;
-        }
-        
-
     }
 
 </style>
