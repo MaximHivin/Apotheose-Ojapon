@@ -4,6 +4,8 @@
   <div class="header__desktop">
           <NavbarConnected v-if="this.$store.state.token"/>
           <HeaderLayout v-else />
+          <BurgerMenu />
+
         <div class="main_container">
 
           <div class="header__desktop-title">
@@ -174,6 +176,7 @@
 
 import HeaderLayout from '@/components/HeaderLayout.vue'
 import NavbarConnected from '@/components/NavbarConnected.vue'
+import BurgerMenu from '@/components/BurgerMenu.vue'
 import InputSearch from '@/components/formulaire/InputSearch.vue'
 import Button from '@/components/Button.vue'
 import CirclePi from '@/components/CirclePi.vue'
@@ -186,6 +189,7 @@ export default {
   components: {
     NavbarConnected,
     HeaderLayout,
+    BurgerMenu,
     InputSearch,
     Button,
     CirclePi,
