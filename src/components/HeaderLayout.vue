@@ -1,9 +1,9 @@
 <template>
 
 <div class="main_container">
-      <nav class="header">
-      <div class="header-left"><img src="../assets/logo.png" alt="logo"></div>
-      <div class="header__center">
+    <nav class="header">
+    <div class="header-left"><img src="../assets/logo.png" alt="logo"></div>
+    <div class="header__center">
           <ul>
               <li class="header__center-item"><router-link v-for="link in links" :key="link.name" :to="link.route">{{ link.name }}</router-link></li>
 
@@ -67,7 +67,7 @@ export default {
                 ]
             }
         }
-
+     
 }
 </script>
 
