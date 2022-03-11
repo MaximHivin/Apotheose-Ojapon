@@ -35,11 +35,7 @@
             </div>
             <div class="center-button">
                 <router-link to="/register">
-<<<<<<< HEAD
-                    <Button btnName="S'inscrire" />
-=======
                 <Button btnName="S'inscrire" />
->>>>>>> develop
                 </router-link>
             </div>
             

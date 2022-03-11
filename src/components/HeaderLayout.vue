@@ -1,17 +1,12 @@
 <template>
 
 <div class="main_container">
-<<<<<<< HEAD
       <nav class="header">
       <div class="header-left"><router-link :to="'/'"><img src="../assets/logo.png" alt="logo"></router-link></div>
       <div class="header__center">
-=======
-    <nav class="header">
-    <div class="header-left"><img src="../assets/logo.png" alt="logo"></div>
-    <div class="header__center">
->>>>>>> develop
           <ul>
               <li class="header__center-item"><router-link v-for="link in links" :key="link.name" :to="link.route">{{ link.name }}</router-link></li>
+              <!-- <li class="header__center-item"><router-link v-for="link in links" :key="link.name" :to="{ path: link.route, hash: link.hash }">{{ link.name }}</router-link></li> -->
 
           </ul>
       </div>
@@ -51,23 +46,25 @@ export default {
                     },
                     {
                         name: 'Le Japon',
-                        route: '/lejapon'
+                        route: '/',
+                        hash: '#japon'
                     },
                     {
                         name: 'Points d\'intérêt',
                         route: '/pointsinteret'
                     },
-                    {
+                   /*  {
                         name: 'Blogs des Voyageurs',
                         route: '/blogs'
-                    },
+                    }, */
                     {
                         name: 'FAQ',
                         route: '/faq'
                     },
                     {
                         name: 'Contact',
-                        route: '/contact'
+                        route: '/',
+                        hash: '#contact'
                     }
                 ]
             }

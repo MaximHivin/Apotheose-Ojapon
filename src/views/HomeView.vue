@@ -28,7 +28,7 @@
         </div>
   </div>
 
-<div class="main_container">
+<div class="main_container" id="japon">
   <div class="lejapon_word">日本の歴史</div>
   <section class="lejapon">
     <!-- <div class="lejapon-word">日本の歴史</div> -->
@@ -52,7 +52,7 @@
   </section>
 </div>
 
-<div class="main_container">
+<div class="main_container" id="pi">
   <section class="pi">
     <div class="pi__content">
       <div class="pi__content-title">
@@ -95,7 +95,7 @@
 
 
 
-<div class="main_container">
+<div class="main_container" id="galerie">
   <section class="galerie">
     <div class="galerie-word">
       <span class="galerie-word-1">ギャラリー</span>
@@ -126,7 +126,7 @@
   </section>
 </div>
 
-<div class="main_container">
+<div class="main_container" id="contact">
   <section class="contact">
 
       <div class="contact__content-left">

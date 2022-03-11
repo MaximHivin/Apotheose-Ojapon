@@ -41,23 +41,25 @@ export default {
                     },
                     {
                         name: 'Le Japon',
-                        route: '/lejapon'
+                        route: '/',
+                        hash: '#japon'
                     },
                     {
                         name: 'Points d\'intérêt',
                         route: '/pointsinteret'
                     },
-                    {
+                   /*  {
                         name: 'Blogs des Voyageurs',
                         route: '/blogs'
-                    },
+                    }, */
                     {
                         name: 'FAQ',
                         route: '/faq'
                     },
                     {
                         name: 'Contact',
-                        route: '/contact'
+                        route: '/',
+                        hash: '#contact'
                     }
                 ]
             }
