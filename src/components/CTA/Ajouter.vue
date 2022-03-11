@@ -18,6 +18,10 @@ export default {
 
     .add{
         display:inline-block;
+        position: absolute;
+        top:-2.5em;
+        right:0;
+        z-index: 3;
     }
 
     .add__element {
@@ -37,18 +41,8 @@ export default {
         margin-top: 1.2em;
     }
 
-    img {
+    .add__element img {
         height: 2.2em;
-    }
-
-    @media screen and (max-width: 375px) {
-
-        .add__element {
-            height: 4em;
-            width: 4em;
-        }
-        
-
     }
 
 </style>

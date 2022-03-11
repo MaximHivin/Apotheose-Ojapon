@@ -26,7 +26,8 @@ export default {
     },
     data(){
         return{
-            nameguidesingle: null
+            nameguidesingle: null,
+            currentId: this.$route.params.id
         }
     },
     mounted(){

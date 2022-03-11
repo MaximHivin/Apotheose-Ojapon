@@ -4,7 +4,9 @@
 </div>
 <section class="listguide">
   <div class="main_container">
-    <Retour textBtn="Retour backoffice" />
+    <router-link to="/backoffice">
+      <Retour textBtn="Retour backoffice" />
+    </router-link>
     <div class="listguide__menu">
       <div class="listguide__menu-left">
         <h2>Liste des <span>guides de voyage</span></h2>

@@ -5,7 +5,9 @@
               <h2>{{ name }}</h2>
           </div>
           <div class="singleguidedetail__menu-right">
+              <router-link :to="{name: 'GuideDeVoyagePOIList', params : {currentId:currentId}}">
               <Button btnName="Ajouter des POI" />
+              </router-link>
           </div>
       </div>
   </div>
@@ -20,7 +22,8 @@ export default {
         Button
     },
     props:{
-        name: String
+        name: String,
+        currentId: Number
     }
 }
 </script>

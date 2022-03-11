@@ -1,6 +1,9 @@
 <template>
 
         <div class="card">
+            <Ajouter v-if="showComponent" />
+            <!--<Ajouter @click="test" />-->
+            <!-- <Supprimer v-if="$route.path ='/listeguidesdevoyages/:currentId'" {currentId:currentId} /> -->
             <div class="card__top">
                 <div class="card__top-img">
                      <img :src="image">
@@ -20,14 +23,35 @@
 </template>
 
 <script>
+import Ajouter from '@/components/CTA/Ajouter.vue'
+// import Supprimer from '@/components/CTA/Supprimer.vue'
 export default {
     name: 'Card',
+    components:{
+        Ajouter
+        // Supprimer
+    },
     props: {
         name: String,
         localisation: String,
         url: String,
         image: String,
-        genre: String
+        genre: String,
+        currentId: Number
+    },
+    computed: {
+        showComponent(){
+            if(typeof(this.$route.params.id) !== 'undefined') {
+                return true
+            }
+            return false
+        }
+    },
+    methods:{
+        test(){
+            console.log(this.$route.params.id);
+            console.log(this.currentId);
+        }
     }
 }
 </script>
@@ -38,8 +62,11 @@ export default {
 
 .card{
     width: 31%;
-    margin-right: 1.6em;
-    margin-bottom: 1.6em;
+    margin-right: 3.2em;
+    margin-bottom: 3.2em;
+    position: relative;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    
 }
 
 .card__top{
