@@ -9,7 +9,7 @@
   </div>
 </div>
 
-<div v-else class="menu__mobile-open" @scroll="notScroll">
+<div v-else class="menu__mobile-open">
   <ul>
     <li @focus="test"><a href="">Accueil</a></li>
     <li><a href="">Le Japon</a></li>
