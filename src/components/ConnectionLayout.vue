@@ -1,21 +1,25 @@
 <template>
     <section class="ConnectionLayout">
         <div class="main_container">
-            <div class="connexion">
+            <div class="titre-principal">
                 <h1>Connectez-vous à votre compte</h1>
             </div>
-            <div class="errors" v-if="errors.length > 0">
-                <p v-for="error in errors" :key="error">{{ error }}</p>
+
+            <div class="createguide-error" v-if="errors.length > 0">
+                <b>Merci de corriger ces erreurs : </b>
+                <ul>
+                    <li v-for="error in errors" :key="error"> {{error}}</li>
+                </ul>
             </div>
             <div class="success" v-if="success">
                 <p>{{ success }}</p>
             </div>
             <fieldset>
-                <label class="email_mdp" for="username">Votre nom d'utilisateur :</label>
+                <label class="mdp_cmdp" for="username">Votre nom d'utilisateur :</label>
                 <InputText name="username" id="username" placeholder="johndoe" type="text" @inputChange="updateInputValue" />
             </fieldset>
             <fieldset>
-                <label class="email_mdp" for="password">Votre mot de passe :</label>
+                <label class="mdp_cmdp" for="password">Votre mot de passe :</label>
                 <InputText name="password" id="password" placeholder="********" type="password" @inputChange="updateInputValue" />
             </fieldset>
 
@@ -34,8 +38,6 @@
                 <Button btnName="S'inscrire" />
                 </router-link>
             </div>
-            <router-link :to="'/backoffice/poi/add'">Add POI</router-link> | 
-            <router-link :to="'/test-createguide'">Test CreateGuide</router-link>
             
 
         </div> 
@@ -100,6 +102,7 @@ export default {
                     // le message en consequence
                     if(data.type === "success") {
                         this.success = data.message;
+                        this.$router.push('/backoffice');
                     } else {
                         this.errors.push(data.message);
                     }
@@ -117,8 +120,7 @@ export default {
     max-width: 102.625em;
     margin: 0 auto;
     background-color: white;
-    padding-bottom: 15.000em;
-    
+    padding: 0 5em 15em; 
 }
 
 .connexion {
@@ -136,6 +138,14 @@ export default {
     color: black;
     font-family: "Fellix SemiBold";
     font-size: 1.500em;
+}
+.mdp_cmdp {
+    display: flex;
+    font-weight: bold;
+    color: black;
+    font-family: "Fellix SemiBold";
+    font-size: 1.500em;
+    margin-bottom: 10px;
 }
 
 .email {
@@ -254,7 +264,15 @@ export default {
     text-decoration: none;
     
 }
-
+.titre-principal {
+    text-align: left;
+    color: black;
+    padding-left: 3.5em;
+    padding-top: 3.125em;
+    margin-top: 2.188em;
+    font-family: "Fellix SemiBold";
+    font-size: 2.0em;
+}
 .center-button {
     display: flex;
     flex-direction: column;

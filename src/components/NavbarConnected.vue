@@ -40,26 +40,27 @@ export default {
                         route: '/'
                     },
                     {
-                        name: 'LeJapon',
-                        route: '/lejapon'
+                        name: 'Le Japon',
+                        route: '/',
+                        hash: '#japon'
                     },
                     {
-                        name: 'PointsInteret',
+                        name: 'Points d\'intérêt',
                         route: '/pointsinteret'
                     },
-                    {
-                        name: 'BlogsVoyageurs',
+                   /*  {
+                        name: 'Blogs des Voyageurs',
                         route: '/blogs'
-                    },
+                    }, */
                     {
                         name: 'FAQ',
                         route: '/faq'
                     },
                     {
                         name: 'Contact',
-                        route: '/contact'
+                        route: '/',
+                        hash: '#contact'
                     }
-                    
                 ]
             }
         }

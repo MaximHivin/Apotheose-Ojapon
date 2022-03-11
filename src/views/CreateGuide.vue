@@ -24,7 +24,7 @@
             <InputText name="nameguide" id="nameguide" placeholder="Mon voyage.." type="text" @inputChange="updateInputValue" /> 
         </fieldset>   
         <div class="uploadfile-img">
-            <UploadFile @uploadComplete="getFileId"/>
+            <UploadFile fileTypes="image/*" @uploadComplete="getFileId"/>
         </div>
 
         <br><br><br><br>

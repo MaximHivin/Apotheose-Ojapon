@@ -1,10 +1,16 @@
 <template>
-<section>
-    <div class="main_container">
-        <div class="titre-principal">
-            <h1>Votre Point d'intérêt</h1>
-        </div>
-            <div class="errors" v-if="errors.length > 0">
+
+
+<section class="createguide">
+      <div class="main_container">
+          <router-link to='/backoffice'>
+            <Retour textBtn="Retour" />
+          </router-link>
+          <div class="createguide-title">
+              <h2>Créer un <span>point d'intérêt</span></h2>
+          </div>
+
+          <div class="errors" v-if="errors.length > 0">
                 <p v-for="error in errors" :key="error">{{ error }}</p>
                 </div>
                 <div class="success" v-if="success">
@@ -15,7 +21,7 @@
                 <label class="mdp_cmdp" for="title">Nom :</label> 
                 <InputText name="title" id="title" placeholder="Osaka" type="text" @inputChange="updateInputValue" /> 
             </fieldset> 
-            <UploadFile @uploadComplete="getFileId"/>
+            <UploadFile fileTypes="image/*" @uploadComplete="getFileId"/>
             <fieldset>
                 <label class="mdp_cmdp" for="title">Description :</label>
                 <TextArea name="content" id="content" placeholder="Description du point d'intérêt : privilégiez une description objective, indépendante de votre expérience personnelle..." @inputChange="updateInputValue" /> 
@@ -50,6 +56,13 @@
             </div>
             <Button v-on:click="sendForm" btnName="Créez votre Point d'intérêt"/>
         </div>
+        </div>
+  </section>
+
+
+<section>
+    <div class="main_container">
+            
 
 
     </div>

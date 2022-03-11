@@ -9,7 +9,7 @@
         <div v-else>
             
                 <label for="file">Choisissez un fichier</label>
-                <input :disabled="loading" @change="upload($event)" name="file" id="file" placeholder="choose a file..." type="file" class="container__inputText-content">
+                <input :disabled="loading" @change="upload($event)" name="file" id="file" placeholder="Choose a file..." type="file" :accept="fileTypes" class="container__inputText-content">
                 <label for="title">Titre de votre fichier</label> 
                 <InputText :disabled="loading" name="title" id="title" placeholder="Titre du fichier" type="text" @inputChange="updateInputValue" /> 
             
@@ -28,6 +28,12 @@ import UploadMediaService from '@/services/UploadMediaService.js';
 
 export default {
     name: 'UploadFile',
+    props: {
+        fileTypes: {
+            default:'image/*,.pdf',
+            type: String
+        }
+    },
     components: {
         InputText
     },
