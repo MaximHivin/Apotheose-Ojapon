@@ -2,20 +2,17 @@
 
 
 <section class="createguide">
-      <div class="main_container">
-          <router-link to='/backoffice'>
+    <div class="main_container" v-if="!success">
+        <router-link to='/backoffice'>
             <Retour textBtn="Retour" />
-          </router-link>
-          <div class="createguide-title">
-              <h2>Créer un <span>point d'intérêt</span></h2>
-          </div>
+        </router-link>
+        <div class="createguide-title">
+            <h2>Créer un <span>point d'intérêt</span></h2>
+        </div>
 
-          <div class="errors" v-if="errors.length > 0">
-                <p v-for="error in errors" :key="error">{{ error }}</p>
-                </div>
-                <div class="success" v-if="success">
-                    <p>{{ success }}</p>
-                </div>
+        <div class="errors" v-if="errors.length > 0">
+            <p v-for="error in errors" :key="error">{{ error }}</p>
+        </div>
         <div>
             <fieldset>
                 <label class="mdp_cmdp" for="title">Nom :</label> 
@@ -33,7 +30,6 @@
                     <input type="checkbox" :id="locSelected.id" :name="locSelected.name" checked>
                     <label for="locSelected" v-html="locSelected.name"></label>
                 </div>
-
             </div>
             <div>
                 <p>Genres (plusieurs choix possibles)</p>
@@ -42,9 +38,7 @@
                     <input type="checkbox" :id="genreSelected.id" :name="genreSelected.name" checked>
                     <label for="genreSelected" v-html="genreSelected.name"></label>
                 </div>
-
             </div>
-
             <div>
                 <p>Seasons (plusieurs choix possibles)</p>
                 <SearchAutocomplete :items="seasons" @itemSelected="updateSeason"/>
@@ -52,25 +46,33 @@
                     <input type="checkbox" :id="seasonSelected.id" :name="seasonSelected.name" checked>
                     <label for="seasonSelected.name" v-html="seasonSelected.name"></label>
                 </div>
-
             </div>
             <Button v-on:click="sendForm" btnName="Créez votre Point d'intérêt"/>
         </div>
+    </div>
+    <div class="main_container" v-else>
+        <router-link to='/backoffice'>
+            <Retour textBtn="Accueil back office" />
+        </router-link>
+        <div class="createguide-title center-button">
+            <div class="check__element">
+                <img alt="check element" src="@/assets/images/check.svg">
+            </div>
+            <h3>Votre <span>point d'intérêt</span> a bien été créé</h3>
+            <router-link to="/backoffice">
+                <Button btnName="Retourner au back office"/>
+            </router-link>
         </div>
+    </div>
   </section>
 
 
-<section>
-    <div class="main_container">
-            
 
-
-    </div>
-</section>
 </template>
 
 <script>
 import InputText from '@/components/formulaire/InputText.vue';
+import Retour from '@/components/CTA/Retour.vue';
 import TextArea from '@/components/formulaire/TextArea.vue';
 import UploadFile from '@/components/formulaire/UploadFile.vue';
 import Button from '@/components/Button.vue';
@@ -82,6 +84,7 @@ export default {
     name: "PoiForm",
     components: {
         InputText,
+        Retour,
         UploadFile,
         TextArea,
         Button,
@@ -226,8 +229,10 @@ export default {
                     // the message accordingly
                     if(data.type === "success") {
                         this.success = data.message;
+                        console.log("OK !", data.message);
                     } else {
                         this.errors.push(data.message);
+                        console.log("KO !", data.message);
                     }
                 });             
             }
@@ -433,7 +438,23 @@ fieldset {
     border: 0;
     margin-bottom: 2em;
 }
+.check{
+    display:inline-block;
+    position: absolute;
+    top:-2.5em;
+    right:0;
+    z-index: 3;
+}
 
+.check__element {
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 </style>

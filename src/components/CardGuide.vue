@@ -1,6 +1,8 @@
 <template>
         <div class="cardguide">
-            <Supprimer @click = "DeleteGuide" />
+            <Supprimer v-if="$route.path == '/listeguidesdevoyages'" @click = "DeleteGuide" />
+            <Ajouter v-if="$route.path == '/listeguidesdevoyages/:id/poi'" @click = "AddPoi" />
+            <Supprimer v-if="$route.path == '/listeguidesdevoyages/:id'" @click = "DeletePoi" />
             <div class="cardguide__top">
                 <div class="cardguide__top-img">
                      <img :src="image">
@@ -37,7 +39,11 @@ export default {
         DeleteGuide: function(){
             GuidesService.delete(this.id)
             this.$emit('onDeleteCardGuide')
-        }
+        },
+        // DeletePoi: function(){
+        //     GuidesService.delete(idGuide, idPoi)
+        //     this.$emit('onDeleteCardPoi')
+        // }
     }     
 }
 </script>

@@ -15,7 +15,7 @@
               v-bind:localisation="poi._embedded['wp:term'][0][0].name" 
               v-bind:genres="poi._embedded['wp:term'] ? poi._embedded['wp:term'][1] : []" 
               v-bind:image="poi._embedded['wp:featuredmedia'] ? poi._embedded['wp:featuredmedia'][0].source_url : defaultImg" 
-               
+              v-bind:currentId="poi.id"
             />
 
             <!-- v-bind:tag="poi._embedded['wp:term'] ? poi._embedded['wp:term'][1].name : ''" -->
