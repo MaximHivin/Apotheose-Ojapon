@@ -8,12 +8,16 @@
             </div>
 
             <div class="card__bottom">
-                <h3>{{ name }}</h3>
+                <h3 v-html="name"></h3>
                 <div class="card__bottom-localisation">
                     <img src="../assets/map-pin.svg">
-                    <p>{{ localisation }}</p>
+                    <p v-html="localisation"></p>
                 </div>
-                <p class="card__bottom-tag">{{ genre }}</p>
+                <ul class="genres-list">
+                    <!-- The first <li> only displays when no tags have been set on the POI -->
+                    <li v-if="genres.length == 0" class="card__bottom-tag">À voir</li>
+                    <li v-else v-for="genre in genres" :key="genre.slug" v-html="genre.name" class="card__bottom-tag"></li>
+                </ul>
             </div>
         </div>
 
@@ -27,7 +31,7 @@ export default {
         localisation: String,
         url: String,
         image: String,
-        genre: String
+        genres: Object
     }
 }
 </script>
@@ -81,15 +85,28 @@ export default {
 
 .card__bottom-localisation p {
     color: var(--regular-black);
-    margin-left: 0.8em;
+    margin: 0.8em;
     font-size: 1.8em;
     font-family: 'Fellix Regular';
 }
 
-.card__bottom-tag p{
+.card__bottom-tag{
     font-family: 'Fellix Regular';
     font-size: 1.6em;
     color: var(--secondary-color);
+}
+.card__bottom-tag::after {
+    content: ", ";
+    padding-right: 0.2em;
+}
+.card__bottom-tag:last-child::after {
+    content: "";
+}
+
+.genres-list {
+    list-style-type: none;
+    display: flex;
+    padding-left: 0;
 }
 
 </style>

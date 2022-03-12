@@ -7,11 +7,19 @@
 
     <div class="main_container">
       <div class="poi">
-        <h2>Liste des points d'intérêts</h2>
+        <h2>Que faire, que voir au Japon ?</h2>
           <div class="poi__card__container">
-            <Card v-bind:name="namePI.title.rendered" v-bind:localisation="namePI._embedded['wp:term'][0][0].name"
-            v-bind:genre="namePI._embedded['wp:term'][1][0].name" 
-            v-bind:image="namePI._embedded['wp:featuredmedia'][0].source_url" v-for="namePI in namesPI" v-bind:key="namePI.title" v-bind:tag="namePI._embedded['wp:term'][1].name" />
+            <Card 
+              v-for="poi in poiList" v-bind:key="poi.title" 
+              v-bind:name="poi.title.rendered" 
+              v-bind:localisation="poi._embedded['wp:term'][0][0].name" 
+              v-bind:genres="poi._embedded['wp:term'] ? poi._embedded['wp:term'][1] : []" 
+              v-bind:image="poi._embedded['wp:featuredmedia'] ? poi._embedded['wp:featuredmedia'][0].source_url : defaultImg" 
+               
+            />
+
+            <!-- v-bind:tag="poi._embedded['wp:term'] ? poi._embedded['wp:term'][1].name : ''" -->
+            
           </div>
  
       </div>
@@ -25,6 +33,8 @@ import HeaderLayout from '@/components/HeaderLayout.vue'
 import NavbarConnected from '@/components/NavbarConnected.vue'
 import Card from '@/components/Card.vue'
 import PointsInteret from '@/services/POIService.js'
+import defaultImg from '@/assets/images/header_background.jpg'
+
 export default {
     name: 'PointsInteretView',
     components: {
@@ -34,14 +44,14 @@ export default {
     },
     data() {
         return {
-            namesPI:null
+            poiList:null,
+            defaultImg
         }
     },
-
     mounted() {
       PointsInteret.findAll().then(
         (response) => {
-          this.namesPI = response.data;
+          this.poiList = response.data;
         }
       )
     }
