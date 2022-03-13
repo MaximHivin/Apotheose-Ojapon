@@ -66,5 +66,51 @@ export default {
                 });
             }
         );
+    },
+    removePoiFromGuide(data, callback) {
+        apiClient.delete(`/travelguide/${data.guideId}/poi/${data.poiId}`, data, {
+            headers: {
+                'Authorization': 'Bearer ' + store.state.token
+            }
+        })
+        .catch(
+            (error) => {
+                console.log(error);
+                callback({
+                    type: 'error',
+                    message: error.response.data.message
+                });
+            }
+        )
+        .then(
+            (response) => {
+                console.log(response);
+                callback({
+                    type: 'success',
+                    message: response.statusText
+                });
+            }
+        );
+    },
+    findAllPoiByGuideId(guideId, callback) {
+        apiClient.get(`/travelguide/${guideId}/poi`)
+        .catch(
+            (error) => {
+                console.log(error);
+                callback({
+                    type: 'error',
+                    message: error.response.data.message
+                });
+            }
+        )
+        .then(
+            (response) => {
+                console.log(response);
+                callback({
+                    type: 'success',
+                    message: response
+                });
+            }
+        );
     }
 };

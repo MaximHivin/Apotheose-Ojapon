@@ -66,22 +66,23 @@ export default {
   },
   methods: {
     addPoiToGuide: function (value) {
-            console.log('I want to add POI ' + value.poiId + ' to Guide ' +this.currentId);
-      POIService.addPoiToGuide({
-                    guideId: this.currentId,
-                    poiId: value.poiId
-                }, (data) => {
-                    // I check the type of response and I display
-                    // the message accordingly
-                    if(data.type === "success") {
-                        this.success = data.message;
-                        console.log("OK !", data.message);
-                    } else {
-                        this.errors.push(data.message);
-                        console.log("KO !", data.message);
-                    }
-                }); 
-      }
+        //console.log('I want to add POI ' + value.poiId + ' to Guide ' +this.currentId);
+        POIService.addPoiToGuide({
+            guideId: this.currentId,
+            poiId: value.poiId
+        }, (data) => {
+            // I check the type of response and I display
+            // the message accordingly
+            if(data.type === "success") {
+                this.success = data.message;
+                console.log("OK !", data.message);
+                this.$router.push('/listeguidesdevoyages/'+this.currentId);
+            } else {
+                this.errors.push(data.message);
+                console.log("KO !", data.message);
+            }
+        }); 
+    }
   }
 }
 </script>
