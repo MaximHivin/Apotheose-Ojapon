@@ -1,9 +1,9 @@
 <template>
-<a href="#" class="delete">
+<div class="delete">
   <div class="delete__element">
       <img alt="delete element" src="@/assets/trash.svg">
   </div>
-  </a>
+</div>
 </template>
 
 <script>

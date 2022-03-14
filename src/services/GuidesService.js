@@ -16,7 +16,7 @@ export default {
         .then(
             (response) => {
                 console.log('ICI', response);
-                callback();
+                callback(response);
             }
         )
     },
