@@ -3,6 +3,7 @@
  <div class="main_container">
     <NavbarConnected v-if="this.$store.state.token"/>
     <HeaderLayout v-else />
+    <BurgerMenu />
 </div>
 
 <section class="backoffice">
@@ -43,7 +44,9 @@
 
 import HeaderLayout from '@/components/HeaderLayout.vue'
 import NavbarConnected from '@/components/NavbarConnected.vue'
+import BurgerMenu from '@/components/BurgerMenu.vue'
 import ButtonBack from '@/components/CTA/ButtonBack.vue'
+
 // import UsersService from '@/services/UsersService.js'
 
 export default {
@@ -51,7 +54,8 @@ export default {
     components: {
         HeaderLayout,
         NavbarConnected,
-        ButtonBack
+        ButtonBack, 
+        BurgerMenu
         // FooterLayoutMobile
     },
     data(){

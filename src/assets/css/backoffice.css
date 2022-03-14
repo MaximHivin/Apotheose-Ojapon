@@ -35,8 +35,13 @@
 }
 
 @media screen and (max-width: 375px){
+
+    .backoffice__card {
+        margin-bottom: 9em;
+    }
     .backoffice__card-content{
         width: 100%;
+        
     }
     .card__back__content{
         padding: 2.4em
