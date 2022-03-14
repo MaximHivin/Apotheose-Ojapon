@@ -242,6 +242,9 @@ export default {
 </script>
 
 <style scoped>
+
+@import url('../assets/css/createguide.css');
+
 .main_container {
     max-width: 102.625em;
     margin: 0 auto;
