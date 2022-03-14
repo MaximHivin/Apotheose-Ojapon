@@ -76,6 +76,7 @@
     },
     methods: {
       setResult(result) {
+        console.log('setResult', result);
         this.search = result;
         this.isOpen = false;
         this.$emit('itemSelected', this.search);
@@ -113,9 +114,11 @@
         }
       },
       onEnter() {
-        this.search = this.results[this.arrowCounter];
+        console.log('onEnter', this.results[this.arrowCounter]);
+        this.setResult(this.results[this.arrowCounter]);
+        /* this.search = this.results[this.arrowCounter];
         this.isOpen = false;
-        this.arrowCounter = -1;
+        this.arrowCounter = -1; */
       },
     },
   };
@@ -143,7 +146,7 @@
 
   .autocomplete-result.is-active,
   .autocomplete-result:hover {
-    background-color: #4AAE9B;
+    background-color: var(--primary-color);
     color: white;
   }
 </style>
