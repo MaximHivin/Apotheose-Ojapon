@@ -1,6 +1,6 @@
 <template>
   <article class="comment">
-      <p>Posté par <span v-html="author"></span> le <span>{{ date }}</span></p>
+      <p>Posté par <span v-html="author"></span> le <span>{{ formattedDate }}</span></p>
       <div v-html="content"></div>
   </article>
 </template>
@@ -13,8 +13,19 @@ export default {
     props: {
         author: String,
         content: String,
-        date: Date,
+        date: String,
         id: Number
+    },
+    data() {
+        return {
+            formattedDate: null
+        }
+    },
+    mounted() {
+        
+        const customDate = new Date(this.date);
+        this.formattedDate = customDate.getDate() +"-" + (customDate.getMonth()+1) + "-" + customDate.getFullYear();
+        
     }
 }
 </script>

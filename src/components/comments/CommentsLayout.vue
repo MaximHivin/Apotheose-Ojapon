@@ -2,15 +2,17 @@
     <div class="comments-container">
         <NewCommentLayout @new_comment="updateCommentsList" v-if="this.$store.state.token"/>
         <h1>Commentaires</h1>
-        <CommentLayout 
-            @deleted_comment="updateCommentsList" 
-            v-for="comment in comments" :key="comment.id" 
-            v-bind:id="comment.id" 
-            v-bind:author="comment.author_name" 
-            v-bind:date="comment.date" 
-            v-bind:content="comment.content.rendered" 
-            
-        />
+        <div v-if="comments.length >0">
+            <CommentLayout 
+                @deleted_comment="updateCommentsList" 
+                v-for="comment in comments" :key="comment.id" 
+                v-bind:id="comment.id" 
+                v-bind:author="comment.author_name" 
+                v-bind:date="comment.date" 
+                v-bind:content="comment.content.rendered" 
+            />
+        </div>
+        <div v-else>Aucun commentaire pour l'instant</div>
     </div>
 </template>
 

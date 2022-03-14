@@ -2,7 +2,7 @@ import axios from 'axios';
 import store from '../store/index.js';
 
 const apiClient = axios.create({
-    baseURL: 'http://ocooking.local/wp-json/',
+    baseURL: 'http://ojapon.local/wp-json',
     headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'
