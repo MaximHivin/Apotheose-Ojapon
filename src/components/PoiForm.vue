@@ -330,7 +330,7 @@ export default {
     margin-right: 8.750em;
 }
 
-.mdp_cmdp {
+.mdp_cmdp, p {
     display: flex;
     font-weight: bold;
     color: black;
@@ -412,7 +412,7 @@ export default {
     /* padding: 16px 24px; */
     border-radius: 0.625em;
     font-weight: bold;
-    /* font-size: 18px; */
+    font-size: 18px;
     text-decoration: none;
     color: #fff;
     margin-left: 7.625em;
@@ -438,6 +438,7 @@ fieldset {
     border: 0;
     margin-bottom: 2em;
 }
+
 .check{
     display:inline-block;
     position: absolute;
