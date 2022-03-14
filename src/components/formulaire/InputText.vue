@@ -1,5 +1,5 @@
 <template>
-      <input :type="type" :name="name" :id="id" v-on:blur="handleBlur" :placeholder="placeholder" class="container__inputText-content">
+      <input :type="type" :name="name" :id="id" v-on:blur="handleChange" v-on:change="handleChange" :placeholder="placeholder" class="container__inputText-content">
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
         }
     },
     methods: {
-        handleBlur: function (event) {
+        handleChange: function (event) {
         this.$emit('inputChange', {
             name: this.name,
             value: event.target.value
