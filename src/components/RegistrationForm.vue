@@ -33,9 +33,15 @@
             <InputText name="password_check" id="password_check" placeholder="*****" type="password" @inputChange="updateInputValue" /> 
         </fieldset>
 
-        <Button v-on:click="sendForm" btnName="Créez un compte"/>
-        <div>
-            <h2 class="titre-principal">Vous avez déjà un compte ?</h2>
+        <div class="btn-submit-register">
+            <Button v-on:click="sendForm" btnName="Créez un compte"/>
+        </div>
+        
+
+       
+        <h2 class="titre-principal">Vous avez déjà un compte ?</h2>
+
+        <div class="btn-submit-login">
             <router-link to="/login">
             <Button btnName="Se connecter"/>
             </router-link>
@@ -131,15 +137,22 @@ export default {
 </script>
 
 <style scoped>
-@import url('../assets/css/style.css');
-@import url('../assets/css/createguide.css');
+ @import url('../assets/css/style.css');
+/* @import url('../assets/css/createguide.css');  */
 
+.main_container {
+    max-width: 102.625em;
+    margin: 0 auto;
+    background-color: white;
+    padding: 0 5em 15em; 
+}
 
-.center-button {
+/* .center-button {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
+
 fieldset {
     border: 0;
     margin-bottom: 2em;
@@ -154,21 +167,60 @@ fieldset {
     font-size: 1.500em;
     margin-bottom: 10px;
 }
-.titre-principal {
-    text-align: left;
+
+.titre-principal h1, h2 {
+    text-align: center;
     color: black;
-    padding-left: 3.5em;
-    padding-top: 3.125em;
-    margin-top: 2.188em;
+    padding: 1.125em 0;
+    margin-top: 1.188em;
     font-family: "Fellix SemiBold";
-    font-size: 2.0em;
+    font-size: 3.375em;
 }
-.main_container {
-    max-width: 102.625em;
+
+.btn-submit-register {
+    width: 25%;
     margin: 0 auto;
-    background-color: white;
-    padding: 0 5em 15em; 
+    
 }
+
+.btn-submit-login{
+    width: 22%;
+    margin: 0 auto;
+    
+}
+
+   @media screen and (max-width: 375px) {
+
+    /* .container_inputText{
+    width: 18.875em;
+    margin: 0 auto;
+    }
+
+    .inputText{
+    padding: 1.000em;
+    }
+     */
+    .titre-principal h1, h2 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-top: -1em;
+        padding: 2.5em 0 0;
+        
+    }
+
+    .btn-submit-register {
+        width: 75%;
+    }
+
+    .btn-submit-login {
+        width: 68%;
+    }
+
+
+ 
+
+}
+
 </style>
 
 
