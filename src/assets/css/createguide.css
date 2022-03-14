@@ -73,3 +73,24 @@
     font-size: 1.6em;
     font-family: 'Fellix Regular';
 }
+
+@media screen and (max-width: 375px){
+
+    .createguide-title h2 {
+        font-size: 3.8em;
+    }
+
+    .createguide-title h3 {
+        font-size: 2.8em;
+    }
+
+    .createguide label {
+        font-size: 2em;
+    }
+
+    .main_container button {
+        margin-bottom: 6em;
+    }
+
+
+}
