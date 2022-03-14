@@ -14,6 +14,9 @@ export default {
     findAll() {
         return apiClient.get('/poi?_embed');
     },
+    findById(idpoi){
+        return apiClient.get(`/poi/${idpoi}?_embed`)
+    },
     add(data, callback) {
         let arrayToString = JSON.stringify(Object.assign({}, data));  // convert array to string
         //let stringToJsonObject = JSON.parse(arrayToString);  // convert string to json object

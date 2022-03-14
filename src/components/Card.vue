@@ -19,6 +19,9 @@
                     <li v-if="genres.length == 0" class="card__bottom-tag">À voir</li>
                     <li v-else v-for="genre in genres" :key="genre.slug" v-html="genre.name" class="card__bottom-tag"></li>
                 </ul>
+                <router-link :to="{name:'SinglePOI', params:{idpoi:currentId}}">
+                    <p class="card__bottom-link">En savoir plus</p>
+                </router-link>
             </div>
         </div>
 
@@ -156,6 +159,13 @@ export default {
     list-style-type: none;
     display: flex;
     padding-left: 0;
+}
+
+.card__bottom a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.6em;
+    font-family: 'Fellix SemiBold';
 }
 
 </style>
