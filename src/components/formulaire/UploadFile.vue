@@ -7,12 +7,13 @@
             <img v-if="newFileInfo.media_type == 'image'" v-bind:src="newFileInfo.media_details.sizes.medium.source_url" />
         </div>
         <div v-else>
-            
+            <div class="upload_container">
                 <label for="file">Choisissez un fichier</label>
                 <input :disabled="loading" @change="upload($event)" name="file" id="file" placeholder="Choose a file..." type="file" :accept="fileTypes" class="container__inputText-content">
                 <label for="title">Titre de votre fichier</label> 
                 <InputText :disabled="loading" name="title" id="title" placeholder="Titre du fichier" type="text" @inputChange="updateInputValue" /> 
-            
+            </div>
+
             <div class="center-button">
                 <img src="../../assets/images/upload.svg" v-on:click="uploadFile" />
                 
@@ -114,6 +115,10 @@ export default {
 .container__inputText-content::placeholder{
     color:var(--regular-black);
     font-weight: 500;
+}
+
+.upload_container {
+    font-size: 0.9em;
 }
 
 .loader{  

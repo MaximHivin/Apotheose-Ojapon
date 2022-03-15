@@ -168,6 +168,10 @@ fieldset {
     margin-bottom: 10px;
 }
 
+label.mdp_cmdp {
+    font-size: 2.2em;
+}
+
 .titre-principal h1, h2 {
     text-align: center;
     color: black;
