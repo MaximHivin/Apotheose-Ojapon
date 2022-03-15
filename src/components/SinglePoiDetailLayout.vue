@@ -7,14 +7,14 @@
       <div class="singlepoidetail__tag">
 
           <div class="singlepoidetail__tag-genre">
-            <span v-for="genre in genres" :key="genre.name" >{{ genre.name }}</span>
+            <span v-for="genre in genres" :key="genre.name" v-html="genre.name" ></span>
           </div>
 
         <div class="singlepoidetail__tag-localisation">
             <h4>Localisation :</h4>
             <div class="singlepoidetail__tag-container">
                 <img src="../assets/map-pin.svg">
-                 <span v-for="localisation in localisations" :key="localisation.name" >  {{ localisation.name }}</span>
+                 <span v-for="localisation in localisations" :key="localisation.name" v-html="localisation.name" ></span>
             </div>
         </div>
 
