@@ -12,15 +12,15 @@
 
 <script>
 export default {
+    name: "CirclePI",
     props:{
         localisationPI: String,
         namePI: String,
         TeamMember: String,
         JapaneseName: String,
-        RoleMember: String
+        RoleMember: String,
         
-        
-        
+         
     }
 }
 </script>

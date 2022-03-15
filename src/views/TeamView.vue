@@ -30,7 +30,7 @@ import CirclePi from '@/components/CirclePi.vue'
 
 export default {
     name: "TeamView",
-     components: {
+    components: {
     NavbarConnected,
     HeaderLayout,
     BurgerMenu,
