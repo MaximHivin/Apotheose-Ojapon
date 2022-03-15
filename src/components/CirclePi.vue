@@ -14,7 +14,13 @@
 export default {
     props:{
         localisationPI: String,
-        namePI: String
+        namePI: String,
+        TeamMember: String,
+        JapaneseName: String,
+        RoleMember: String
+        
+        
+        
     }
 }
 </script>

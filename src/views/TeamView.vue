@@ -9,13 +9,13 @@
         <h1 class="titre_team">L'équipe du projet</h1>
 
         <div class="team_container">
-            <CirclePi localisationPI="Lead Dev Back/Git Master Back" namePI="Aurélie"/>
-            <CirclePi localisationPI="Product Owner/Dev Fullstack" namePI="Xavier"/>
-            <CirclePi localisationPI="Scrum Master/Dev Fullstack" namePI="Bastien"/>
+            <CirclePi RoleMember="Lead Dev Back/Git Master Back" TeamMember="Aurélie"/>
+            <CirclePi RoleMember="Product Owner/Dev Fullstack" TeamMember="Xavier"/>
+            <CirclePi RoleMember="Scrum Master/Dev Fullstack" TeamMember="Bastien"/>
         </div>
         <div class="team_container">
-            <CirclePi localisationPI="Lead Dev Front" namePI="Valentin"/>
-            <CirclePi localisationPI="Dev Front/Git Master Front" namePI="Maxime"/>
+            <CirclePi RoleMember="Lead Dev Front" TeamMember="Valentin"/>
+            <CirclePi RoleMember="Dev Front/Git Master Front" TeamMember="Maxime"/>
         </div>
 
     </div>
