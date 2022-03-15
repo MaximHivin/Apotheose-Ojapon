@@ -1,13 +1,13 @@
 .createguide{
     background-color: #fff;
-    padding-top: 4em;
-    padding-bottom: 4em;
-    margin: 0;
+    padding: 4em 10em;
+    margin: 0 auto;
 }
+    
 
 .createguide-title h2{
     color: var(--secondary-color);
-    font-size: 5.4em;
+    font-size: 5.4rem;
     font-family: 'Fellix Bold';
     margin-top: 0.8em;
     padding:0;
@@ -18,7 +18,7 @@
 }
 
 .createguide-title h3{
-    font-size: 3.8em;
+    font-size: 3.8rem;
     font-family: 'Fellix SemiBold';
     margin-bottom: 1.6em;
     color: var(--secondary-color);
@@ -72,4 +72,34 @@
     color: #fff;
     font-size: 1.6em;
     font-family: 'Fellix Regular';
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 375px){
+
+    .createguide {
+        padding: 4em 0;
+    }
+
+    .createguide-title h2 {
+        font-size: 3.8em;
+    }
+
+    .createguide-title h3 {
+        font-size: 2.8em;
+    }
+
+    .createguide label {
+        font-size: 2em;
+    }
+
+    .main_container button {
+        margin-bottom: 6em;
+    }
+
+
 }

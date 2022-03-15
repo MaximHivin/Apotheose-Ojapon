@@ -120,7 +120,7 @@ export default {
     max-width: 102.625em;
     margin: 0 auto;
     background-color: white;
-    padding: 0 5em 15em; 
+    padding: 0 5em 15.500em; 
 }
 
 .connexion {
@@ -153,7 +153,7 @@ export default {
 }
 
 .mdp {
-        margin: auto;
+    margin: auto;
     padding-right: 2.5em;
 }
 
@@ -181,16 +181,6 @@ export default {
     font-weight: 500;
 }
 
- @media screen and (max-width: 23.438em){
-    .container_inputText{
-    width: 18.875em;
-    margin: 0 auto;
-    }
-
-    .inputText{
-    padding: 1.000em;
-    }
-} 
 .input_left {
     border-radius: 0.625em;
     border: 0.063em solid #F1F1F1;
@@ -264,15 +254,29 @@ export default {
     text-decoration: none;
     
 }
-.titre-principal {
-    text-align: left;
+.titre-principal h1 {
+    text-align: center;
     color: black;
-    padding-left: 3.5em;
-    padding-top: 3.125em;
+    padding: 2.125em 0;
     margin-top: 2.188em;
     font-family: "Fellix SemiBold";
-    font-size: 2.0em;
+    font-size: 3.375em;
 }
+
+ .inscription h1 {
+    text-align: center;
+    margin: 1.500em 0;
+    font-family: "Fellix SemiBold";
+    font-size: 3.375em;
+    color: black;
+    }
+
+.text_mdp {
+    text-align: center;
+    font-family: "Fellix SemiBold";
+    font-size: 1.500em;
+    }
+
 .center-button {
     display: flex;
     flex-direction: column;
@@ -285,26 +289,38 @@ fieldset {
 
     
 
-    @media screen and (max-width: 23.438em) {
+    @media screen and (max-width: 375px) {
 
+    /* .container_inputText{
+    width: 18.875em;
+    margin: 0 auto;
+    }
+
+    .inputText{
+    padding: 1.000em;
+    }
+     */
+    .titre-principal h1 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-top: -1em;
+        padding: 2.5em 0 0;
+        
     }
 
     .text_mdp {
-    text-align: right;
-    margin-right: 8.750em;
+    text-align: center;
     font-family: "Fellix SemiBold";
-    font-size: 1.125em;
+    font-size: 1.250em;
     }
 
-    .inscription {
-    text-align: left;
-    margin-left: 3em;
-    margin-top: 5.000em;
-    margin-bottom: 3.500em;
-    font-family: "Fellix SemiBold";
-    font-size: 2.375em;
-    color: black;
+    .inscription h1 {
+        font-size: 2.5em;
     }
+
+}
+
+   
 
 </style>
 

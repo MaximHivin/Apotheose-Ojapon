@@ -15,6 +15,7 @@
             
             <div class="center-button">
                 <img src="../../assets/images/upload.svg" v-on:click="uploadFile" />
+                
                 <div class="loader" v-if="loading"></div>
         </div>
         </div>
@@ -129,6 +130,10 @@ export default {
     z-index:10000000;
     opacity: 0.4;
     filter: alpha(opacity=40);
+}
+
+.center-button {
+    padding: 1em;
 }
 
 </style>

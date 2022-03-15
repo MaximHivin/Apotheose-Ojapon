@@ -39,7 +39,7 @@ export default {
     border:none;
     background-color:#F1F1F1 ;
     color: var(--secondary-color);
-    font-size: 1.6em;
+    font-size: 1.5em;
     font-family: 'Fellix Medium';
     font-weight: 500;
     width: 100%;

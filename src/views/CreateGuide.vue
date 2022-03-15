@@ -1,6 +1,7 @@
 <template>
       <div class="main_container">
           <NavbarConnected />
+          <BurgerMenu />
         </div>
 
   <section class="createguide">
@@ -38,6 +39,7 @@
 import Retour from '@/components/CTA/Retour.vue'
 import NavbarConnected from '@/components/NavbarConnected.vue';
 import Button from '@/components/Button.vue'
+import BurgerMenu from '@/components/BurgerMenu.vue'
 import InputText from '@/components/formulaire/InputText.vue';
 import UploadFile from '@/components/formulaire/UploadFile.vue';
 import GuidesService from '@/services/GuidesService.js';
@@ -51,6 +53,7 @@ export default {
         InputText,
         UploadFile,
         Button,
+        BurgerMenu,
         Retour
         // FormBackCreateGuide
 
@@ -126,6 +129,5 @@ export default {
 <style>
 @import url('../assets/css/style.css');
 @import url('../assets/css/createguide.css');
-
 
 </style>

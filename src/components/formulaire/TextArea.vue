@@ -42,7 +42,7 @@ export default {
     width: 100%;
     height: 100%;
     resize: none;
-    font-size: 1.6em;
+    font-size: 1.5em;
     font-family: 'Fellix Medium';
     color: var(--secondary-color);
     border-radius: 5px;

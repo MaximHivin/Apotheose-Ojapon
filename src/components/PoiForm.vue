@@ -26,25 +26,25 @@
             <div>
                 <p>Localisation (plusieurs choix possibles)</p>
                 <SearchAutocomplete :items="locations" @itemSelected="updateLocation"/>
-                <div v-for="locSelected in locationsSelected" :key="locSelected.id">
-                    <input type="checkbox" :id="locSelected.id" :name="locSelected.name" checked>
-                    <label for="locSelected" v-html="locSelected.name"></label>
+                <div class="container_selected_taxonomie" v-for="locSelected in locationsSelected" :key="locSelected.id">
+                    <input class="checkbox_selected" type="checkbox" :id="locSelected.id" :name="locSelected.name" checked>
+                    <label class="checkbox_label" for="locSelected" v-html="locSelected.name"></label>
                 </div>
             </div>
             <div>
                 <p>Genres (plusieurs choix possibles)</p>
                 <SearchAutocomplete :items="genres" @itemSelected="updateGenre"/>
-                <div v-for="genreSelected in genresSelected" :key="genreSelected.id">
-                    <input type="checkbox" :id="genreSelected.id" :name="genreSelected.name" checked>
-                    <label for="genreSelected" v-html="genreSelected.name"></label>
+                <div class="container_selected_taxonomie" v-for="genreSelected in genresSelected" :key="genreSelected.id">
+                    <input class="checkbox_selected" type="checkbox" :id="genreSelected.id" :name="genreSelected.name" checked>
+                    <label class="checkbox_label" for="genreSelected" v-html="genreSelected.name"></label>
                 </div>
             </div>
             <div>
                 <p>Seasons (plusieurs choix possibles)</p>
                 <SearchAutocomplete :items="seasons" @itemSelected="updateSeason"/>
-                <div v-for="seasonSelected in seasonsSelected" :key="seasonSelected.id">
-                    <input type="checkbox" :id="seasonSelected.id" :name="seasonSelected.name" checked>
-                    <label for="seasonSelected.name" v-html="seasonSelected.name"></label>
+                <div class="container_selected_taxonomie" v-for="seasonSelected in seasonsSelected" :key="seasonSelected.id">
+                    <input class="checkbox_selected" type="checkbox" :id="seasonSelected.id" :name="seasonSelected.name" checked>
+                    <label class="checkbox_label" for="seasonSelected.name" v-html="seasonSelected.name"></label>
                 </div>
             </div>
             <Button v-on:click="sendForm" btnName="Créez votre Point d'intérêt"/>
@@ -242,6 +242,9 @@ export default {
 </script>
 
 <style scoped>
+
+@import url('../assets/css/createguide.css');
+
 .main_container {
     max-width: 102.625em;
     margin: 0 auto;
@@ -330,16 +333,18 @@ export default {
     margin-right: 8.750em;
 }
 
-.mdp_cmdp {
+
+
+.mdp_cmdp, p {
     display: flex;
     font-weight: bold;
     color: black;
     font-family: "Fellix SemiBold";
-    font-size: 1.500em;
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
-.mdp {
+/* .mdp {
     margin-left: 5em;
     padding-top: 2.5em;
 }
@@ -348,13 +353,32 @@ export default {
     margin: auto;
     padding-top: 2.5em;
     
-}
+} */
 
-.container_inputText_bottom {
+.container_selected_taxonomie {
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 2em;
 }
 
-.container_bottom_left {
+.checkbox_selected {
+    display: block;
+    height: 1em;
+    margin: 0;
+    width: 10%;
+}
+
+.checkbox_label {
+    font-size: 1.5em;
+}
+
+/* .container_inputText_bottom {
+    display: flex;
+} */
+
+/* .container_bottom_left {
     border-radius: 0.625em;
     border: 0.063em solid #F1F1F1;
     background-color:#F1F1F1 ;
@@ -377,7 +401,7 @@ export default {
     width: 100%;
     box-sizing: border-box;
     margin-right: 8.750em;
-}
+} */
 
 .button_top {
     width: 180px;
@@ -412,7 +436,7 @@ export default {
     /* padding: 16px 24px; */
     border-radius: 0.625em;
     font-weight: bold;
-    /* font-size: 18px; */
+    font-size: 18px;
     text-decoration: none;
     color: #fff;
     margin-left: 7.625em;
@@ -438,6 +462,7 @@ fieldset {
     border: 0;
     margin-bottom: 2em;
 }
+
 .check{
     display:inline-block;
     position: absolute;
