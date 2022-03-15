@@ -340,7 +340,7 @@ export default {
     font-weight: bold;
     color: black;
     font-family: "Fellix SemiBold";
-    font-size: 2em;
+    font-size: 2.2em;
     margin-bottom: 10px;
 }
 
