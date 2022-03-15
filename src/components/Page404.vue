@@ -112,7 +112,7 @@ html {
       position: relative;
  }
   .error-page h2 {
-    margin: 0px 0 30px 0;
+    margin: 0px 0 15px 0;
     font-size: 24px; }
     .error-page h2:before {
       width: 130px;
@@ -136,15 +136,19 @@ html {
 
 .error-back {
   text-decoration: none;
-  color: #430400;
+  color: black;
   font-size: 3em;
-  
+  animation: clignote 2s linear infinite;
+  text-shadow: 0 0 3px white;
    }
   .error-back:hover {
     color: white;
-    text-shadow: 0 0 3px black;
+    text-shadow: 0 0 6px black;
     
    }
+   @keyframes clignote {  
+  50% { opacity: 0; }
+}
 
 
 
