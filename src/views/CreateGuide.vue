@@ -130,5 +130,4 @@ export default {
 @import url('../assets/css/style.css');
 @import url('../assets/css/createguide.css');
 
-
 </style>

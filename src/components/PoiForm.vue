@@ -333,16 +333,18 @@ export default {
     margin-right: 8.750em;
 }
 
+
+
 .mdp_cmdp, p {
     display: flex;
     font-weight: bold;
     color: black;
     font-family: "Fellix SemiBold";
-    font-size: 1.500em;
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
-.mdp {
+/* .mdp {
     margin-left: 5em;
     padding-top: 2.5em;
 }
@@ -351,7 +353,7 @@ export default {
     margin: auto;
     padding-top: 2.5em;
     
-}
+} */
 
 .container_selected_taxonomie {
     display: flex;
