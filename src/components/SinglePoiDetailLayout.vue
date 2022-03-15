@@ -11,12 +11,18 @@
 
         <div class="singlepoidetail__tag-localisation">
             <h4>Localisation :</h4>
-            <span v-for="localisation in localisations" :key="localisation.name" ><img src="../assets/map-pin.svg">  {{ localisation.name }}</span>
+            <div class="singlepoidetail__tag-container">
+                <img src="../assets/map-pin.svg">
+                 <span v-for="localisation in localisations" :key="localisation.name" >  {{ localisation.name }}</span>
+            </div>
+
         </div>
 
         <div class="singlepoidetail__tag-saison">
             <h4>Saison(s) recommandée(s) :</h4>
-            <span v-for="saison in saisons" :key="saison.name" > {{ saison.name }}</span>
+            <div class="singlepoidetail__tag-container">
+                <span v-for="saison in saisons" :key="saison.name" > {{ saison.name }}</span>
+            </div>
         </div>
 
 
@@ -83,12 +89,17 @@ export default {
     font-family: 'Fellix SemiBold';
 }
 
-.singlepoidetail__tag-localisation span, .singlepoidetail__tag-saison span{
-    display:flex;
+
+.singlepoidetail__tag-container{
+    display: flex;
     align-items: center;
+}
+
+.singlepoidetail__tag-container span{
     font-size: 1.6em;
     font-family: 'Fellix SemiBold';
     color: var(--primary-color);
+    margin-right: 0.8em;
 }
 
 .singlepoidetail__tag-localisation img {
