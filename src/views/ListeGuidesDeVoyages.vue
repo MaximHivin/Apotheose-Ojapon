@@ -1,6 +1,7 @@
 <template>
 <div class="main_container">
   <NavbarConnected />
+  <BurgerMenu />
 </div>
 <section class="listguide">
   <div class="main_container">
@@ -28,6 +29,7 @@
 
 <script>
 import NavbarConnected from '@/components/NavbarConnected.vue'
+import BurgerMenu from '@/components/BurgerMenu.vue'
 import Retour from '@/components/CTA/Retour.vue'
 import Button from '@/components/Button.vue'
 import CardGuide from '@/components/CardGuide.vue'
@@ -39,6 +41,7 @@ export default {
     name: 'ListeGuidesDeVoyages',
     components: {
       NavbarConnected,
+      BurgerMenu,
       Retour,
       Button,
       CardGuide

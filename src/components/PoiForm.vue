@@ -15,13 +15,13 @@
         </div>
         <div>
             <fieldset>
-                <label class="mdp_cmdp" for="title">Nom :</label> 
-                <InputText name="title" id="title" placeholder="Osaka" type="text" @inputChange="updateInputValue" /> 
-            </fieldset> 
+                <label class="mdp_cmdp" for="title">Nom :</label>
+                <InputText name="title" id="title" placeholder="Osaka" type="text" @inputChange="updateInputValue" />
+            </fieldset>
             <UploadFile fileTypes="image/*" @uploadComplete="getFileId"/>
             <fieldset>
                 <label class="mdp_cmdp" for="title">Description :</label>
-                <TextArea name="content" id="content" placeholder="Description du point d'intérêt : privilégiez une description objective, indépendante de votre expérience personnelle..." @inputChange="updateInputValue" /> 
+                <TextArea name="content" id="content" placeholder="Description du point d'intérêt : privilégiez une description objective, indépendante de votre expérience personnelle..." @inputChange="updateInputValue" />
             </fieldset>
             <div>
                 <p>Localisation (plusieurs choix possibles)</p>
@@ -89,7 +89,7 @@ export default {
         TextArea,
         Button,
         SearchAutocomplete
-        
+
     },
     data () {
         return {
@@ -126,7 +126,7 @@ export default {
                         id: location.id,
                         name: location.name
                     } );
-                    /* 
+                    /*
                     location.id.toString()*/
                 }
                 //this.locations = response.data;
@@ -143,7 +143,7 @@ export default {
                         id: genre.id,
                         name: genre.name
                     } );
-                    /* 
+                    /*
                     location.id.toString()*/
                 }
                 //this.locations = response.data;
@@ -160,7 +160,7 @@ export default {
                         id: season.id,
                         name: season.name
                     } );
-                    /* 
+                    /*
                     location.id.toString()*/
                 }
                 //this.locations = response.data;
@@ -200,14 +200,14 @@ export default {
             // validate this data
             if(!this.formData.title) {
                 this.errors.push('Comment avez-vous dit que votre point d\'intérêt s\'appelait, déjà ?');
-            } 
+            }
             if(!this.formData.content) {
                 this.errors.push('Pensez à nous dire ce qui fait de cet endroit un endroit intéressant !');
             }
             if(!this.formData.attachmentId) {
                 this.errors.push('Une image serait du plus bel effet, vous ne pensez pas ? :)');
             }
-            
+
             // return error messages in case of non-validation
             // run an asynchronous request to register a new user
             if (this.errors.length > 0) {
@@ -234,7 +234,7 @@ export default {
                         this.errors.push(data.message);
                         console.log("KO !", data.message);
                     }
-                });             
+                });
             }
         }
     }
@@ -246,11 +246,11 @@ export default {
 @import url('../assets/css/createguide.css');
 
 .main_container {
-    max-width: 102.625em;
+    max-width: 1642px;
     margin: 0 auto;
     background-color: white;
-    padding-bottom: 15em;
-    
+    padding: 2em 5em;
+
 }
 
 .titre-principal {
@@ -297,7 +297,7 @@ export default {
 .container__inputText-content {
     padding-left: 1.500em;
     padding-top: 2.000em;
-    padding-bottom: 2.000em; 
+    padding-bottom: 2.000em;
     border-radius: 0.625em;
     border: 0.063em solid #F1F1F1;
     background-color:#F1F1F1 ;
@@ -305,10 +305,10 @@ export default {
     font-size: 1.000em;
     font-weight: 500;
     width: 100%;
-    box-sizing: border-box;  
+    box-sizing: border-box;
 }
 
-.input_top_left {
+/* .input_top_left {
     border-radius: 0.625em;
     border: 0.063em solid #F1F1F1;
     background-color:#F1F1F1 ;
@@ -331,7 +331,7 @@ export default {
     width: 100%;
     box-sizing: border-box;
     margin-right: 8.750em;
-}
+} */
 
 
 
@@ -352,7 +352,7 @@ export default {
 .cmdp {
     margin: auto;
     padding-top: 2.5em;
-    
+
 } */
 
 .container_selected_taxonomie {
@@ -372,6 +372,21 @@ export default {
 
 .checkbox_label {
     font-size: 1.5em;
+}
+
+.container__inputText-content{
+    padding-left: 2.4em;
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
+    border-radius: 5px;
+    border:none;
+    background-color:#F1F1F1 ;
+    color: var(--secondary-color);
+    font-size: 1.6em;
+    font-family: 'Fellix Medium';
+    font-weight: 500;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* .container_inputText_bottom {
@@ -403,37 +418,37 @@ export default {
     margin-right: 8.750em;
 } */
 
-.button_top {
+/* .button_top {
     width: 180px;
     height: 3.375em;
     line-height: 3.375em;
     background-color: #CE1137;
-    /* padding: 16px 24px; */
+    /* padding: 16px 24px;
     border-radius: 0.625em;
     font-weight: bold;
-    /* font-size: 18px; */
+    font-size: 18px;
     text-decoration: none;
     color: #fff;
     margin-left: 7.5em;
     margin-top: 2.188em;
     margin-bottom: 2.5em;
-}
+} */
 
-.btn_connexion {
-    
+/* .btn_connexion {
+
     border: 0.750em solid #CE1137;
     color: white;
     transition: 400ms ease-in-out;
     text-decoration: none;
-}
+} */
 
 
-.button_bottom {
+/* .button_bottom {
     width: 7.813em;
     height: 3.375em;
     line-height: 3.375em;
     background-color: #CE1137;
-    /* padding: 16px 24px; */
+    /* padding: 16px 24px;
     border-radius: 0.625em;
     font-weight: bold;
     font-size: 18px;
@@ -442,15 +457,15 @@ export default {
     margin-left: 7.625em;
     margin-top: 2.188em;
     font-family: "Fellix Bold";
-}
+} */
 
-.btn_create {
+/* .btn_create {
     border: 0.750em solid #CE1137;
     color: white;
     transition: 400ms ease-in-out;
     text-decoration: none;
-    
-}
+
+} */
 
 
 .center-button {
@@ -458,12 +473,13 @@ export default {
     flex-direction: column;
     align-items: center;
 }
+
 fieldset {
     border: 0;
     margin-bottom: 2em;
 }
 
-.check{
+/* .check{
     display:inline-block;
     position: absolute;
     top:-2.5em;
@@ -479,6 +495,39 @@ fieldset {
     display: flex;
     justify-content: center;
     align-items: center;
+} */
+
+@media screen and (max-width: 375px){
+
+    .createguide {
+        padding: 4em 0;
+    }
+
+    .createguide-title h2 {
+        font-size: 3.8em;
+    }
+
+    .createguide-title h3 {
+        font-size: 2.8em;
+    }
+
+    .createguide label {
+        font-size: 2em;
+    }
+
+    .main_container button {
+        margin-bottom: 6em;
+    }
+
+    #content {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 2em;
+    }
+
+
 }
 
 
