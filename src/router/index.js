@@ -10,6 +10,12 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/:pathMatch(.*)*',
+    name: 'PageNotFound',
+    meta: { requiresAuth: false },
+    component: () => import(/* webpackChunkName: "about" */ '../views/Page404NotFounded.vue')
+  },
+  {
     path: '/test-comments',
     name: 'TestComments',
     // route level code-splitting
@@ -148,7 +154,6 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/BackPointsInteret.vue'),
   },
-  
   {
     path: '/createguide',
     name: 'CreateGuide',
@@ -158,6 +163,17 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/CreateGuide.vue'),
   },
+  {
+    path: '/team',
+    name: 'Team',
+    meta: { requiresAuth: false },
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/TeamView.vue')
+  }
+
+  
 ]
 
 const router = createRouter({

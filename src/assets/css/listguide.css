@@ -33,3 +33,22 @@
     color: #fff;
 }
 
+@media screen  and (max-width: 375px) {
+
+    .listguide {
+        height: 100vh;
+    }
+
+    .listguide__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+
+    }
+    
+    .listguide__menu-left h2{
+        font-size: 3.4em;
+    }
+}
+

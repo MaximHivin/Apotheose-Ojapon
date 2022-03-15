@@ -1,7 +1,7 @@
 <template>
   <article class="comment">
       <p>Posté par <span v-html="author"></span> le <span>{{ formattedDate }}</span></p>
-      <div v-html="content"></div>
+      <div class="comment-content" v-html="content"></div>
   </article>
 </template>
 
@@ -31,14 +31,23 @@ export default {
 </script>
 
 <style scoped>
-    .comment {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .comment{
+        background-color: var(--light-black);
+        padding: 1.6em;
+        margin-bottom: 1.6em;
+        border-radius: 5px;
+        font-size: 1.4em;
     }
-    .comment p,
-    .comment div {
-        color: white;
-        font-size: 2em;
+
+    .comment p{
+        font-family: 'Fellix Regular';
+    }
+    .comment span{
+        color:var(--primary-color);
+        font-family: 'Fellix SemiBold';
+    }
+
+    .comment-content{
+        font-family: 'Fellix Regular';
     }
 </style>
