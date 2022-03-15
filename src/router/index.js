@@ -8,6 +8,11 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/:pathMatch(.*)*',
+    name: 'PageNotFound',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Page404NotFounded.vue')
+  },
+  {
     path: '/test-comments',
     name: 'TestComments',
     // route level code-splitting
