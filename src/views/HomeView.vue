@@ -15,12 +15,12 @@
 
           <div class="header__desktop__action">
             <div class="header__desktop__action__container-search">
-              <InputSearch />
+              <!-- <InputSearch />-->
             </div>
             <div class="header__desktop__action__container-btn">
-               <Button btnName="Rechercher" />
+               <!--<Button btnName="Rechercher" />-->
             </div>
-          </div>
+          </div> -->
 
           <div class="header__desktop-pi">
             <CirclePi localisationPI="Localisation" namePI="Nom du point d'intérêt" /><CirclePi localisationPI="Localisation" namePI="Nom du point d'intérêt" /><CirclePi localisationPI="Localisation" namePI="Nom du point d'intérêt" />
@@ -177,7 +177,7 @@
 import HeaderLayout from '@/components/HeaderLayout.vue'
 import NavbarConnected from '@/components/NavbarConnected.vue'
 import BurgerMenu from '@/components/BurgerMenu.vue'
-import InputSearch from '@/components/formulaire/InputSearch.vue'
+/* import InputSearch from '@/components/formulaire/InputSearch.vue' */
 import Button from '@/components/Button.vue'
 import CirclePi from '@/components/CirclePi.vue'
 import InputText from '@/components/formulaire/InputText.vue'
@@ -190,7 +190,7 @@ export default {
     NavbarConnected,
     HeaderLayout,
     BurgerMenu,
-    InputSearch,
+    /* InputSearch, */
     Button,
     CirclePi,
     InputText,
