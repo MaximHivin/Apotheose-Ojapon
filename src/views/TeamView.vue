@@ -6,7 +6,7 @@
         
         <div class="separateur"></div>
 
-        <h1 class="titre_team">L'équipe du projet</h1>
+        <h1 class="titre_team">L'équipe du projet :S</h1>
 
         <div class="team_container">
             <CirclePi RoleMember="Lead Dev Back/Git Master Back" TeamMember="Aurélie"/>
@@ -57,6 +57,7 @@ export default {
     font-family: "Fellix Light";
     color: var(--grey-color);
     text-align: center;
+    padding: 1em;
 
 }
 
