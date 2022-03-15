@@ -1,7 +1,6 @@
 <template>
     <div class="comments-container">
-        <NewCommentLayout @new_comment="updateCommentsList" v-if="this.$store.state.token"/>
-        <h1>Commentaires</h1>
+        <h4>Commentaires</h4>
         <div v-if="comments.length >0">
             <CommentLayout 
                 @deleted_comment="updateCommentsList" 
@@ -12,7 +11,12 @@
                 v-bind:content="comment.content.rendered" 
             />
         </div>
-        <div v-else>Aucun commentaire pour l'instant</div>
+        <div v-else>
+            <p class="comments-container-nocomment">Aucun commentaire pour l'instant</p>
+            </div>
+        <div class="singlepoidetail-separator"></div>
+
+        <NewCommentLayout @new_comment="updateCommentsList" v-if="this.$store.state.token"/>
     </div>
 </template>
 
@@ -37,7 +41,8 @@ export default {
     methods: {
         getComments() {
             // this.$route.params.id --> à la place de l'id en dur
-            const poiId = 78;
+            const poiId = this.$route.params.idpoi;
+            console.log('ICI',this.$route.params.idpoi)
             POIService.findById(poiId).then(
                 (response) => {
                     console.log('RESPONSE COMMENTS LAYOUT', response.data);
@@ -48,6 +53,7 @@ export default {
         },
         updateCommentsList() {
             this.getComments();
+            console.log('laaaa',this.comments.length)
         }
     },
     mounted() {
@@ -63,4 +69,24 @@ export default {
     .comments-container {
         margin-bottom: 5em;
     }
+
+    .comments-container h4{
+        font-size: 2em;
+        color: var(--secondary-color);
+        font-family: 'Fellix SemiBold';
+    }
+
+    .comments-container-nocomment{
+        font-size: 1.8em;
+        font-family: 'Fellix Italic';
+    }
+
+    .singlepoidetail-separator{
+        height: 2px;
+        width: 100%;
+        background-color: var(--light-black);
+        margin-top: 2.4em;
+        margin-bottom: 2.4em;
+    }
+    
 </style>
