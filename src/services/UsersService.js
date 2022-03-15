@@ -59,6 +59,13 @@ export default {
                 });
             }
         );
+    },
+    disconnect() {
+        store.commit('setToken', null);
+        store.commit('setUserID', null);
+        store.commit('setUserName', null);
+        store.commit('setUserRole', null);
+        return 'You have successfully been logged out';
     }
 }
 
