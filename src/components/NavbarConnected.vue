@@ -11,7 +11,7 @@
       </div>
       <div class="header__right">
           <ul>
-              <li class="header__right-inscription"><a href="#">Se deconnecter</a></li>
+              <li class="header__right-inscription" @click="logout">Se deconnecter</li>
               <li>
                   <router-link to="/backoffice">
                         <Button btnName="Accès à mon back office"/>
@@ -27,6 +27,8 @@
 
 <script>
 import Button from '@/components/Button.vue'
+import UsersService from '@/services/UsersService.js';
+
 export default {
     name:'NavbarConnected',
     components: {
@@ -62,6 +64,14 @@ export default {
                         hash: '#contact'
                     }
                 ]
+            }
+        },
+        methods: {
+            logout() {
+                const loggedOut = UsersService.disconnect();
+                if (loggedOut) this.$router.push('/');
+                else console.log('something went wrong...');
+
             }
         }
 
@@ -105,7 +115,7 @@ export default {
     list-style: none;
 }
 
-.header__right-inscription a{
+.header__right-inscription {
     text-decoration: none;
     color:#fff;
     font-size: 1.6em;
@@ -113,7 +123,7 @@ export default {
     margin-right: 3.2em;
 }
 
-.header__right-inscription a:hover{
+.header__right-inscription:hover{
     color:var(--primary-color);
     transition: 0.5s;
 }
