@@ -28,11 +28,11 @@
                 <ButtonBack linkContent="Accéder à mes guides de voyage"/>
                 </router-link>
             </div>
-            <div class="backoffice__card-content">
+            <!-- <div class="backoffice__card-content">
                 <router-link to="/test-comments">
                 <ButtonBack linkContent="Test des commentaires"/>
                 </router-link>
-            </div>
+            </div> -->
         </div>
     </div>
  </section>

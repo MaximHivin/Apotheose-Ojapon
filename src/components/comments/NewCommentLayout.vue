@@ -1,11 +1,11 @@
 <template>
     <div class="new-comment-container">
-        <h2>Commenter la recette</h2>
+        <h2>Donner mon avis sur ce point d'intérêt :</h2>
         <fieldset>
             <div class="field">
                 <TextArea name="content" id="content" placeholder="Partagez votre expérience sur ce point d'intérêt ! Subjectivité requise ! :)" @inputChange="updateInputValue" /> 
-                <label class="mdp_cmdp" for="notation">Ma note sur 5</label>
-                <InputText name="notation" id="notation" placeholder="Note de 0 à 5" type="text" @inputChange="updateInputValue" /> 
+                <!-- <label class="mdp_cmdp" for="notation">Ma note sur 5</label> -->
+                <!-- <InputText name="notation" id="notation" placeholder="Note de 0 à 5" type="text" @inputChange="updateInputValue" />  -->
             </div>
         </fieldset>
         <Button v-on:click="createComment" btnName="Envoyer mon commentaire"/>
@@ -15,14 +15,14 @@
 <script>
 import CommentsService from '@/services/CommentsService.js';
 import TextArea from '@/components/formulaire/TextArea.vue';
-import InputText from '@/components/formulaire/InputText.vue';
+// import InputText from '@/components/formulaire/InputText.vue';
 import Button from '@/components/Button.vue';
 
 export default {
     name: "NewCommentLayout",
     components: {
         TextArea,
-        InputText,
+        // InputText,
         Button
     },
     data() {
@@ -35,7 +35,7 @@ export default {
             },            
             userID : this.$store.state.userID,
             // Correspond au param de l'URL
-            poiId: 78
+            poiId: this.$route.params.idpoi
         }
     },
     methods: {
@@ -58,5 +58,26 @@ export default {
 </script>
 
 <style scoped>
+
+.new-comment-container fieldset{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.new-comment-container h2, .mdp_cmdp{
+    font-size: 2em;
+    color: var(--secondary-color);
+    font-family: 'Fellix SemiBold';
+}
+
+.new-comment-container textarea{
+    margin-bottom: 2.4em;
+}
+
+.new-comment-container button{
+    margin-top: 3.2em;
+}
+
 
 </style>

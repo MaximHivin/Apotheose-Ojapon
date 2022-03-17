@@ -5,18 +5,20 @@
           <img :src="image">
       </div>
       <div class="singlepoidetail__tag">
+
           <div class="singlepoidetail__tag-genre">
-            <span v-for="genre in genres" :key="genre.name" >{{ genre.name }}</span>
+            <span v-for="genre in genres" :key="genre.name" v-html="genre.name" ></span>
           </div>
 
         <div class="singlepoidetail__tag-localisation">
             <h4>Localisation :</h4>
             <div class="singlepoidetail__tag-container">
                 <img src="../assets/map-pin.svg">
-                 <span v-for="localisation in localisations" :key="localisation.name" >  {{ localisation.name }}</span>
+                 <span v-for="localisation in localisations" :key="localisation.name" v-html="localisation.name" ></span>
             </div>
-
         </div>
+
+        <div class="singlepoidetail-separator"></div>
 
         <div class="singlepoidetail__tag-saison">
             <h4>Saison(s) recommandée(s) :</h4>
@@ -25,6 +27,7 @@
             </div>
         </div>
 
+        <div class="singlepoidetail-separator"></div>
 
       </div>
       <span>{{ tag }}</span>
@@ -32,6 +35,8 @@
           <h4>Description :</h4>
           <div v-html="description"></div>
       </div>
+      
+       <div class="singlepoidetail-separator"></div>
   </div>
 </template>
 
@@ -120,6 +125,14 @@ export default {
     font-size: 1.8em;
     color: var(--secondary-color);
     font-family: 'Fellix Regular';
+}
+
+.singlepoidetail-separator{
+    height: 2px;
+    width: 100%;
+    background-color: var(--light-black);
+    margin-top: 2.4em;
+    margin-bottom: 2.4em;
 }
 
 </style>

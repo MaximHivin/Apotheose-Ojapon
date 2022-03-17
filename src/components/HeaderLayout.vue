@@ -46,7 +46,7 @@ export default {
                     },
                     {
                         name: 'Le Japon',
-                        route: '/',
+                        route: '/home#japon',
                         hash: '#japon'
                     },
                     {
@@ -60,6 +60,10 @@ export default {
                     {
                         name: 'FAQ',
                         route: '/faq'
+                    },
+                      {
+                        name: 'Team',
+                        route: '/team'
                     },
                     {
                         name: 'Contact',

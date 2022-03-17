@@ -58,6 +58,10 @@ export default {
                         name: 'FAQ',
                         route: '/faq'
                     },
+                     {
+                        name: 'Team',
+                        route: '/team'
+                    },
                     {
                         name: 'Contact',
                         route: '/',
