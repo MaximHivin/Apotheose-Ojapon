@@ -155,7 +155,8 @@
 
 <div class="main_container">
   <footer class="footer">
-    <HeaderLayout />
+    <NavbarConnected v-if="this.$store.state.token"/>
+    <HeaderLayout v-else />
     <div class="footer-separator"></div>
     <div class="footer-bottom">
       <span>Mentions Légales</span>
