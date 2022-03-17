@@ -18,6 +18,18 @@
     flex-wrap: wrap;
 }
 
+.resultats {
+    font-size: 1.6em;
+    color: #fff;
+    font-family: 'Fellix Bold';
+}
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    
+}
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 375px){
