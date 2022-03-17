@@ -1,6 +1,6 @@
 <template>
   <div class="singlepoidetail">
-      <h2>{{ name }}</h2>
+      <h2 v-html="name"></h2>
       <div class="singlepoidetail-img">
           <img :src="image">
       </div>

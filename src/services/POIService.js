@@ -11,8 +11,8 @@ const apiClient = axios.create({
 });
 
 export default {
-    findAll() {
-        return apiClient.get('/poi?_embed');
+    findAll(pageNb = 1) {
+        return apiClient.get('/poi?_embed&per_page=9&page='+pageNb);
     },
     findById(poiId) {
         return apiClient.get(`/poi/${poiId}?_embed`);

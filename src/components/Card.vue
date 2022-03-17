@@ -91,7 +91,6 @@ export default {
 
 .card{
     width: 31%;
-    margin-right: 3.2em;
     margin-bottom: 3.2em;
     position: relative;
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;

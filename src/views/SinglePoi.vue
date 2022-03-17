@@ -6,7 +6,7 @@
     <section class="singlepoi">
         <div class="main_container">
             <router-link to="/pointsinteret">
-                <Retour textBtn="Retour à la liste des POI" @click='test' />
+                <Retour textBtn="Retour à la liste" />
             </router-link>
             <SinglePoiDetailLayout v-if="singlepoi" v-bind:name="singlepoi.title.rendered" v-bind:description="singlepoi.content.rendered" v-bind:image="singlepoi._embedded['wp:featuredmedia'][0].source_url" v-bind:saisons="singlepoi._embedded['wp:term'][2]" v-bind:localisations="singlepoi._embedded['wp:term'][0]" v-bind:genres="singlepoi._embedded['wp:term'][1]"   />
             <CommentsLayout />
