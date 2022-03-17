@@ -9,7 +9,7 @@
         <h1 class="titre_team">L'équipe du projet :</h1>
 
         <div class="team_container">
-            <CirclePi RoleMember="Lead Dev Back/Git Master Back" TeamMember="Aurélie" JapaneseName=" オーレリー"/>
+            <CirclePi ImgUrl='../assets/images/circlepi1.png' RoleMember="Lead Dev Back/Git Master Back" TeamMember="Aurélie" JapaneseName=" オーレリー"/>
             <CirclePi RoleMember="Product Owner/Dev Fullstack" TeamMember="Xavier" JapaneseName=" ザビエル"/>
             <CirclePi RoleMember="Scrum Master/Dev Fullstack" TeamMember="Bastien" JapaneseName=" バスティエン"/>
         </div>
@@ -35,8 +35,6 @@ export default {
     HeaderLayout,
     BurgerMenu,
     CirclePi,
-    
-
   }
 
 }

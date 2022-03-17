@@ -1,7 +1,7 @@
 <template>
 
         <div class="card__pi">
-            <div class="card__pi__left"><img src="../assets/images/circlepi1.png"></div>
+            <div class="card__pi__left"><img :src="ImgUrl"></div>
             <div class="card__pi__right">
             <span class="card__pi__right-tag">{{localisationPI}} {{RoleMember}}</span>
             <span class="card__pi__right-name">{{namePI}} {{TeamMember}} {{ JapaneseName }}</span>
@@ -19,6 +19,9 @@ export default {
         TeamMember: String,
         JapaneseName: String,
         RoleMember: String,
+        ImgUrl: String
+       
+        
         
          
     }
