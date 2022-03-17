@@ -182,6 +182,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from) => {
+  window.scrollTo(0, 0);
   console.log("to ", to);
       console.log("from ", from);
   // instead of having to check every route record with
