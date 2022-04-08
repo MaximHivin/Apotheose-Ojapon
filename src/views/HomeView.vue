@@ -23,7 +23,10 @@
           </div> -->
 
           <div class="header__desktop-pi">
-            <CirclePi localisationPI="Localisation" namePI="Nom du point d'intérêt" /><CirclePi localisationPI="Localisation" namePI="Nom du point d'intérêt" /><CirclePi localisationPI="Localisation" namePI="Nom du point d'intérêt" />
+            <CirclePi localisationPI="Localisation" namePI="Nom du point d'intérêt" ImgUrl="https://source.unsplash.com/200x200?japan&random=1"/>
+            <CirclePi localisationPI="Localisation" namePI="Nom du point d'intérêt" ImgUrl="https://source.unsplash.com/200x200?japan&random=2"/>
+            <CirclePi localisationPI="Localisation" namePI="Nom du point d'intérêt" ImgUrl="https://source.unsplash.com/200x200?japan&random=3"/>
+
           </div> 
         </div>
   </div>
